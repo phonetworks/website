@@ -1,6 +1,0 @@
-{
-    "require": {
-        "couscous/couscous": "^1.6",
-        "phpdocumentor/phpdocumentor": "*" 
-    }
-}

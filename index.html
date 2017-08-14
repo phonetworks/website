@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Phở Networks</title>
+
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/highlight.dark.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+
+        <header class="navbar navbar-default navbar-fixed-top">
+
+            <a class="navbar-brand" href="/">
+                Phở Networks
+                <small class="hidden-xs hidden-sm">
+                    A modern framework for your next social-enabled app
+                </small>
+            </a>
+
+                            <a href="https://github.com/phonetworks/">
+                    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+                </a>
+            
+        </header>
+
+        <main class="container-fluid">
+            <div class="row">
+
+                
+                    <nav id="sidebar" class="col-sm-3 col-lg-2" role="navigation">
+
+                        <ul class="nav nav-pills nav-stacked">
+                                                            <li class="active">
+                                    <a href="/">
+                                        Overview
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="/features.html">
+                                        Features
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="/projects.html">
+                                        Projects
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="/getting-started.html">
+                                        Getting Started
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="/reference.html">
+                                        Reference
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="https://example.com">
+                                        API
+                                    </a>
+                                </li>
+                                                    </ul>
+
+                    </nav>
+
+                
+                <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
+                    <h2 id="meet-graph-apps-">Meet Graph Apps 👯‍</h2>
+<script type="text/javascript" src="https://asciinema.org/a/0xrNPEGyO0QP4y0ifkYJo0RSo.js" id="asciicast-0xrNPEGyO0QP4y0ifkYJo0RSo" data-autoplay="true" async></script>
+<p>Phở Networks is an open source, <strong>infinitely scalable</strong>, event-driven, <strong>extensible</strong> stack that gives you solid foundations to build <strong>social-enabled apps</strong>.</p>
+<p>When developing a social-enabled app, you have four options to base it off:</p>
+<table>
+<thead>
+<tr>
+<th>Foundation</th>
+<th>Maturity</th>
+<th>Scalability</th>
+<th>Convenience</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relational Database</td>
+<td>10</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr>
+<td>NoSQL</td>
+<td>8</td>
+<td>8*</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Graph Database</td>
+<td>6</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Phở</td>
+<td>3</td>
+<td>10</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>* there is no major SN that uses mongodb but they all use redis and memcache</p>
+<p>Social-enabled apps consist of graphs, and graphs are by definition difficult to break down into shards using relational databases, therefore it is extremely costly to scale a fast-growing social-enabled app. </p>
+<p>Built with portability and scale-out in mind, Phở Networks apps can run on web, desktop, mobile, IoT (internet of things) &amp; embedded platforms, and serve just a handful number of users or billions using open source software and commodity hardware.</p>
+<p>Before we proceed with an explanation of how Phở helps you build such apps, let us illustrate the concept of social-enabled apps with some usage scenarios;</p>
+<h2 id="use-cases">Use Cases</h2>
+<p>What is a social-enabled app? Here are some examples:</p>
+<ul>
+<li><a href="http://techcrunch.com">A blog or news web site (with different actor models such as readers, authors, editors, contributors).</a></li>
+<li>[A personal/business web site with some level of interactivity such as page comments and subscription for updates.]()</li>
+<li><a href="http://facebook.com">A macro social network like Facebook, instagram and Twitter.</a></li>
+<li><a href="http://wowwiki.wikia.com/wiki/Portal:Main">A wiki for the game World of Warcraft.</a></li>
+<li><a href="https://groups.yahoo.com/neo/groups/old-chevy-truck/info">A micro social network like a Yahoo Group that connects stock Chevrolet and GMC truck fans in the US.</a></li>
+<li><a href="https://www.meetup.com/python-istanbul/events/238314057/">A meetup that connects Python developers in Istanbul, Turkey.</a></li>
+<li><a href="http://fitbit.com">A mobile health/fitness app  that ranks your activity and calorie intake amongst your friends.</a></li>
+<li><a href="http://www.kiloo.com/games/subway-surfers/">A mobile game that ranks your activity/score among your friends who play the same game.</a></li>
+<li><a href="https://www.halowaypoint.com/en-us">A multi-player console game that matches you with other gamers in real-time.</a></li>
+<li>An IoT camera attached to your car plate, monitors other cars around, forms a real-time traffic graph and alerts you with commute potentials. (💡)</li>
+</ul>
+<p>The applications of social-enabled apps are limitless. The bottomline is that any app that touches humans and help them interact are social-enabled by definition.</p>
+<h2 id="scalability-">Scalability 💪</h2>
+<p>While designing Pho Networks, our aim was to build a truly infinitely scalable open source fully extensible social backend. The biggest challenge was database. Today's popular databases such as MySQL are hard to maintain with growing traffic and millions of daily active users. The answer to these problems are (a) to shard your data (b) to switch to a NoSQL solution. Although sharding data is tedious and expensive, and NoSQL solutions are notoriously yet to standardize and stabilize. In response, inspired by FriendFeed founder Bret Taylor's <a href="http://backchannel.org/blog/friendfeed-schemaless-mysql">schema-less MySQL blog post</a>, we chose to create a stack that would be built upon stable technologies and use atomic methods to establish a horizontally scalable platform to handle any workload.</p>
+<p>At Pho, our default choice of stable keeper of truth has been Redis. Although this and all of our choices can be adapted to your platform of choice using custom adapters. For indexing, we use ElasticSearch. For event-driven messaging, we use ZeroMQ. The platform itself is therefore clusterable to an endless number of machines using round-robin DNS and high-availability solutions that continuously listen for service heartbeats.</p>
+<p>While this is too many open source technologies to digest, we've made it easy for you to get started via Vagrant and docker images. Also our automated cloud installer will get you up and running on best cloud platforms such as AWS, heroku instantly.</p>
+<h2 id="theory-">Theory 🤓</h2>
+<p>Pho-Kernel is a first of its kind backend. It is not a database but it is closely coupled with Redis, a proven distributed persistable in-memory storage service. Moreover, Pho stack gives you a familiar programming interface for graph-type relationship models that are in heavy use with social-enabled apps.</p>
+<p><img src="https://github.com/phonetworks/pho-lib-graph/raw/master/.github/lib-graph-components.png" alt="Architecture" title="Pho LibGraph Architecture" /></p>
+<p>Pho introduces GAO to model social graphs. Nodes and Edges are atomic entities of any graph. In the GAO model, the atomic nodes are:</p>
+<ul>
+<li>Graph</li>
+<li>Actor</li>
+<li>Object</li>
+</ul>
+<p>Pho allows you to extend you these abstract entities with your own, and create your very own innovative macro social network, or use one of our existing <a href="https://github.com/pho-recipes">recipes</a> to replicate well-known solutions for your own domain-specific community needs.</p>
+<h2 id="license">License</h2>
+<p>MIT, see <a href="https://github.com/phonetworks/pho-framework/blob/master/LICENSE">LICENSE</a></p>
+                </section>
+
+            </div>
+        </main>
+
+        <footer>
+            <div class="container-fluid">
+                <p class="text-muted">
+                    website generated with <a href="http://couscous.io" title="Markdown website generator">Couscous</a>
+                </p>
+            </div>
+        </footer>
+
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="/js/highlight.min.js"></script>
+
+        <script>
+            $(function() {
+                $("section>h1").wrap('<div class="page-header" />');
+                // Syntax highlighting
+                hljs.initHighlightingOnLoad();
+            });
+        </script>
+
+    </body>
+</html>
