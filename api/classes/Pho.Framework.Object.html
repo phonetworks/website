@@ -1,0 +1,2185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/Pho.html">\Pho</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">211</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-2063885406"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-2063885406" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2143291845"></a>
+                                <a href="../namespaces/Pho.html" style="margin-left: 30px; padding-left: 0">Pho</a>
+            </div>
+            <div id="namespace-2143291845" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2038866609"></a>
+                                <a href="../namespaces/Pho.Framework.html" style="margin-left: 30px; padding-left: 0">Framework</a>
+            </div>
+            <div id="namespace-2038866609" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-363592616"></a>
+                                <a href="../namespaces/Pho.Framework.ActorOut.html" style="margin-left: 30px; padding-left: 0">ActorOut</a>
+            </div>
+            <div id="namespace-363592616" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Pho.Framework.ActorOut.Read.html">Read</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ActorOut.ReadPredicate.html">ReadPredicate</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ActorOut.Subscribe.html">Subscribe</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ActorOut.SubscribePredicate.html">SubscribePredicate</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ActorOut.Write.html">Write</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ActorOut.WriteNotification.html">WriteNotification</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ActorOut.WritePredicate.html">WritePredicate</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-179944008"></a>
+                                <a href="../namespaces/Pho.Framework.Cargo.html" style="margin-left: 30px; padding-left: 0">Cargo</a>
+            </div>
+            <div id="namespace-179944008" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Pho.Framework.Cargo.CargoInterface.html">CargoInterface</a></li>
+                                                                            <li class="trait"><a href="../classes/Pho.Framework.Cargo.FormativePropertiesTrait.html">FormativePropertiesTrait</a></li>
+                                                    <li class="trait"><a href="../classes/Pho.Framework.Cargo.SetterPropertiesTrait.html">SetterPropertiesTrait</a></li>
+                                                                            <li class="class"><a href="../classes/Pho.Framework.Cargo.AbstractEdgeCargo.html">AbstractEdgeCargo</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Cargo.AbstractOutgoingEdgeCargo.html">AbstractOutgoingEdgeCargo</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Cargo.FieldsCargo.html">FieldsCargo</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Cargo.IncomingEdgeCargo.html">IncomingEdgeCargo</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Cargo.OutgoingEdgeCargo.html">OutgoingEdgeCargo</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1316957407"></a>
+                                <a href="../namespaces/Pho.Framework.Exceptions.html" style="margin-left: 30px; padding-left: 0">Exceptions</a>
+            </div>
+            <div id="namespace-1316957407" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Pho.Framework.Exceptions.InjectionUnavailableException.html">InjectionUnavailableException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Exceptions.InvalidEdgeHeadTypeException.html">InvalidEdgeHeadTypeException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Exceptions.InvalidParticleMethodException.html">InvalidParticleMethodException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Exceptions.PredicateClassDoesNotExistException.html">PredicateClassDoesNotExistException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Exceptions.UnrecognizedSetOfParametersForFormativeEdgeException.html">UnrecognizedSetOfParametersForFormativeEdgeException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1125548660"></a>
+                                <a href="../namespaces/Pho.Framework.Handlers.html" style="margin-left: 30px; padding-left: 0">Handlers</a>
+            </div>
+            <div id="namespace-1125548660" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Pho.Framework.Handlers.HandlerInterface.html">HandlerInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/Pho.Framework.Handlers.Form.html">Form</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Handlers.Get.html">Get</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Handlers.Has.html">Has</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Handlers.Set.html">Set</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Handlers.Utils.html">Utils</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-142625082"></a>
+                                <a href="../namespaces/Pho.Framework.Loaders.html" style="margin-left: 30px; padding-left: 0">Loaders</a>
+            </div>
+            <div id="namespace-142625082" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Pho.Framework.Loaders.AbstractLoader.html">AbstractLoader</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Loaders.FieldsLoader.html">FieldsLoader</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Loaders.IncomingEdgeLoader.html">IncomingEdgeLoader</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Loaders.OutgoingEdgeLoader.html">OutgoingEdgeLoader</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1811541030"></a>
+                                <a href="../namespaces/Pho.Framework.ObjectOut.html" style="margin-left: 30px; padding-left: 0">ObjectOut</a>
+            </div>
+            <div id="namespace-1811541030" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Pho.Framework.ObjectOut.Mention.html">Mention</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ObjectOut.MentionNotification.html">MentionNotification</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ObjectOut.MentionPredicate.html">MentionPredicate</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Pho.Framework.ContextInterface.html">ContextInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Pho.Framework.InjectableInterface.html">InjectableInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Pho.Framework.ParticleInterface.html">ParticleInterface</a></li>
+                                                                            <li class="trait"><a href="../classes/Pho.Framework.InjectableTrait.html">InjectableTrait</a></li>
+                                                    <li class="trait"><a href="../classes/Pho.Framework.ParticleTrait.html">ParticleTrait</a></li>
+                                                                            <li class="class"><a href="../classes/Pho.Framework.AbstractNotification.html">AbstractNotification</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.AbstractPredicate.html">AbstractPredicate</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Actor.html">Actor</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.FieldHelper.html">FieldHelper</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Graph.html">Graph</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Logger.html">Logger</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.NotificationList.html">NotificationList</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Object.html">Object</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Predicate.html">Predicate</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Space.html">Space</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-153964581"></a>
+                                <a href="../namespaces/Pho.Lib.html" style="margin-left: 30px; padding-left: 0">Lib</a>
+            </div>
+            <div id="namespace-153964581" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1111218780"></a>
+                                <a href="../namespaces/Pho.Lib.Graph.html" style="margin-left: 30px; padding-left: 0">Graph</a>
+            </div>
+            <div id="namespace-1111218780" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-54596790"></a>
+                                <a href="../namespaces/Pho.Lib.Graph.Exceptions.html" style="margin-left: 30px; padding-left: 0">Exceptions</a>
+            </div>
+            <div id="namespace-54596790" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.DuplicateEdgeException.html">DuplicateEdgeException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.EdgeAlreadyConnectedException.html">EdgeAlreadyConnectedException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.InvalidDirectionException.html">InvalidDirectionException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.InvalidEncapsulatedEdgeException.html">InvalidEncapsulatedEdgeException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.MalformedGraphIDException.html">MalformedGraphIDException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.NodeAlreadyMemberException.html">NodeAlreadyMemberException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.NodeDoesNotExistException.html">NodeDoesNotExistException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.OrphanEdgeException.html">OrphanEdgeException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Pho.Lib.Graph.EntityInterface.html">EntityInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Pho.Lib.Graph.GraphInterface.html">GraphInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Pho.Lib.Graph.HookableInterface.html">HookableInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Pho.Lib.Graph.NodeInterface.html">NodeInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Pho.Lib.Graph.NodeWorkerInterface.html">NodeWorkerInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Pho.Lib.Graph.PredicateInterface.html">PredicateInterface</a></li>
+                                                                            <li class="trait"><a href="../classes/Pho.Lib.Graph.EntityTrait.html">EntityTrait</a></li>
+                                                    <li class="trait"><a href="../classes/Pho.Lib.Graph.GraphTrait.html">GraphTrait</a></li>
+                                                    <li class="trait"><a href="../classes/Pho.Lib.Graph.HookableTrait.html">HookableTrait</a></li>
+                                                    <li class="trait"><a href="../classes/Pho.Lib.Graph.SerializableTrait.html">SerializableTrait</a></li>
+                                                    <li class="trait"><a href="../classes/Pho.Lib.Graph.SplSubjectTrait.html">SplSubjectTrait</a></li>
+                                                                            <li class="class"><a href="../classes/Pho.Lib.Graph.AdjacentNode.html">AdjacentNode</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.AttributeBag.html">AttributeBag</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Direction.html">Direction</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.EdgeList.html">EdgeList</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.EncapsulatedEdge.html">EncapsulatedEdge</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Graph.html">Graph</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.HeadNode.html">HeadNode</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.ID.html">ID</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Logger.html">Logger</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Node.html">Node</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Predicate.html">Predicate</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.SubGraph.html">SubGraph</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.TailNode.html">TailNode</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/Pho.Framework.html">\Pho\Framework</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\Pho\Framework</small>Object</h1>
+                    <p><em>The Object Particle</em></p>
+                    <p>One of the three foundational nodes in the Pho Framework.
+Objects do one and only one thing, they &quot;transmit&quot;
+And that is an optional edge, most object will not
+have any outgoing edges.</p>
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#method_initializeParticle" class="">initializeParticle()</a><br />
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#method_registerIncomingEdges" class="">registerIncomingEdges()</a><br />
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#method_registerOutgoingEdges" class="">registerOutgoingEdges()</a><br />
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#method_getRegisteredIncomingEdges" class="">getRegisteredIncomingEdges()</a><br />
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#method_getRegisteredOutgoingEdges" class="">getRegisteredOutgoingEdges()</a><br />
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#method_registerHandler" class="">registerHandler()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_toArray" class="">toArray()</a><br />
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#method_existentials" class="">existentials()</a><br />
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#method_creator" class="">creator()</a><br />
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#method_notifySubscribers" class="">notifySubscribers()</a><br />
+                                                                    <a href="../classes/Pho.Framework.Object.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.Node.html#method_context" class="">context()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.Node.html#method_changeContext" class="">changeContext()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.Node.html#method_edges" class="">edges()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.Node.html#method_edge" class="">edge()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_destroy" class="">destroy()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.Node.html#method_inDeletion" class="">inDeletion()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.SplSubjectTrait.html#method_attach" class="">attach()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.SplSubjectTrait.html#method_detach" class="">detach()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.SplSubjectTrait.html#method_notify" class="">notify()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_id" class="">id()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_label" class="">label()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_isA" class="">isA()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_attributes" class="">attributes()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_update" class="">update()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_type" class="">type()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method___toString" class="">__toString()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.HookableTrait.html#method_hook" class="">hook()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.HookableTrait.html#method_unhook" class="">unhook()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.HookableTrait.html#method_hooks" class="">hooks()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#method_initializeHandler" class="">initializeHandler()</a><br />
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#method_autoRegisterOutgoingEdges" class="">autoRegisterOutgoingEdges()</a><br />
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#method_addEdges" class="">addEdges()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_entityToArray" class="">entityToArray()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.HookableTrait.html#method_hookable" class="">hookable()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#property_creator" class="">$creator</a><br />
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#property_creator_id" class="">$creator_id</a><br />
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#property_handler" class="">$handler</a><br />
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#property_incoming_edges" class="">$incoming_edges</a><br />
+                                                                    <a href="../classes/Pho.Framework.ParticleTrait.html#property_outgoing_edges" class="">$outgoing_edges</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.Node.html#property_edge_list" class="">$edge_list</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.Node.html#property_context" class="">$context</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.Node.html#property_context_id" class="">$context_id</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.Node.html#property_in_deletion" class="">$in_deletion</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.SplSubjectTrait.html#property_observers" class="">$observers</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#property_id" class="">$id</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#property_attributes" class="">$attributes</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.HookableTrait.html#property_hooks" class="">$hooks</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <a href="../classes/Pho.Lib.Graph.Node.html#method_attachGraphObservers" class="">attachGraphObservers()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Framework.Object.html"><div class="path-wrapper">Framework/Object.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Default</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                                                                                                                                                
+                                        <div class="namespace-wrapper"><a href="../classes/Pho.Lib.Graph.Node.html">\Pho\Lib\Graph\Node</a></div>
+                                                                                                    <div class="namespace-wrapper">\Pho\Framework\Object</div>
+                            </dd>
+
+                                                                            <dt>Implements</dt>
+                                                        <dd><a href="../classes/Pho.Framework.ParticleInterface.html"><div class="namespace-wrapper">\Pho\Framework\ParticleInterface</div></a></dd>
+                                                                                <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                                                <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                        
+                                                                                    <dt>Uses traits</dt>
+                                                        <dd>
+                                <a href="../classes/Pho.Framework.ParticleTrait.html">                                    <div class="namespace-wrapper">\Pho\Framework\ParticleTrait</div>
+                                </a>                            </dd>
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>Emre Sokullu <a href="mailto:emre@phonetworks.org">emre@phonetworks.org</a></p>
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_creator" name="property_creator" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$creator</h3>
+                <pre class="signature">$creator : \Pho\Framework\Actor</pre>
+                <p><em>Who created this node. Must point to an Actor.</em></p>
+                <p>Points to self by Actor particles.</p>
+
+                                <h4>Type</h4>
+                <a href="../classes/Pho.Framework.Actor.html">\Pho\Framework\Actor</a>
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_creator_id" name="property_creator_id" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$creator_id</h3>
+                <pre class="signature">$creator_id : string</pre>
+                <p><em>The creator&#039;s ID</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_handler" name="property_handler" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$handler</h3>
+                <pre class="signature">$handler : \Pho\Framework\Handlers\Gateway</pre>
+                <p><em>Handles catch-all method calls.</em></p>
+                
+
+                                <h4>Type</h4>
+                \Pho\Framework\Handlers\Gateway
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_incoming_edges" name="property_incoming_edges" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$incoming_edges</h3>
+                <pre class="signature">$incoming_edges : array</pre>
+                <p><em>An array of incoming edge classes</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_outgoing_edges" name="property_outgoing_edges" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$outgoing_edges</h3>
+                <pre class="signature">$outgoing_edges : array</pre>
+                <p><em>An array of outgoing edge classes</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_edge_list" name="property_edge_list" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$edge_list</h3>
+                <pre class="signature">$edge_list : \Pho\Lib\Graph\EdgeList</pre>
+                <p><em>Internal variable that keeps track of edges in and out.</em></p>
+                
+
+                                <h4>Type</h4>
+                <a href="../classes/Pho.Lib.Graph.EdgeList.html">\Pho\Lib\Graph\EdgeList</a>
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.Node.html"><div class="path-wrapper">\Pho\Lib\Graph\Node</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_context" name="property_context" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$context</h3>
+                <pre class="signature">$context : \Pho\Lib\Graph\GraphInterface</pre>
+                <p><em>The graph context of this node</em></p>
+                
+
+                                <h4>Type</h4>
+                <a href="../classes/Pho.Lib.Graph.GraphInterface.html">\Pho\Lib\Graph\GraphInterface</a>
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.Node.html"><div class="path-wrapper">\Pho\Lib\Graph\Node</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_context_id" name="property_context_id" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$context_id</h3>
+                <pre class="signature">$context_id : string</pre>
+                <p><em>The ID of the graph context of this node</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.Node.html"><div class="path-wrapper">\Pho\Lib\Graph\Node</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_in_deletion" name="property_in_deletion" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$in_deletion</h3>
+                <pre class="signature">$in_deletion : boolean</pre>
+                <p><em>A flag that states that the destruction process has begun.</em></p>
+                
+
+                                <h4>Type</h4>
+                boolean
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.Node.html"><div class="path-wrapper">\Pho\Lib\Graph\Node</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_observers" name="property_observers" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$observers</h3>
+                <pre class="signature">$observers : array</pre>
+                <p><em>The observers of this object.</em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.SplSubjectTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\SplSubjectTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_id" name="property_id" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$id</h3>
+                <pre class="signature">$id : \Pho\Lib\Graph\ID</pre>
+                <p><em>The entity ID.</em></p>
+                
+
+                                <h4>Type</h4>
+                <a href="../classes/Pho.Lib.Graph.ID.html">\Pho\Lib\Graph\ID</a>
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.EntityTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\EntityTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_attributes" name="property_attributes" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$attributes</h3>
+                <pre class="signature">$attributes : \Pho\Lib\Graph\AttributeBag</pre>
+                <p><em>Attributes of the entity.</em></p>
+                <p>Both nodes and edges may hold attributes.</p>
+
+                                <h4>Type</h4>
+                <a href="../classes/Pho.Lib.Graph.AttributeBag.html">\Pho\Lib\Graph\AttributeBag</a>
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.EntityTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\EntityTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_hooks" name="property_hooks" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$hooks</h3>
+                <pre class="signature">$hooks : </pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.HookableTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\HookableTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_initializeParticle" name="method_initializeParticle" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">initializeParticle()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">initializeParticle() </pre>
+                <p><em>Constructor.</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_registerIncomingEdges" name="method_registerIncomingEdges" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">registerIncomingEdges()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">registerIncomingEdges(  <span class="argument">$classes</span>) : void</pre>
+                <p><em>Registers the incoming edges.</em></p>
+                <p>The default ones for all nodes are:</p>
+<ul>
+<li>ActorOut\Read::class</li>
+<li>ActorOut\Subscribe::class</li>
+<li>ObjectOut\Publish::class</li>
+</ul>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$classes </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_registerOutgoingEdges" name="method_registerOutgoingEdges" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">registerOutgoingEdges()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">registerOutgoingEdges(  <span class="argument">$classes</span>) : void</pre>
+                <p><em>Registers the outgoing edges.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$classes </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRegisteredIncomingEdges" name="method_getRegisteredIncomingEdges" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRegisteredIncomingEdges()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRegisteredIncomingEdges() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRegisteredOutgoingEdges" name="method_getRegisteredOutgoingEdges" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRegisteredOutgoingEdges()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRegisteredOutgoingEdges() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_registerHandler" name="method_registerHandler" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">registerHandler()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">registerHandler(string  <span class="argument">$key</span>, string  <span class="argument">$class</span>) : void</pre>
+                <p><em>Registers a new handler adapter.</em></p>
+                <p>Default handlers may be overriden.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$key </td>
+                                <td><p>Adapter key; e.g. &quot;get&quot;, &quot;set&quot;, &quot;form&quot; etc.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$class </td>
+                                <td><p>Handler class to register. A handler class shall implement HandlerInterface</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_toArray" name="method_toArray" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">toArray()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">toArray() </pre>
+                <p><em>{@inheritdoc}</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.EntityTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\EntityTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_existentials" name="method_existentials" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">existentials()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">existentials() </pre>
+                <p><em>{@inheritdoc}</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_creator" name="method_creator" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">creator()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">creator() : \Pho\Framework\Actor</pre>
+                <p><em>Retrieves the creator of this node.</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Pho.Framework.Actor.html">\Pho\Framework\Actor</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_notifySubscribers" name="method_notifySubscribers" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">notifySubscribers()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">notifySubscribers(\Pho\Framework\AbstractNotification  <span class="argument">$notification</span>) : void</pre>
+                <p><em>Notifies observers about deletion</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Pho.Framework.AbstractNotification.html">\Pho\Framework\AbstractNotification</a></td>
+                                <td>$notification </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct(\Pho\Framework\Actor  <span class="argument">$creator</span>, \Pho\Framework\ContextInterface  <span class="argument">$context</span>) </pre>
+                <p><em>{@inheritdoc}</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Pho.Framework.Actor.html">\Pho\Framework\Actor</a></td>
+                                <td>$creator </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td><a href="../classes/Pho.Framework.ContextInterface.html">\Pho\Framework\ContextInterface</a></td>
+                                <td>$context </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_context" name="method_context" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">context()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">context() : \Pho\Lib\Graph\ArrayObject</pre>
+                <p><em>Returns the context that this node is a member of.</em></p>
+                <p>Contexts are GraphInterface objects that contain nodes.</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Pho\Lib\Graph\ArrayObject
+                                            &mdash; <p>An ArrayObject of contexts in no particular order.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.Node.html"><div class="path-wrapper">\Pho\Lib\Graph\Node</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_changeContext" name="method_changeContext" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">changeContext()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">changeContext(\Pho\Lib\Graph\GraphInterface  <span class="argument">$context</span>) : void</pre>
+                <p><em>Changes the fundamental context of a node.</em></p>
+                <p>Rarely, a node may need its fundamental context to change
+after its construction. This method enables setting a new
+context for the node.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Pho.Lib.Graph.GraphInterface.html">\Pho\Lib\Graph\GraphInterface</a></td>
+                                <td>$context </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.Node.html"><div class="path-wrapper">\Pho\Lib\Graph\Node</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edges" name="method_edges" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">edges()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">edges() : \Pho\Lib\Graph\EdgeList</pre>
+                <p><em>Gives access to this node&#039;s EdgeList property.</em></p>
+                <p>EdgeList contains all the edges in and out from
+this node. It is also used to add new edges.</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Pho.Lib.Graph.EdgeList.html">\Pho\Lib\Graph\EdgeList</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.Node.html"><div class="path-wrapper">\Pho\Lib\Graph\Node</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_edge" name="method_edge" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">edge()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">edge(\Pho\Lib\Graph\string  <span class="argument">$id</span>) : \Pho\Lib\Graph\EdgeInterface</pre>
+                <p><em>Retrieve Edge objects given its ID.</em></p>
+                <p>Used in serialization. This function must be implemented for a higher level
+package with persistence. Otherwise it has no use and no function within
+pho-lib-graph.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\Pho\Lib\Graph\string</td>
+                                <td>$id </td>
+                                <td><p>The Edge ID in string format</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Pho\Lib\Graph\EdgeInterface
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.Node.html"><div class="path-wrapper">\Pho\Lib\Graph\Node</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_destroy" name="method_destroy" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">destroy()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">destroy() </pre>
+                <p><em>{@inheritdoc}</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.EntityTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\EntityTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_inDeletion" name="method_inDeletion" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">inDeletion()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">inDeletion() : boolean</pre>
+                <p><em>Determines whether the node is in self-destruction process.</em></p>
+                <p>Used by observers.</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>Yes or no.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.Node.html"><div class="path-wrapper">\Pho\Lib\Graph\Node</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_attach" name="method_attach" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">attach()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">attach(\SplObserver  <span class="argument">$observer</span>) : void</pre>
+                <p><em>Adds a new observer to the object</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\SplObserver</td>
+                                <td>$observer </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.SplSubjectTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\SplSubjectTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_detach" name="method_detach" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">detach()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">detach(\SplObserver  <span class="argument">$observer</span>) : void</pre>
+                <p><em>Removes an observer from the object</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\SplObserver</td>
+                                <td>$observer </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.SplSubjectTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\SplSubjectTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_notify" name="method_notify" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">notify()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">notify() : void</pre>
+                <p><em>Notifies observers about a change</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.SplSubjectTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\SplSubjectTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_id" name="method_id" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">id()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">id() </pre>
+                <p><em>{@inheritdoc}</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.EntityTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\EntityTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_label" name="method_label" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">label()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">label() </pre>
+                <p><em>{@inheritdoc}</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.EntityTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\EntityTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isA" name="method_isA" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isA()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isA(\Pho\Lib\Graph\string  <span class="argument">$class_name</span>) </pre>
+                <p><em>{@inheritdoc}</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\Pho\Lib\Graph\string</td>
+                                <td>$class_name </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.EntityTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\EntityTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_attributes" name="method_attributes" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">attributes()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">attributes() </pre>
+                <p><em>{@inheritdoc}</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.EntityTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\EntityTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_update" name="method_update" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">update()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">update(\SplSubject  <span class="argument">$subject</span>) </pre>
+                <p><em>{@inheritdoc}</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\SplSubject</td>
+                                <td>$subject </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.EntityTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\EntityTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_type" name="method_type" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">type()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">type() : string</pre>
+                <p><em>Retrieves the entity type</em></p>
+                <p>Current allowed values are &quot;node&quot; or &quot;edge&quot;
+Can be extended for more types.
+If the type is unknown, it returns &quot;entity&quot;</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>&quot;node&quot;, &quot;edge&quot; or &quot;entity&quot;.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.EntityTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\EntityTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___toString" name="method___toString" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__toString()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__toString() : string</pre>
+                <p><em>Turns the object into string</em></p>
+                <p>Returns its ID in string format</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The ID</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.EntityTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\EntityTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_hook" name="method_hook" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">hook()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">hook(\Pho\Lib\Graph\string  <span class="argument">$method</span>, \Closure  <span class="argument">$call</span>) </pre>
+                <p><em>{@inheritDoc}</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\Pho\Lib\Graph\string</td>
+                                <td>$method </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>\Closure</td>
+                                <td>$call </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.HookableTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\HookableTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_unhook" name="method_unhook" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">unhook()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">unhook(\Pho\Lib\Graph\string  <span class="argument">$method</span>) </pre>
+                <p><em>{@inheritDoc}</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\Pho\Lib\Graph\string</td>
+                                <td>$method </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.HookableTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\HookableTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_hooks" name="method_hooks" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">hooks()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">hooks() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.HookableTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\HookableTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_initializeHandler" name="method_initializeHandler" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">initializeHandler()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">initializeHandler() : void</pre>
+                <p><em>A helper method to set up edges and fields.</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_autoRegisterOutgoingEdges" name="method_autoRegisterOutgoingEdges" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">autoRegisterOutgoingEdges()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">autoRegisterOutgoingEdges() : void</pre>
+                <p><em>Auto-registers outgoing edge classes</em></p>
+                <p>Auto-registration is done by directory structure. Directories that sit
+in this folder, and are named after this class with
+&quot;Out&quot; suffix (such as &quot;MyNodeOut&quot; for a node class named &quot;MyNode&quot;)
+would be candidate for auto-registration.</p>
+<p>Please note, this does not check if it's actually an Edge class.
+The check is done by the OutgoingEdgeLoader class.</p>
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_addEdges" name="method_addEdges" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">addEdges()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">addEdges(string  <span class="argument">$direction</span>,   <span class="argument">$classes</span>) : self</pre>
+                <p><em>A helper method to register edges</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$direction </td>
+                                <td><p>Either incoming or outgoing</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$classes </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.ParticleTrait.html"><div class="path-wrapper">\Pho\Framework\ParticleTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_entityToArray" name="method_entityToArray" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">entityToArray()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">entityToArray() : array</pre>
+                <p><em>Converts the object to array</em></p>
+                <p>Used for serialization/unserialization. Converts internal
+object properties into a simple format to help with
+reconstruction.</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>The object in array format.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.EntityTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\EntityTrait</div></a></dd>
+                                                                            <dt>See also</dt>
+                                                                <dd><a href=""><span class="namespace-wrapper">for actual implementation of this method by subclasses.</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_hookable" name="method_hookable" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">hookable()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">hookable() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.HookableTrait.html"><div class="path-wrapper">\Pho\Lib\Graph\HookableTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_attachGraphObservers" name="method_attachGraphObservers" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">attachGraphObservers()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">attachGraphObservers(\Pho\Lib\Graph\GraphInterface  <span class="argument">$context</span>) : void</pre>
+                <p><em>Adds the context itself and the context&#039;s contexts (if available)
+recursively to the list of observers for deletion.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Pho.Lib.Graph.GraphInterface.html">\Pho\Lib\Graph\GraphInterface</a></td>
+                                <td>$context </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.Node.html"><div class="path-wrapper">\Pho\Lib\Graph\Node</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">Object.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Framework/Object.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/Pho.html">\Pho</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on August 14th, 2017 at 06:07.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

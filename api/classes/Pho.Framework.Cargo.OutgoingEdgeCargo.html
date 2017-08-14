@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/Pho.html">\Pho</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">211</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-105541089"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-105541089" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-593270428"></a>
+                                <a href="../namespaces/Pho.html" style="margin-left: 30px; padding-left: 0">Pho</a>
+            </div>
+            <div id="namespace-593270428" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-250814026"></a>
+                                <a href="../namespaces/Pho.Framework.html" style="margin-left: 30px; padding-left: 0">Framework</a>
+            </div>
+            <div id="namespace-250814026" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1381110005"></a>
+                                <a href="../namespaces/Pho.Framework.ActorOut.html" style="margin-left: 30px; padding-left: 0">ActorOut</a>
+            </div>
+            <div id="namespace-1381110005" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Pho.Framework.ActorOut.Read.html">Read</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ActorOut.ReadPredicate.html">ReadPredicate</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ActorOut.Subscribe.html">Subscribe</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ActorOut.SubscribePredicate.html">SubscribePredicate</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ActorOut.Write.html">Write</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ActorOut.WriteNotification.html">WriteNotification</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ActorOut.WritePredicate.html">WritePredicate</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1826052082"></a>
+                                <a href="../namespaces/Pho.Framework.Cargo.html" style="margin-left: 30px; padding-left: 0">Cargo</a>
+            </div>
+            <div id="namespace-1826052082" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Pho.Framework.Cargo.CargoInterface.html">CargoInterface</a></li>
+                                                                            <li class="trait"><a href="../classes/Pho.Framework.Cargo.FormativePropertiesTrait.html">FormativePropertiesTrait</a></li>
+                                                    <li class="trait"><a href="../classes/Pho.Framework.Cargo.SetterPropertiesTrait.html">SetterPropertiesTrait</a></li>
+                                                                            <li class="class"><a href="../classes/Pho.Framework.Cargo.AbstractEdgeCargo.html">AbstractEdgeCargo</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Cargo.AbstractOutgoingEdgeCargo.html">AbstractOutgoingEdgeCargo</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Cargo.FieldsCargo.html">FieldsCargo</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Cargo.IncomingEdgeCargo.html">IncomingEdgeCargo</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Cargo.OutgoingEdgeCargo.html">OutgoingEdgeCargo</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-52531901"></a>
+                                <a href="../namespaces/Pho.Framework.Exceptions.html" style="margin-left: 30px; padding-left: 0">Exceptions</a>
+            </div>
+            <div id="namespace-52531901" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Pho.Framework.Exceptions.InjectionUnavailableException.html">InjectionUnavailableException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Exceptions.InvalidEdgeHeadTypeException.html">InvalidEdgeHeadTypeException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Exceptions.InvalidParticleMethodException.html">InvalidParticleMethodException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Exceptions.PredicateClassDoesNotExistException.html">PredicateClassDoesNotExistException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Exceptions.UnrecognizedSetOfParametersForFormativeEdgeException.html">UnrecognizedSetOfParametersForFormativeEdgeException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-817111100"></a>
+                                <a href="../namespaces/Pho.Framework.Handlers.html" style="margin-left: 30px; padding-left: 0">Handlers</a>
+            </div>
+            <div id="namespace-817111100" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Pho.Framework.Handlers.HandlerInterface.html">HandlerInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/Pho.Framework.Handlers.Form.html">Form</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Handlers.Get.html">Get</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Handlers.Has.html">Has</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Handlers.Set.html">Set</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Handlers.Utils.html">Utils</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-660477813"></a>
+                                <a href="../namespaces/Pho.Framework.Loaders.html" style="margin-left: 30px; padding-left: 0">Loaders</a>
+            </div>
+            <div id="namespace-660477813" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Pho.Framework.Loaders.AbstractLoader.html">AbstractLoader</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Loaders.FieldsLoader.html">FieldsLoader</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Loaders.IncomingEdgeLoader.html">IncomingEdgeLoader</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Loaders.OutgoingEdgeLoader.html">OutgoingEdgeLoader</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-246060886"></a>
+                                <a href="../namespaces/Pho.Framework.ObjectOut.html" style="margin-left: 30px; padding-left: 0">ObjectOut</a>
+            </div>
+            <div id="namespace-246060886" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Pho.Framework.ObjectOut.Mention.html">Mention</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ObjectOut.MentionNotification.html">MentionNotification</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ObjectOut.MentionPredicate.html">MentionPredicate</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Pho.Framework.ContextInterface.html">ContextInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Pho.Framework.InjectableInterface.html">InjectableInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Pho.Framework.ParticleInterface.html">ParticleInterface</a></li>
+                                                                            <li class="trait"><a href="../classes/Pho.Framework.InjectableTrait.html">InjectableTrait</a></li>
+                                                    <li class="trait"><a href="../classes/Pho.Framework.ParticleTrait.html">ParticleTrait</a></li>
+                                                                            <li class="class"><a href="../classes/Pho.Framework.AbstractNotification.html">AbstractNotification</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.AbstractPredicate.html">AbstractPredicate</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Actor.html">Actor</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.FieldHelper.html">FieldHelper</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Graph.html">Graph</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Logger.html">Logger</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.NotificationList.html">NotificationList</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Object.html">Object</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Predicate.html">Predicate</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.Space.html">Space</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2103184512"></a>
+                                <a href="../namespaces/Pho.Lib.html" style="margin-left: 30px; padding-left: 0">Lib</a>
+            </div>
+            <div id="namespace-2103184512" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1997463059"></a>
+                                <a href="../namespaces/Pho.Lib.Graph.html" style="margin-left: 30px; padding-left: 0">Graph</a>
+            </div>
+            <div id="namespace-1997463059" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-156006997"></a>
+                                <a href="../namespaces/Pho.Lib.Graph.Exceptions.html" style="margin-left: 30px; padding-left: 0">Exceptions</a>
+            </div>
+            <div id="namespace-156006997" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.DuplicateEdgeException.html">DuplicateEdgeException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.EdgeAlreadyConnectedException.html">EdgeAlreadyConnectedException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.InvalidDirectionException.html">InvalidDirectionException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.InvalidEncapsulatedEdgeException.html">InvalidEncapsulatedEdgeException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.MalformedGraphIDException.html">MalformedGraphIDException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.NodeAlreadyMemberException.html">NodeAlreadyMemberException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.NodeDoesNotExistException.html">NodeDoesNotExistException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.OrphanEdgeException.html">OrphanEdgeException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Pho.Lib.Graph.EntityInterface.html">EntityInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Pho.Lib.Graph.GraphInterface.html">GraphInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Pho.Lib.Graph.HookableInterface.html">HookableInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Pho.Lib.Graph.NodeInterface.html">NodeInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Pho.Lib.Graph.NodeWorkerInterface.html">NodeWorkerInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Pho.Lib.Graph.PredicateInterface.html">PredicateInterface</a></li>
+                                                                            <li class="trait"><a href="../classes/Pho.Lib.Graph.EntityTrait.html">EntityTrait</a></li>
+                                                    <li class="trait"><a href="../classes/Pho.Lib.Graph.GraphTrait.html">GraphTrait</a></li>
+                                                    <li class="trait"><a href="../classes/Pho.Lib.Graph.HookableTrait.html">HookableTrait</a></li>
+                                                    <li class="trait"><a href="../classes/Pho.Lib.Graph.SerializableTrait.html">SerializableTrait</a></li>
+                                                    <li class="trait"><a href="../classes/Pho.Lib.Graph.SplSubjectTrait.html">SplSubjectTrait</a></li>
+                                                                            <li class="class"><a href="../classes/Pho.Lib.Graph.AdjacentNode.html">AdjacentNode</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.AttributeBag.html">AttributeBag</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Direction.html">Direction</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.EdgeList.html">EdgeList</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.EncapsulatedEdge.html">EncapsulatedEdge</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Graph.html">Graph</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.HeadNode.html">HeadNode</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.ID.html">ID</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Logger.html">Logger</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Node.html">Node</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Predicate.html">Predicate</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.SubGraph.html">SubGraph</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.TailNode.html">TailNode</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/Pho.Framework.Cargo.html">\Pho\Framework\Cargo</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\Pho\Framework\Cargo</small>OutgoingEdgeCargo</h1>
+                    <p><em>Holds variables in regards to outgoing edges of a particle</em></p>
+                    <p>This helper class' variables are set at construction of a particle,
+then accessed by handlers.</p>
+<p>The variables are public, but the class shall be kept in a protected
+variable within the shell class, hence, not exposed to end-users.</p>
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Pho.Framework.Cargo.AbstractEdgeCargo.html#method___construct" class="">__construct()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Pho.Framework.Cargo.FormativePropertiesTrait.html#property_formative_labels" class="">$formative_labels</a><br />
+                                                                    <a href="../classes/Pho.Framework.Cargo.FormativePropertiesTrait.html#property_formative_label_class_pairs" class="">$formative_label_class_pairs</a><br />
+                                                                    <a href="../classes/Pho.Framework.Cargo.FormativePropertiesTrait.html#property_formative_patterns" class="">$formative_patterns</a><br />
+                                                                    <a href="../classes/Pho.Framework.Cargo.SetterPropertiesTrait.html#property_setter_labels" class="">$setter_labels</a><br />
+                                                                    <a href="../classes/Pho.Framework.Cargo.SetterPropertiesTrait.html#property_setter_classes" class="">$setter_classes</a><br />
+                                                                    <a href="../classes/Pho.Framework.Cargo.SetterPropertiesTrait.html#property_setter_label_settable_pairs" class="">$setter_label_settable_pairs</a><br />
+                                                                    <a href="../classes/Pho.Framework.Cargo.AbstractEdgeCargo.html#property_classes" class="">$classes</a><br />
+                                                                    <a href="../classes/Pho.Framework.Cargo.AbstractEdgeCargo.html#property_labels" class="">$labels</a><br />
+                                                                    <a href="../classes/Pho.Framework.Cargo.AbstractEdgeCargo.html#property_label_class_pairs" class="">$label_class_pairs</a><br />
+                                                                    <a href="../classes/Pho.Framework.Cargo.AbstractEdgeCargo.html#property_singularLabels" class="">$singularLabels</a><br />
+                                                                    <a href="../classes/Pho.Framework.Cargo.AbstractEdgeCargo.html#property_singularLabel_class_pairs" class="">$singularLabel_class_pairs</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Framework.Cargo.OutgoingEdgeCargo.html"><div class="path-wrapper">Framework/Cargo/OutgoingEdgeCargo.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Default</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                        <div class="namespace-wrapper"><a href="../classes/Pho.Framework.Cargo.AbstractEdgeCargo.html">\Pho\Framework\Cargo\AbstractEdgeCargo</a></div>
+                                                                    
+                                        <div class="namespace-wrapper"><a href="../classes/Pho.Framework.Cargo.AbstractOutgoingEdgeCargo.html">\Pho\Framework\Cargo\AbstractOutgoingEdgeCargo</a></div>
+                                                                                                    <div class="namespace-wrapper">\Pho\Framework\Cargo\OutgoingEdgeCargo</div>
+                            </dd>
+
+                        
+                                                                                    <dt>Uses traits</dt>
+                                                        <dd>
+                                <a href="../classes/Pho.Framework.Cargo.FormativePropertiesTrait.html">                                    <div class="namespace-wrapper">\Pho\Framework\Cargo\FormativePropertiesTrait</div>
+                                </a>                            </dd>
+                                                                                <dd>
+                                <a href="../classes/Pho.Framework.Cargo.SetterPropertiesTrait.html">                                    <div class="namespace-wrapper">\Pho\Framework\Cargo\SetterPropertiesTrait</div>
+                                </a>                            </dd>
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>Emre Sokullu <a href="mailto:emre@phonetworks.org">emre@phonetworks.org</a></p>
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_formative_labels" name="property_formative_labels" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$formative_labels</h3>
+                <pre class="signature">$formative_labels : array</pre>
+                <p><em>Formative Labels of Outgoing Edges</em></p>
+                <p>A simple array of edge names</p>
+
+                                <h4>Type</h4>
+                array
+                &mdash; Edge Labels                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.Cargo.FormativePropertiesTrait.html"><div class="path-wrapper">\Pho\Framework\Cargo\FormativePropertiesTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_formative_label_class_pairs" name="property_formative_label_class_pairs" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$formative_label_class_pairs</h3>
+                <pre class="signature">$formative_label_class_pairs : array</pre>
+                <p><em>Formative Classes of Outgoing Edges</em></p>
+                <p>An array of edge labels as key
+and associated edge class name as value.
+Both in string format.</p>
+
+                                <h4>Type</h4>
+                array
+                &mdash; Edge Label =&gt; Edge Class                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.Cargo.FormativePropertiesTrait.html"><div class="path-wrapper">\Pho\Framework\Cargo\FormativePropertiesTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_formative_patterns" name="property_formative_patterns" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$formative_patterns</h3>
+                <pre class="signature">$formative_patterns : array</pre>
+                <p><em>Arguments that match with each formative edge out.</em></p>
+                <p>In regular expression format.</p>
+
+                                <h4>Type</h4>
+                array
+                &mdash; Edge label as key, arguments pattern as value                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.Cargo.FormativePropertiesTrait.html"><div class="path-wrapper">\Pho\Framework\Cargo\FormativePropertiesTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_setter_labels" name="property_setter_labels" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$setter_labels</h3>
+                <pre class="signature">$setter_labels : array</pre>
+                <p><em>Setter Labels of Outgoing Edges</em></p>
+                <p>A simple array of edge names</p>
+
+                                <h4>Type</h4>
+                array
+                &mdash; Edge Labels                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.Cargo.SetterPropertiesTrait.html"><div class="path-wrapper">\Pho\Framework\Cargo\SetterPropertiesTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_setter_classes" name="property_setter_classes" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$setter_classes</h3>
+                <pre class="signature">$setter_classes : array</pre>
+                <p><em>Setter Classes of Outgoing Edges</em></p>
+                <p>An array of edge labels as key
+and associated edge class name as value.
+Both in string format.</p>
+
+                                <h4>Type</h4>
+                array
+                &mdash; Edge Label =&gt; Edge Class                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.Cargo.SetterPropertiesTrait.html"><div class="path-wrapper">\Pho\Framework\Cargo\SetterPropertiesTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_setter_label_settable_pairs" name="property_setter_label_settable_pairs" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$setter_label_settable_pairs</h3>
+                <pre class="signature">$setter_label_settable_pairs : array</pre>
+                <p><em>Class Associations for Outgoing Edges</em></p>
+                <p>An array of particle types that can be set by this
+particle's outgoing edges. Edge labels (string) as
+key, settables as array.</p>
+
+                                <h4>Type</h4>
+                array
+                &mdash; Edge Label =&gt; Settable Node Classes                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.Cargo.SetterPropertiesTrait.html"><div class="path-wrapper">\Pho\Framework\Cargo\SetterPropertiesTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_classes" name="property_classes" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$classes</h3>
+                <pre class="signature">$classes : array</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                &mdash; An array of class names (with their namespaces)                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.Cargo.AbstractEdgeCargo.html"><div class="path-wrapper">\Pho\Framework\Cargo\AbstractEdgeCargo</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_labels" name="property_labels" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$labels</h3>
+                <pre class="signature">$labels : array</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                &mdash; An array of plural labels in string format.                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.Cargo.AbstractEdgeCargo.html"><div class="path-wrapper">\Pho\Framework\Cargo\AbstractEdgeCargo</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_label_class_pairs" name="property_label_class_pairs" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$label_class_pairs</h3>
+                <pre class="signature">$label_class_pairs : array</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                &mdash; An array of plural labels as key, and edge class names as value.                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.Cargo.AbstractEdgeCargo.html"><div class="path-wrapper">\Pho\Framework\Cargo\AbstractEdgeCargo</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_singularLabels" name="property_singularLabels" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$singularLabels</h3>
+                <pre class="signature">$singularLabels : array</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                &mdash; An array of singular labels in string format.                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.Cargo.AbstractEdgeCargo.html"><div class="path-wrapper">\Pho\Framework\Cargo\AbstractEdgeCargo</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_singularLabel_class_pairs" name="property_singularLabel_class_pairs" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$singularLabel_class_pairs</h3>
+                <pre class="signature">$singularLabel_class_pairs : array</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                &mdash; An array of singular labels as key, and edge class names as value.                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.Cargo.AbstractEdgeCargo.html"><div class="path-wrapper">\Pho\Framework\Cargo\AbstractEdgeCargo</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct(array  <span class="argument">$edges = array()</span>) </pre>
+                <p><em>Constructor</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$edges </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.Cargo.AbstractEdgeCargo.html"><div class="path-wrapper">\Pho\Framework\Cargo\AbstractEdgeCargo</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">OutgoingEdgeCargo.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Framework/Cargo/OutgoingEdgeCargo.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/Pho.html">\Pho</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on August 14th, 2017 at 06:07.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>
