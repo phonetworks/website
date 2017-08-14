@@ -26,7 +26,7 @@ scripts:
 #cname: docs.yourdomain.com
 
 # Set the target branch in which to deploy the generated website
-#branch: gh-pages
+branch: gh-pages
 
 # Any variable you put in this file is also available in the Twig layouts:
 title: Phở Networks
