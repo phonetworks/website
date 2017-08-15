@@ -35,7 +35,7 @@ function pick(div, to_bolden) {
 
 ## Meet Graph Apps 👯‍
 
-[ <a href="#" onclick="pick('Cloning', this)" class="dPicker">Cloning a Recipe</a> ] &nbsp; [ <a href="#" onclick="pick('Editing', this)" class="dPicker">Editing Schema Files</a> ] &nbsp; [ <a href="#" onclick="pick('Building', this)"  class="dPicker">Building</a> ] &nbsp; [ <a href="#" onclick="pick('Playing', this)"  class="dPicker">Working with the APIs</a> ]
+[ <a href="#" onclick="pick('Cloning', this)" class="dPicker" style="font-weight:900;">Cloning a Recipe</a> ] &nbsp; [ <a href="#" onclick="pick('Editing', this)" class="dPicker">Editing Schema Files</a> ] &nbsp; [ <a href="#" onclick="pick('Building', this)"  class="dPicker">Building</a> ] &nbsp; [ <a href="#" onclick="pick('Playing', this)"  class="dPicker">Working with the APIs</a> ]
 
 <div  style="display:block;" data-id="ElK47XRwn9cAwx2OZicJ5VA1N" id="dCloning">
 <script type="text/javascript" src="https://asciinema.org/a/ElK47XRwn9cAwx2OZicJ5VA1N.js" id="asciicast-ElK47XRwn9cAwx2OZicJ5VA1N" data-autoplay="true" data-speed="2" async></script>
