@@ -132,12 +132,14 @@ type Post implements WriteEdge
     id: ID,
     status: String @constraints(maxLength: 140)
 }</code></pre>
-<p>Once the schema is set up, you can get it up and running using your recently downloaded <a href="https://phonetworks.github.io/pho-cli/pho.phar">pho.phar</a>:</p>
-<pre><code class="language-bash">php pho.phar build your-pgql-source-dir compiled-dir pgql # where pgql is the extension of your graphql files
-php pho.phar init destination-dir compiled-dir
-cd destination-dir
-</code></pre>
-<p>Voila, now you can access your graph by entering the desination-dir and setting up the play.php or play-custom.php accordingly.</p>
+<p>Once the schema is set up, you should compile it using <a href="https://github.com/phonetworks/pho-cli">pho-cli</a>.  Please note pho-cli depends on a specific patched set of packages.</p>
+<pre><code class="language-bash">git clone https://github.com/phonetworks/pho-cli
+cd pho-cli
+composer install
+bin/pho-cli build  your-pgql-source-dir compiled-dir pgql # where pgql is the extension of your graphql files
+bin/pho-cli init destination-dir compiled-dir
+cd destination-dir</code></pre>
+<p>Voila, now you can access your graph by entering the destination-dir and setting up the play.php or play-custom.php accordingly.</p>
 <p>For more information on schema set up, take a look at <a href="https://github.com/pho-recipes">https://github.com/pho-recipes</a></p>
 <p>The examples are self-explanatory.</p>
                 </section>
