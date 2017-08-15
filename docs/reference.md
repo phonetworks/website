@@ -2,7 +2,7 @@
 currentMenu: reference
 ---
 
-## Introduction
+## Reference
 
 Phở Kernel is the core of the Phở Networks stack. Written in PHP7, it is a programmable interface, as well as a configuration, events broker for distributed micro social graphs.
 
@@ -296,4 +296,4 @@ The permissions table is as follows;
 
 ## Reference
 
-For a full list of Phở Kernel classes and methods, refer to our PHPDocumentor auto-generated reference.
+For a full list of Phở Kernel classes and methods, refer to our [PHPDocumentor auto-generated reference](http://phonetworks.org/api/index.html).

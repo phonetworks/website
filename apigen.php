@@ -16,7 +16,7 @@ if(!command_exists("git")) {
 }
 
 $work_dir = "for_api";
-$res_dir = "website/api";
+$res_dir = ".couscous/generated/api";
 
 if(!file_exists($work_dir))
     @mkdir($work_dir);
