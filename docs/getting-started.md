@@ -81,16 +81,18 @@ type Post implements WriteEdge
 }
 ```
 
-Once the schema is set up, you can get it up and running using your recently downloaded [pho.phar](https://phonetworks.github.io/pho-cli/pho.phar):
+Once the schema is set up, you should compile it using [pho-cli](https://github.com/phonetworks/pho-cli).  Please note pho-cli depends on a specific patched set of packages.
 
 ```bash
-php pho.phar build your-pgql-source-dir compiled-dir pgql # where pgql is the extension of your graphql files
-php pho.phar init destination-dir compiled-dir
+git clone https://github.com/phonetworks/pho-cli
+cd pho-cli
+composer install
+bin/pho-cli build  your-pgql-source-dir compiled-dir pgql # where pgql is the extension of your graphql files
+bin/pho-cli init destination-dir compiled-dir
 cd destination-dir
-
 ```
 
-Voila, now you can access your graph by entering the desination-dir and setting up the play.php or play-custom.php accordingly.
+Voila, now you can access your graph by entering the destination-dir and setting up the play.php or play-custom.php accordingly.
 
 For more information on schema set up, take a look at https://github.com/pho-recipes
 
