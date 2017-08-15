@@ -65,9 +65,9 @@ header.navbar {
     line-height: 40px;
     margin-left: 20px;
     padding-left: 60px;
-    background-image: url(https://avatars0.githubusercontent.com/u/23718594?v=5&s=50);
+    background-image: url(https://avatars0.githubusercontent.com/u/23718594?v=7&s=60);
     background-repeat: no-repeat;
-    background-size: 50px 50px;
+    background-size: 60px 60px;
     background-position: left center;
 }
 .navbar .navbar-brand small {
@@ -117,4 +117,11 @@ table {
 td, th {
     padding: 5px;
     border: 1px solid;
+}
+
+a.anchor:before {
+    content:"";
+    display:block;
+    height:90px; /* fixed header height*/
+    margin:-90px 0 0; /* negative fixed header height */
 }
