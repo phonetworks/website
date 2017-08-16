@@ -40,7 +40,7 @@
                                         Overview
                                     </a>
                                 </li>
-                                                            <li class="active">
+                                                            <li class="">
                                     <a href="/features.html">
                                         Features
                                     </a>
@@ -60,6 +60,11 @@
                                         Reference
                                     </a>
                                 </li>
+                                                            <li class="active">
+                                    <a href="/reference/libgraph.html">
+                                        -- LibGraph
+                                    </a>
+                                </li>
                                                             <li class="">
                                     <a href="/api/index.html">
                                         API
@@ -71,7 +76,13 @@
 
                 
                 <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-                    <p>This is not empty. Full of lorem ipsum.</p>
+                    <h1 id="architecture">Architecture</h1>
+<p>A graph consists of edges and nodes.  In Pho, the core components edges and nodes are organized as subclasses of <a href="https://github.com/phonetworks/pho-lib-graph/blob/master/src/Pho/Lib/Graph/EntityInterface.php">Entity</a> for the common themes they share (such as an identifier, label etc). <a href="https://github.com/phonetworks/pho-lib-graph/blob/master/src/Pho/Lib/Graph/GraphInterface.php">Graph</a> is positioned completely different, and <a href="https://github.com/phonetworks/pho-lib-graph/blob/master/src/Pho/Lib/Graph/SubGraph.php">SubGraph</a> stands uniquely as a subclass of <a href="https://github.com/phonetworks/pho-lib-graph/blob/master/src/Pho/Lib/Graph/NodeInterface.php">Node</a> that also shows <a href="https://github.com/phonetworks/pho-lib-graph/blob/master/src/Pho/Lib/Graph/ClusterTrait.php">Graph traits</a> at the same time.</p>
+<p><img src="https://github.com/phonetworks/pho-lib-graph/raw/master/.github/lib-graph-components.png" alt="Architecture" title="Pho LibGraph Architecture" /></p>
+<blockquote>
+<p>Graph illustration created with <a href="https://www.yworks.com/products/yed">yEd</a>.</p>
+</blockquote>
+<p>Pho is written in PHP 7. All files in pho-lib-graph (with the single exception of the EdgeList.php) are in strict mode enabled by default.</p>
                 </section>
 
             </div>
@@ -88,6 +99,7 @@
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
         <script src="/js/highlight.min.js"></script>
+        <script src="//my.hellobar.com/08ac4950f258d6bddac2cce5ad68a1cf2c3b281e.js" type="text/javascript" charset="utf-8" async="async"></script>
 
         <script>
             $(function() {
