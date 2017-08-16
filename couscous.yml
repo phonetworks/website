@@ -52,6 +52,9 @@ menu:
         reference:
             text: Reference
             relativeUrl: reference.html
+        reference-libgraph:
+            text: -- LibGraph
+            relativeUrl: reference/libgraph.html
         api:
             text: API
             relativeUrl: api/index.html

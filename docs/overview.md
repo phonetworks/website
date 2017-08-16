@@ -27,6 +27,7 @@ function pick(div, to_bolden) {
         x.setAttribute("data-autoplay", true);
         x.setAttribute("data-speed", 2);
         document.getElementById('d'+div).appendChild(x);
+        first[div] = true;
     }
     document.getElementById('d'+div).style.display="block";
     to_bolden.style.fontWeight="900";
