@@ -81,12 +81,13 @@ type Post implements WriteEdge
 }
 ```
 
-Once the schema is set up, you should compile it using [pho-cli](https://github.com/phonetworks/pho-cli).  Please note pho-cli depends on a specific patched set of packages.
+Once the schema is set up, you should compile it using [pho-cli](https://github.com/phonetworks/pho-cli).  Please note pho-cli depends on a specific patched set of packages. So, the easiest way to get started is to install [git](https://git-scm.com/) and [Vagrant](https://www.vagrantup.com/) (if you don't have them already), and then run the following:
 
 ```bash
 git clone https://github.com/phonetworks/pho-cli
 cd pho-cli
-composer install
+vagrant up
+vagrant ssh
 bin/pho-cli build  your-pgql-source-dir compiled-dir pgql # where pgql is the extension of your graphql files
 bin/pho-cli init destination-dir compiled-dir
 cd destination-dir

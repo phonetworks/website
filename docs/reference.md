@@ -2,13 +2,32 @@
 currentMenu: reference
 ---
 
-## Reference
+# Reference
 
-Phở Kernel is the core of the Phở Networks stack. Written in PHP7, it is a programmable interface, as well as a configuration, events broker for distributed micro social graphs.
+1.  <a href="#r1">Overview</a>
+2. <a href="#r2">Core Concepts</a>
+3. <a href="#r3">Configuration</a>
+4. <a href="#r4">Services & Adapters</a>
+5. <a href="#r5">Kernel Methods</a>
+6. <a href="#r6">Graph </a>
+7. <a href="#r7">Nodes</a>
+8. <a href="#r8">Edges</a>
+9. <a href="#r9">Notifications</a>
+10. <a href="#r10">Signals</a>
+11. <a href="#r11">Hooks</a>
+12. <a href="#r12">Handlers & Injectables</a>
+13. <a href="#r13">ACL (Access-Control Lists)</a>
+14. <a href="#r14">More Resources</a>
+
+---
+
+## <a name="r1" class="anchor">1. Overview</a>
+
+ Written in PHP7, Phở Kernel is a programmable interface, as well as a configuration, events broker for distributed micro social graphs.
 
 Phở Kernel is **not** static, which means you can run multiple kernel instances in a thread, and you can halt and reboot each thread as many times as needed.
 
-Once you install [pho-kernel](https://github.com/phonetworks/pho-kernel), If you have PHP 7.1+ installed on your system, you can play with Phở Kernel right away, by typing ```php -a``` in the ```examples/``` directory of the pho-kernel repository, and including the index.php ```include("index.php")``` Although there are easier ways as well using CLI and you can intera
+Here is a sample bootstrap script for [pho-kernel](https://github.com/phonetworks/pho-kernel):
 
 ```php
 include("vendor/autoload.php");
@@ -27,38 +46,40 @@ array_walk($network->members(), function($key, $item) {
 });
 ```
 
+In a nutshell;
 
-## Installation
+1. Firstly, we form the kernel object by passing a configuration variable that holds all our preferences and server-related settings.
+2. Secondly, we boot it up. Optionally you can pass the founder object as a parameter, which would initialize the kernel (for a single time) with that user as the founder. This may be useful if you have a custom Actor node.
+3. Finally, we start playing with it by calling ```graph()``` and ```founder()``` methods.
 
-! TODO !
+## <a name="r2" class="anchor">2. Core Concepts</a>
 
-## Core Concepts
+Phở Kernel allows you to launch and manage social graphs. Just like any other [graph](https://en.wikipedia.org/wiki/Graph_theory), social graphs are also formed by "nodes" and their relationships identified by "edges".
 
-Pho Kernel is a tool that facilitates your (as a programmer) management of social graphs. Just like any other [graph](https://en.wikipedia.org/wiki/Graph_theory), it is formed by "nodes" and their relationships identified by "edges".
-
-In [social networks](https://en.wikipedia.org/wiki/Social_network), there are three type of entities:
+In Phở's GAO model, a [social network](https://en.wikipedia.org/wiki/Social_network) cconsists of three type of entities:
 
 * Graphs
 * Actors
 * Objects
 
-Each of these nodes can have a particular set of edges. For example, Graphs "contain", so they have the Contain edges.  Actors create and subscribe, so they have Create and Subscribe edges. Objects transmit, so they have Transmit edge.
+![Architecture](https://github.com/phonetworks/pho-lib-graph/raw/master/.github/lib-graph-components.png "Pho LibGraph Architecture")
 
-Both edges and nodes are represented in the database with a universally unique identifier in the form of: "aa406464-8508-49e9-b13a-c38d0a67c157". At Pho-Kernel, we use a cryptographically secure [UUIDv4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_.28random.29) generator to avoid collisions.
+Each of these types have their own particular characteristics which we will discuss in the chapters 5, 6 and 7.
 
-Overall, the picture below illustrates a mini social network, inspired by the movie [Matrix](https://en.wikipedia.org/wiki/The_Matrix) where **nodes** are represented by:
+Both edges and nodes are "entities" and they're represented in the database with a cryptographically secure unique identifier in the form of: "aa406464-8508-49e9-b13a-c38d0a67c157". [UUIDv4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4) uses a random generator to avoid collisions.
+
+The figures below illustrate a mini social network, inspired by the movie [Matrix](https://en.wikipedia.org/wiki/The_Matrix) where **nodes** are represented by:
 
 * Squares => Graph,
 * Triangles => Actor,
 * Circles => Object
 
-and **edges** by arrows. The color of the arrow defines the Edge type;
+and **edges** by arrows.
 
-* Blue => Transmits,
-* Black => Creates,
-* Red => Contains,
-* Green => Subscribes
+This is what the figure looks like with the Actor/Write edges:
+![Matrix movie social network](img/Matrix.png)
 
+And this is what it looks like with the Actor/Subscribe edges:
 ![Matrix movie social network](img/Matrix.png)
 
 This tiny social network consists of:
@@ -71,7 +92,9 @@ This tiny social network consists of:
       * "We must save Morpheus" a blog post by Neo transmitted to the Resistance Hovercraft group after Agent Smith captures Morpheus,
       * and "Kiss me" a private message by Trinity transmitted to Neo before she dies.
 
-## Configuration
+The examples above should give you an idea about how Actor, Graph and Object nodes behave.
+
+## <a name="r3" class="anchor">3. Configuration</a>
 
 The list of all the configuration variables you can play with can be found in pho-microkernel's [defaults.php](https://github.com/phonetworks/pho-microkernel/blob/master/src/Pho/Kernel/defaults.php) file.
 
@@ -104,8 +127,23 @@ array(
 );
 ```
 
+## <a name="r4" class="anchor">4. Services & Adapters</a>
 
-## Kernel Methods
+Kernel services are defined in [pho-microkernel](https://github.com/phonetworks/pho-microkernel). You can access a service by calling ```$kernel->$service_name()``` where $service_name is the name of the service in lowercase. Currently standard services on Pho-Kernel are:
+
+Service Type | Description | Base Adapter   | Distributed Adapter | Cloud Adapter | Implements
+------------ | ----------- | -------------- | ------------------- | ------------- |
+**Database**     | As a proof of truth and to store fundamental graph information. | APCU | Redis | ~~DynamoDB~~ | ...
+**Events**       | To make the kernel more flexible with event-driven programming. | Local | ZeroMQ | ... | ...
+**Index**        | To make search and database query easier and faster. | MySQL | ElasticSearch | ... | ...
+**Logger**       | To log for errors or debug information. | Stdout or File | Scribe | ... | ...
+**Storage**      | To store and retrieve plaintext or binary files such as photos, videos, zip files etc. | Filesystem | OpenStack Swift | AWS S3 | ..
+
+To illustrate, you can access database with; ```$kernel->database()```, and logger with; ```$kernel->logger()```.
+
+## <a name="r5" class="anchor">5. Kernel Methods</a>
+
+### 5.1 boot
 
 Once you create the kernel object, you need to boot it up with:
 
@@ -121,6 +159,8 @@ $kernel->boot($founder);
 
 If this is not the first time the kernel is booted up, the argument will be ignored.
 
+### 5.2 space & graph
+
 Once the kernel is booted up, you can query the outer and inner graphs as follows:
 
 ```
@@ -130,12 +170,7 @@ $graph = $kernel->graph(); // returns the actual graph that all your nodes will 
 
 The outer graph, or "space" is a super-graph that has one and only one element, that is the graph.
 
-To create a node in the graph, you just need to create the object by passing the kernel ($kernel) as its first argument. By default:
-
-*  Actor objects have two constructor variables; $kernel and $context (must implement \Pho\Framework\ContextInterface, for example: $kernel->space() which is the outer graph or $kernel->graph() which is the inner graph)
-* Object and Graph nodes are three constructor variables; $kernel, $context and $creator (which is an Actor object, the creator of this object)
-
-Please note, while this is a valid way to create nodes, it is not advised, unless you're creating Actor nodes. Under normal circumstances, you'll create nodes via formative edges, which we will see later.
+### 5.3 gs
 
 To query a node, you just use the kernel's ```gs()``` method, which is similar to UNIX' filesystem. You must know the ID of the node.
 
@@ -147,29 +182,58 @@ $node = $kernel->gs()->node("aa406464-8508-49e9-b13a-c38d0a67c157");
 
 Similarly, you can retrieve an edge with its ID using ```$kernel->gs()->edge("edge-id")```
 
-## Nodes
+### 5.3 Services
 
-The default Pho Kernel node hierarchy, which is based on the AGO model is as follows:
+You call a service with ```$kernel->$service_name``` where $service_name represents the service keyword in lower case. For more details, see Chapter 4.
 
-&nbsp;
+### 5.4 Creating new nodes
 
-![Node Hierarchy](img/NodeHierarchy.png)
+To create a node in the graph, you just need to create the object by passing the kernel ($kernel) as its first argument. By default:
 
-&nbsp;
+*  Actor objects have a minimum of two constructor arguments; $kernel and $context (must implement \Pho\Framework\ContextInterface, for example: $kernel->space() which is the outer graph or $kernel->graph() which is the inner graph)
+* Object and Graph nodes may be created with at least three constructor arguments; $kernel, $context and $creator (which is an Actor object, the creator of this object). However, please note, graphs and object nodes shall not be created manually. The recommended way to create such nodes is via formative edges, which we will see later.
 
-For more information on the basics of working with nodes and edges, check out:
+## <a name="r6" class="anchor">6. Graph</a>
 
-* [Lib-Graph Documentation](https://github.com/phonetworks/pho-lib-graph/tree/master/docs)
-* [Framework Documentation](https://github.com/phonetworks/pho-framework/tree/master/docs)
+Graph contains objects that implement [NodeInterface](https://github.com/phonetworks/pho-lib-graph/blob/master/src/Pho/Lib/Graph/NodeInterface.php) interface, such as [Node](https://github.com/phonetworks/pho-lib-graph/blob/master/src/Pho/Lib/Graph/Node.php) and [Subgraph](https://github.com/phonetworks/pho-lib-graph/blob/master/src/Pho/Lib/Graph/SubGraph.php), but not [Edge](https://github.com/phonetworks/pho-lib-graph/blob/master/src/Pho/Lib/Graph/Edge.php).
 
 
-Three types of nodes (actors, graphs and objects) can be summarized as follows:
+| Method               | Parameter(s)            | Description                   | Returns                |
+| -------------------- | ----------------------- | ----------------------------- | ---------------------- |
+| id                   |                         | Always returns "." as ID obj. | ID                     |
+| add [\*]             | NodeInterface $node     | Adds a new node               | void                   |
+| count                |                         | Counts the # of member nodes. | int                    |
+| contains             | ID $node_id             | Checks if a node is a member  | bool                   |
+| get                  | ID $node_id             | Fetches a member              | NodeInterface          |
+| remove               | ID $node_id             | Removes a member              | void                   |
+| members              |                         | Lists members in  object form | array\<NodeInterface\> |
+| toArray              |                         | Lists member ref.s in ID form | array\<ID\>            |
+| loadNodesFromArray   | array $nodes            | Array of NodeInteface objects | void                   |
+| loadNodesFromIDArray | array $node_ids         | Array of node IDs in string   | void                   |
 
-#### Graphs
+## <a name="r7" class="anchor">7. Nodes</a>
+
+Nodes(aka Particles) implement the following API:
+
+| Method        | Parameter(s)            | Description                    | Returns              |
+| ------------- | ----------------------- | ------------------------------ | -------------------- |
+| id            |                         | Retrieves its ID               | ID                   |
+| label         |                         | Returns the class name         | string               |
+| isA           | string $class_name      | Validates object class         | bool                 |
+| attributes    |                         | Returns the attributes class   | AttributeBag         |
+| destroy |                         | Readies object for destruction | void                 |
+| toArray       |                         | Lists member ref.s in ID form  | array                |
+| edges         |                       | Retrieves the EdgeList object that interfaces its edges.           | EdgeList       |
+| context       |                       | Retrieves its context                                              | GraphInterface | 
+| inDestruction |                       | Reserved to use by observers to understand the state of the node.  | bool           |        
+
+Nodes (or Particles) have three sub-types:
+
+#### 7.1 Graphs (aka SubGraphs)
 
 Graphs contain other nodes. This is their one and only function. A social network itself is a Graph. We call it the "Network". Another typical type of Graph that most social networks have is Groups. 
 
-#### Actors
+#### 7.2 Actors
 Actors can do three things;
 
 1. Read
@@ -178,25 +242,46 @@ Actors can do three things;
 
 In social network context, social network members are the Actors. To illustrate this, take the example of Facebook. Facebook itself is a Graph. The groups and friend lists on Facebook are also Graphs (micro graphs). And you, as a Facebook member or the pages you own are Actors, because they like (subscribe) and respond (write) objects.
 
-#### Objects
+#### 7.3 Objects
 
 Objects are what social networks are centered around. They are the fundamental units of sharing. A photo or status update can be examples of object. The only edge that originates from Objects is Edge, which does the exact opposite of Subscribe, e.g. sending Notifications.
 
 
-## Services & Adapters
+## <a name="r8" class="anchor">8. Edges</a>
 
-You can use ```Pho\Kernel\Kernel::service($service_id)``` to reach a service. Currently standard services on Pho-Kernel are:
+An [Edge](https://github.com/phonetworks/pho-lib-graph/blob/master/src/Pho/Lib/Graph/Edge.php) (aka lines or arcs in graph theory) are used to represent the relationships between Nodes of a Graph. Therefore it is a fundamental unit graphs.
 
-Service Type | Description | Base Adapter   | Distributed Adapter | Cloud Adapter | Implements
------------- | ----------- | -------------- | ------------------- | ------------- |
-**Database**     | As a proof of truth and to store fundamental graph information. | APCU | Redis | ~~DynamoDB~~ | ...
-**Events**       | To make the kernel more flexible with event-driven programming. | Local | ZeroMQ | ... | ...
-**Index**        | To make search and database query easier and faster. | MySQL | ElasticSearch | ... | ...
-**Logger**       | To log for errors or debug information. | Stdout or File | Scribe | ... | ...
-**Storage**      | To store and retrieve plaintext or binary files such as photos, videos, zip files etc. | Filesystem | OpenStack Swift | AWS S3 | ..
+| Method       | Parameter(s)        | Description                                              | Returns            |
+| ------------ | ------------------- | -------------------------------------------------------- | ------------------ |
+| id            |                         | Retrieves its ID               | ID                   |
+| label         |                         | Returns the class name         | string               |
+| isA           | string $class_name      | Validates object class         | bool                 |
+| attributes    |                         | Returns the attributes class   | AttributeBag         |
+| destroy |                         | Readies object for destruction | void                 |
+| toArray       |                         | Lists member ref.s in ID form  | array                |
+| tail         |                     | Retrieves the tail node of the edge.                     | TailNode [\*]      |
+| tailID       |                     | Retrieves the tail node's ID.                            | ID                 |
+| head         |                     | Retrieves the head node of the edge.                     | HeadNode [\*]      |
+| headID       |                     | Retrieves the head node's ID                             | ID                 |
+| predicate    |                     | Retrieves the predicate                                  | PredicateInterface |
+| connect      | NodeInterface $head | Connects the edge to a head node.                        | void               |
+| orphan       |                     | Checks if the edge fails to possess a tail or a head     | bool               |
 
+## <a name="r9" class="anchor">9. Notifications</a>
 
-## Working with Events
+Notifications are the messages passed between notifiers and objects, or 
+subscribers and their subscriptions. Notifications constitute a basic component
+of all social-enabled apps.
+
+For more information, take a look at 
+* [AbstractNotification.php](https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/AbstractNotification.php) class.
+* and [ObjectOut/MentionNotification.php](https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/ObjectOut/MentionNotification.php) class.
+
+to see how notifications works.
+
+Notifications are called by the ```execute()``` method of the edges. Example: [ObjectOut/Mention.php](https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/ObjectOut/Mention.php) and [ActorOut/Write.php](https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/ActorOut/Write.php)
+
+## <a name="r10" class="anchor">10. Signals</a>
 
 One of the best features of the Pho Kernel is that it is event-driven. Anytime a new node or edge is created, deleted, edited, a signal is emitted. If set, a listener object (a [Callable](http://php.net/manual/en/language.types.callable.php)) can process the signal in real-time.
 
@@ -233,8 +318,88 @@ $node->on("modified", function() use ($node) {
 });
 ```
 
+## <a name="r11" class="anchor">11. Hooks</a>
 
-## ACL (Access Control Lists)
+Hooks allow developers to intercept certain functions that may benefit from hydration at higher-levels. Hydration takes place with persistent objects which, once deserialized, may lose some of their object associations. 
+
+To illustrate, when you persist a node object, its EdgeList object may turn into an array rather than a full-blown object, which would be hard and expensive to store. Then, in order to retrieve the edge list, you can use the IDs and tap into your database in separate calls, which would enhance the performance of your app. Lib-Graph's hooks come into play in such scenarios, because you can intercept these getter methods and inject value by leveraging the information stored in your database.
+
+You can use hooks as follows:
+
+```php
+$node->hook("get", function($id) use ($existing_node) {
+   return $existing_node;
+});
+```
+
+where 
+
+1. The first argument is the hook key, in string format.
+2. The second argument is a PHP closure (you can pass it as a variable too).
+
+Below you can see a full list of entities that support hooks and their keys.
+
+#### Graph and SubGraph:
+
+* **get(ID $node_id)**: called when ```get(ID $node_id)``` can't find the object in ```$nodes```. Enables you to access ```$node_ids``` to fetch the object from external sources. The return value is **NodeInterface**.
+* **members**: called when ```members()``` can't find any objects in ```$nodes```. Enables you to access ```$node_ids``` to fetch the objects from external sources. The return value is **array** (of NodeInterface objects).
+
+#### Edge:
+
+* **head**: called when ```head()``` can't find the head node. Enables you to access ```$head_id``` to fetch it from external sources. The return value is **NodeInterface**.
+* **tail**: called when ```tail()``` can't find the tail node. Enables you to access ```$tail_id``` to fetch it from external sources. The return value is **NodeInterface**.
+* **predicate**: called when ```predicate()``` can't find the predicate object. Enables you to access ```$predicate_label``` to recreate it or fetch from external sources. The return value is **PredicateInterface**.
+
+#### Node and SubGraph:
+
+* **context**: called when ```context()``` can't find the context. Enables you to access ```$context_id``` to fetch it from external sources. The return value is **GraphInterface**.
+* **edge(string $edge_id)**: called to retrieve an edge object from external sources. The return value must be an **EdgeInterface**
+* **creator()**: called when ```creator()``` can't find the creator. Enables you to access ```$creator_id``` to fetch it from external sources. This can be used with any particle; be it an Actor, Object or Graph. The return value is **Actor**.
+
+#### Notifications:
+
+* **edge()**: called when ```edge()``` (in NotificationList.php) can't find the edge. Enables you to access ```$edge_id``` to fetch it from external sources. The return value is **\Pho\Lib\Graph\EdgeInterface**.
+
+## <a name="r12" class="anchor">12. Handlers and Injectables</a>
+
+#### Handlers 
+
+Handlers are virtual methods in use by particles. Virtual methods are created to handle setters and getters in respect to edges and fields. There are four (4) types of handlers:
+
+* **Get**: to retrieve an edge. [Default implementation](https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/Handlers/Get.php).
+* **Set**: to create an edge. [Default implementation](https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/Handlers/Set.php).
+* **Form**: not only to create an edge, but also its head node. [Default implementation](https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/Handlers/Form.php).
+* **Has**: to check if such an edge does exist. [Default implementation](https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/Handlers/Has.php).
+
+These adapters can be replaced, or more can be added using handler adapters via ```registerHandlerAdapter(string $handler_key, string $handler_class)``` function. For example:
+
+```php
+$this->registerHandler(
+            "form",
+            \Pho\Kernel\Foundation\Handlers\Form::class);
+```
+
+#### Injectables
+
+Objects that implement the [InjectableInterface](https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/InjectableInterface.php) and use the [InjectableTrait](https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/InjectableTrait.php) are easily extensible, with a plug-in variable architecture.
+
+In order to inject a variable to an injectable object, just use
+
+```php
+$obj->inject("key", $booster);
+```
+
+Then, the ```$obj``` will be able to use the ```$booster``` object internally via:
+
+```php
+$this->injection("key");
+```
+
+The use Injectable is discouraged, as it may represent security holes if not used properly. But you can use it when you must. Currently the only class that implements it by default is [AbstractEdge](https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/AbstractEdge.php).
+
+
+
+## <a name="r13" class="anchor">13. ACL (Access Control Lists)</a>
 
 Acl stands for "access-control-lists". Pho handles access to nodes and graphs similarly to how UNIX handles access to files and folders, hence the name.
 
@@ -294,6 +459,10 @@ The permissions table is as follows;
 | Object    | Manage reactions | Read               | Edit           | Subscribe/*react*
 | Graph     | Moderate/profile | Read contents      | Post content   | Subscribe
 
-## Reference
+## <a name="r14" class="anchor">More resources</a>
 
-For a full list of Phở Kernel classes and methods, refer to our [PHPDocumentor auto-generated reference](http://phonetworks.org/api/index.html).
+For a full list of Phở Kernel classes and methods, refer to:
+
+1. [PHPDocumentor auto-generated reference](http://phonetworks.org/api/index.html).
+2. [Pho-Lib-Graph docs](https://github.com/phonetworks/pho-lib-graph/tree/master/docs)
+3. [Pho-Framework docs](https://github.com/phonetworks/pho-framework/tree/master/docs)
