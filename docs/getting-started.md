@@ -88,8 +88,10 @@ git clone https://github.com/phonetworks/pho-cli
 cd pho-cli
 vagrant up
 vagrant ssh
-bin/pho-cli build  your-pgql-source-dir compiled-dir pgql # where pgql is the extension of your graphql files
-bin/pho-cli init destination-dir compiled-dir
+# now we're in the Vagrant box
+cd /opt/pho-cli
+bin/pho.php build  your-pgql-source-dir compiled-dir pgql # where pgql is the extension of your graphql files
+bin/pho.php init destination-dir compiled-dir
 cd destination-dir
 ```
 

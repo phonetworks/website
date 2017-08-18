@@ -32,9 +32,10 @@ if(!file_exists($work_dir))
 
 @mkdir($res_dir);
 chdir($work_dir);
+chmod($work_dir, 0777);
 
 if(!file_exists("pho-lib-graph"))
-    exec("git clone http://github.com/phonetworks/pho-lib-graph");
+    `git clone https://github.com/phonetworks/pho-lib-graph`;
 else {
     chdir("pho-lib-graph");
     exec("git pull");
@@ -42,7 +43,7 @@ else {
 }
 
 if(!file_exists("pho-framework"))
-    exec("git clone http://github.com/phonetworks/pho-framework");
+    `git clone https://github.com/phonetworks/pho-framework`;
 else {
     chdir("pho-framework");
     exec("git pull");
