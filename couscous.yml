@@ -13,16 +13,11 @@ exclude:
     - %gitignore%
 
 scripts:
-    # Scripts to execute before generating the website
     after:
         - php apigen.php
-
-    # Scripts to execute after generating the website
     #before:
         #- rm website/couscous.phar
 
-# Set this variable to use a Custom Domain
-# The content of this variable will be directly inserted into the CNAME file
 cname: phonetworks.org
 
 # Set the target branch in which to deploy the generated website
@@ -55,7 +50,3 @@ menu:
         api:
             text: API
             relativeUrl: api/index.html
-
-# Base URL of the published website (no "/" at the end!)
-# You are advised to set and use this variable to write your links in the HTML layouts
-#baseUrl: http://username.github.io/your-project
