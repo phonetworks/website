@@ -81,11 +81,10 @@ type Post implements WriteEdge
 }
 ```
 
-Once the schema is set up, you should compile it using [pho-cli](https://github.com/phonetworks/pho-cli).  Please note pho-cli depends on a specific patched set of packages. So, the easiest way to get started is to install [git](https://git-scm.com/) and [Vagrant](https://www.vagrantup.com/) (if you don't have them already), and then run the following:
+Once the schema is set up, you should compile it using [pho-cli](https://github.com/phonetworks/pho-cli).  Please note pho-cli depends on a specific patched set of packages. So, the easiest way to get started is to install [Vagrant](https://www.vagrantup.com/), and then run the following:
 
 ```bash
-git clone https://github.com/phonetworks/pho-cli
-cd pho-cli
+vagrant init phonetworks/xenial-php71-pho
 vagrant up
 vagrant ssh
 # now we're in the Vagrant box
