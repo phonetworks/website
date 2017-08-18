@@ -132,9 +132,8 @@ type Post implements WriteEdge
     id: ID,
     status: String @constraints(maxLength: 140)
 }</code></pre>
-<p>Once the schema is set up, you should compile it using <a href="https://github.com/phonetworks/pho-cli">pho-cli</a>.  Please note pho-cli depends on a specific patched set of packages. So, the easiest way to get started is to install <a href="https://git-scm.com/">git</a> and <a href="https://www.vagrantup.com/">Vagrant</a> (if you don't have them already), and then run the following:</p>
-<pre><code class="language-bash">git clone https://github.com/phonetworks/pho-cli
-cd pho-cli
+<p>Once the schema is set up, you should compile it using <a href="https://github.com/phonetworks/pho-cli">pho-cli</a>.  Please note pho-cli depends on a specific patched set of packages. So, the easiest way to get started is to install <a href="https://www.vagrantup.com/">Vagrant</a>, and then run the following:</p>
+<pre><code class="language-bash">vagrant init phonetworks/xenial-php71-pho
 vagrant up
 vagrant ssh
 # now we're in the Vagrant box
