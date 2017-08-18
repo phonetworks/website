@@ -20,12 +20,12 @@ In addition, there are several repositories that help the aforementioned ones:
 
 Github                                                                         | Description        
 ------------------------------------------------------------------------------ | -------------------------------------
-[pho-lib-graphql-parser](http://github.com/phonetworks/pho-lib-graphql-parser) | General purpose GraphQL schema parser.
-[pho-compiler](http://github.com/phonetworks/pho-compiler)                     | Used by pho-cli, the compiler helps compile the GraphQL files into PHP interpretables.
+[pho-lib-graphql-parser](http://github.com/phonetworks/pho-lib-graphql-parser) | General purpose GraphQL schema parser. Used by pho-compiler.
+[pho-compiler](http://github.com/phonetworks/pho-compiler)                     | Compiles the GraphQL files into PHP interpretables. Used by pho-cli.
 
 
 ### Others
 
 Pho-microkernel service adapters can be found at [https://github.com/pho-adapters](https://github.com/pho-adapters)
 
-Last but not least, a number of sample GraphQL implementations can be found under [Pho Recipes](https://github.com/pho-recipes)
+Last but not least, a number of sample GraphQL implementations can be found under [https://github.com/phonetworks/pho-kernel](https://github.com/pho-recipes)
