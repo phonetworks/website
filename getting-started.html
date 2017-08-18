@@ -61,11 +61,6 @@
                                     </a>
                                 </li>
                                                             <li class="">
-                                    <a href="/reference/libgraph.html">
-                                        -- LibGraph
-                                    </a>
-                                </li>
-                                                            <li class="">
                                     <a href="/api/index.html">
                                         API
                                     </a>
@@ -137,12 +132,15 @@ type Post implements WriteEdge
     id: ID,
     status: String @constraints(maxLength: 140)
 }</code></pre>
-<p>Once the schema is set up, you should compile it using <a href="https://github.com/phonetworks/pho-cli">pho-cli</a>.  Please note pho-cli depends on a specific patched set of packages.</p>
+<p>Once the schema is set up, you should compile it using <a href="https://github.com/phonetworks/pho-cli">pho-cli</a>.  Please note pho-cli depends on a specific patched set of packages. So, the easiest way to get started is to install <a href="https://git-scm.com/">git</a> and <a href="https://www.vagrantup.com/">Vagrant</a> (if you don't have them already), and then run the following:</p>
 <pre><code class="language-bash">git clone https://github.com/phonetworks/pho-cli
 cd pho-cli
-composer install
-bin/pho-cli build  your-pgql-source-dir compiled-dir pgql # where pgql is the extension of your graphql files
-bin/pho-cli init destination-dir compiled-dir
+vagrant up
+vagrant ssh
+# now we're in the Vagrant box
+cd /opt/pho-cli
+bin/pho.php build  your-pgql-source-dir compiled-dir pgql # where pgql is the extension of your graphql files
+bin/pho.php init destination-dir compiled-dir
 cd destination-dir</code></pre>
 <p>Voila, now you can access your graph by entering the destination-dir and setting up the play.php or play-custom.php accordingly.</p>
 <p>For more information on schema set up, take a look at <a href="https://github.com/pho-recipes">https://github.com/pho-recipes</a></p>
