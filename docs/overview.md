@@ -91,7 +91,7 @@ While designing Phở Networks, our aim was to build a truly infinitely scalable
 
 At Phở, our default choice of stable keeper of truth has been Redis. Although this and all of our choices can be adapted to your platform of choice using custom adapters. For indexing, we use ElasticSearch. For event-driven messaging, we use ZeroMQ. The platform itself is therefore clusterable to an endless number of machines using round-robin DNS and high-availability solutions that continuously listen for service heartbeats.
 
-While this is too many open source technologies to digest, we've made it easy for you to get started via Vagrant and docker images. Also our automated cloud installer will get you up and running on best cloud platforms such as AWS, heroku instantly.
+While this is too many open source technologies to digest, we've made it easy for you to get started via Vagrant and docker images.
 
 ## Theory 🤓
 
