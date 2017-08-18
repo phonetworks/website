@@ -68,7 +68,7 @@ Social-enabled apps consist of graphs, and graphs are by definition difficult to
 
 Built with portability and scale-out in mind, Phở Networks apps can run on web, desktop, mobile, IoT (internet of things) & embedded platforms, and serve just a handful number of users or billions using open source software and commodity hardware.
 
-## Use Cases
+## Use Cases 🤔
 
 What is a social-enabled app? Here are some examples:
 
@@ -108,7 +108,7 @@ Phở introduces GAO to model social graphs. Nodes and Edges are atomic entities
 Phở Networks allows you to extend you these abstract entities with your own, and create your very own innovative macro social network, or use one of our existing [recipes](https://github.com/pho-recipes) to replicate well-known solutions for your own domain-specific community needs.
 
 
-## License
+## License 💩
 
 MIT, see [LICENSE](https://github.com/phonetworks/pho-framework/blob/master/LICENSE)
 
