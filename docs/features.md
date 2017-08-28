@@ -59,4 +59,4 @@ The technologies in use by Phở Networks have been field-tested by social netwo
 
 Last but not least, Phở Networks’ event-based design allows you to plug your custom functionality into any part of the system via hooks and signals. Besides, Phở is open source. Which means, you can view and modify the source code too. 
 
-Phở Networks has taken its strength from Linux’ playbook, hence the stack is not monolithic. Its architecture is based off of microkernel principles which makes each part of the stack stand on its own repository, decoupled from services. This approach makes the Phở Networks source code easier to grasp and play with for programmers.
+Phở Networks stack is not monolithic. Its architecture is based off of microkernel principles which makes each part of the stack stand on its own repository, decoupled from services. This approach makes the Phở Networks source code easier to grasp and play with for programmers.
