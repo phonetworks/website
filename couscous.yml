@@ -47,6 +47,9 @@ menu:
         reference:
             text: Reference
             relativeUrl: reference.html
+        restapi:
+            text: REST API
+            relativeUrl: assets/restapi.html
         #api:
          #   text: API
           #  relativeUrl: api/index.html
