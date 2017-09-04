@@ -46,11 +46,6 @@
                                     </a>
                                 </li>
                                                             <li class="">
-                                    <a href="/projects.html">
-                                        Projects
-                                    </a>
-                                </li>
-                                                            <li class="">
                                     <a href="/getting-started.html">
                                         Getting Started
                                     </a>
@@ -61,8 +56,18 @@
                                     </a>
                                 </li>
                                                             <li class="">
-                                    <a href="/api/index.html">
-                                        API
+                                    <a href="https://github.com/pho-clients">
+                                        Clients
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="https://github.com/pho-recipes">
+                                        Recipes
+                                    </a>
+                                </li>
+                                                            <li class="">
+                                    <a href="/more.html">
+                                        More...
                                     </a>
                                 </li>
                                                     </ul>
@@ -81,12 +86,14 @@
 <li><a href="#r6">Graph </a></li>
 <li><a href="#r7">Nodes</a></li>
 <li><a href="#r8">Edges</a></li>
-<li><a href="#r9">Notifications</a></li>
-<li><a href="#r10">Signals</a></li>
-<li><a href="#r11">Hooks</a></li>
-<li><a href="#r12">Handlers &amp; Injectables</a></li>
-<li><a href="#r13">ACL (Access-Control Lists)</a></li>
-<li><a href="#r14">More Resources</a></li>
+<li><a href="#r9">IDs</a></li>
+<li><a href="#r10">Notifications</a></li>
+<li><a href="#r11">Signals</a></li>
+<li><a href="#r12">Hooks</a></li>
+<li><a href="#r13">Handlers &amp; Injectables</a></li>
+<li><a href="#r14">ACL (Access-Control Lists)</a></li>
+<li><a href="#r15">Project Directory</a></li>
+<li><a href="#r16">More Resources...</a></li>
 </ol>
 <hr />
 <h2><a name="r1" class="anchor">1. Overview</a></h2>
@@ -123,7 +130,7 @@ array_walk($network-&gt;members(), function($key, $item) {
 </ul>
 <p><img src="https://github.com/phonetworks/pho-lib-graph/raw/master/.github/lib-graph-components.png" alt="Architecture" title="Pho LibGraph Architecture" /></p>
 <p>Each of these types have their own particular characteristics which we will discuss in the chapters 5, 6 and 7.</p>
-<p>Both edges and nodes are &quot;entities&quot; and they're represented in the database with a cryptographically secure unique identifier in the form of: &quot;aa406464-8508-49e9-b13a-c38d0a67c157&quot;. <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4">UUIDv4</a> uses a random generator to avoid collisions.</p>
+<p>Both edges and nodes are &quot;entities&quot; and they're represented in the database with a cryptographically secure unique identifier in the form of: &quot;4a406464850849e9b13ac38d0a67c157&quot;. For more information on Pho IDs, check out <a href="#r9">section 9</a>.</p>
 <p>The figures below illustrate a mini social network, inspired by the movie <a href="https://en.wikipedia.org/wiki/The_Matrix">Matrix</a> where <strong>nodes</strong> are represented by:</p>
 <ul>
 <li>Squares =&gt; Graph,</li>
@@ -151,13 +158,14 @@ array_walk($network-&gt;members(), function($key, $item) {
 <h2><a name="r3" class="anchor">3. Configuration</a></h2>
 <p>The list of all the configuration variables you can play with can be found in pho-microkernel's <a href="https://github.com/phonetworks/pho-microkernel/blob/master/src/Pho/Kernel/defaults.php">defaults.php</a> file.</p>
 <pre><code class="language-php">array(
-      "services" =&gt; array( // Services: type defines the adapter to use, and uri the service options.
-          "database" =&gt; "apcu:", // ["type"=&gt;"apcu", "uri"=&gt; "" ],
-          "logger" =&gt; "stdout:", // ["type"=&gt;"stdout", "uri"=&gt; "" ],
-          "storage" =&gt; "filesystem:", // ["type"=&gt;"filesystem", "uri"=&gt; "" ],
-          "events" =&gt; "local:", // ["type"=&gt;"local", "uri"=&gt; "" ]
+      "services" =&gt; array( 
+          // The adapter to use, and uri the service options.
+          "database" =&gt; "apcu:", 
+          "logger" =&gt; "stdout:", 
+          "storage" =&gt; "filesystem:", 
+          "events" =&gt; "local:", 
       ),
-      "tmp_path" =&gt; sys_get_temp_dir(), // Temporary folder to store files. For example uploaded files may go there.
+      "tmp_path" =&gt; sys_get_temp_dir(), // Tmp folder to store files (e.g. uploads)
       "root_path" =&gt; __DIR__,
       "adapter_path" =&gt; __DIR__ . DIRECTORY_SEPARATOR ." Services" . DIRECTORY_SEPARATOR . "Adapters",
       "namespaces" =&gt; array(
@@ -173,6 +181,7 @@ array_walk($network-&gt;members(), function($key, $item) {
         "graph" =&gt; Standards\Graph::class,
         "founder" =&gt; Standards\Founder::class,
         "space" =&gt; Standards\Space::class,
+        // "actor" =&gt; ... // not set here.
         "editors" =&gt; Standards\VirtualGraph::class
       )
 );</code></pre>
@@ -505,7 +514,33 @@ $graph = $kernel-&gt;graph(); // returns the actual graph that all your nodes wi
 </tr>
 </tbody>
 </table>
-<h2><a name="r9" class="anchor">9. Notifications</a></h2>
+<h2><a name="r9" class="anchor">9. IDs</a></h2>
+<p>Pho IDs are immutable and come in the format of cryptographically secure,
+similarly to <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUIDv4</a>,
+though not the same.</p>
+<p>Pho IDs are used to define all graph entities, e.g nodes and edges. It is 16 bytes (128 bits) long similar to UUID, but the first 8 bits are reserved to determine entity type, while the UUID variants are omitted. Hence, Pho ID provides 15 bytes and 8 bits of randomness.</p>
+<p>The Graph ID defaults to nil (00000000000000000000000000000000), or 32 chars of 0. It may may be called with <code>ID::root()</code></p>
+<p>Even at scale of billions of nodes and edges, the chances of collision
+is identical to zero.</p>
+<p>You can generate a new ID with <code>$id_object = ID::generate($entity)</code>,
+where $entity is any Pho entity, and fetch its  string representation with
+PHP type-casting; <code>(string) $id_object</code>.</p>
+<p>Entity headers will be as follows:</p>
+<ul>
+<li>0: Graph</li>
+<li>1: Unidentified Node</li>
+<li>2: SubGraph Node</li>
+<li>3: Framework\Graph Node</li>
+<li>4: Actor Node</li>
+<li>5: Object Node</li>
+<li>6: Unidentified Edge</li>
+<li>7: Read Edge</li>
+<li>8: Write Edge</li>
+<li>9: Subscribe Edge</li>
+<li>10: Mention Edge</li>
+<li>11: Unidentified</li>
+</ul>
+<h2><a name="r10" class="anchor">10. Notifications</a></h2>
 <p>Notifications are the messages passed between notifiers and objects, or
 subscribers and their subscriptions. Notifications constitute a basic component
 of all social-enabled apps.</p>
@@ -516,7 +551,7 @@ of all social-enabled apps.</p>
 </ul>
 <p>to see how notifications works.</p>
 <p>Notifications are called by the <code>execute()</code> method of the edges. Example: <a href="https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/ObjectOut/Mention.php">ObjectOut/Mention.php</a> and <a href="https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/ActorOut/Write.php">ActorOut/Write.php</a></p>
-<h2><a name="r10" class="anchor">10. Signals</a></h2>
+<h2><a name="r11" class="anchor">11. Signals</a></h2>
 <p>One of the best features of the Pho Kernel is that it is event-driven. Anytime a new node or edge is created, deleted, edited, a signal is emitted. If set, a listener object (a <a href="http://php.net/manual/en/language.types.callable.php">Callable</a>) can process the signal in real-time.</p>
 <p>Available events are:</p>
 <h4 id="graph">Graph</h4>
@@ -549,7 +584,7 @@ of all social-enabled apps.</p>
 <pre><code class="language-php">$node-&gt;on("modified", function() use ($node) {
     $node-&gt;persist();
 });</code></pre>
-<h2><a name="r11" class="anchor">11. Hooks</a></h2>
+<h2><a name="r12" class="anchor">12. Hooks</a></h2>
 <p>Hooks allow developers to intercept certain functions that may benefit from hydration at higher-levels. Hydration takes place with persistent objects which, once deserialized, may lose some of their object associations. </p>
 <p>To illustrate, when you persist a node object, its EdgeList object may turn into an array rather than a full-blown object, which would be hard and expensive to store. Then, in order to retrieve the edge list, you can use the IDs and tap into your database in separate calls, which would enhance the performance of your app. Lib-Graph's hooks come into play in such scenarios, because you can intercept these getter methods and inject value by leveraging the information stored in your database.</p>
 <p>You can use hooks as follows:</p>
@@ -583,7 +618,7 @@ of all social-enabled apps.</p>
 <ul>
 <li><strong>edge()</strong>: called when <code>edge()</code> (in NotificationList.php) can't find the edge. Enables you to access <code>$edge_id</code> to fetch it from external sources. The return value is <strong>\Pho\Lib\Graph\EdgeInterface</strong>.</li>
 </ul>
-<h2><a name="r12" class="anchor">12. Handlers and Injectables</a></h2>
+<h2><a name="r13" class="anchor">13. Handlers and Injectables</a></h2>
 <h4 id="handlers">Handlers</h4>
 <p>Handlers are virtual methods in use by particles. Virtual methods are created to handle setters and getters in respect to edges and fields. There are four (4) types of handlers:</p>
 <ul>
@@ -603,7 +638,7 @@ of all social-enabled apps.</p>
 <p>Then, the <code>$obj</code> will be able to use the <code>$booster</code> object internally via:</p>
 <pre><code class="language-php">$this-&gt;injection("key");</code></pre>
 <p>The use Injectable is discouraged, as it may represent security holes if not used properly. But you can use it when you must. Currently the only class that implements it by default is <a href="https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/AbstractEdge.php">AbstractEdge</a>.</p>
-<h2><a name="r13" class="anchor">13. ACL (Access Control Lists)</a></h2>
+<h2><a name="r14" class="anchor">14. ACL (Access Control Lists)</a></h2>
 <p>Acl stands for &quot;access-control-lists&quot;. Pho handles access to nodes and graphs similarly to how UNIX handles access to files and folders, hence the name.</p>
 <p>With Pho:</p>
 <ul>
@@ -681,7 +716,63 @@ of all social-enabled apps.</p>
 </tr>
 </tbody>
 </table>
-<h2><a name="r14" class="anchor">More resources</a></h2>
+<h2><a name="r15" class="anchor">15. Project Directory</a></h2>
+<p>Pho is designed in microservices architecture. This is a directory of Pho stack projects; it starts with foundational packages and goes up to the user-level.</p>
+<table>
+<thead>
+<tr>
+<th>Github</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://github.com/phonetworks/pho-lib-graph">pho-lib-graph</a></td>
+<td>General purpose graph library.</td>
+</tr>
+<tr>
+<td><a href="http://github.com/phonetworks/pho-framework">pho-framework</a></td>
+<td>A stateless framework that establishes the core principles of the Pho stack.</td>
+</tr>
+<tr>
+<td><a href="http://github.com/phonetworks/pho-microkernel">pho-microkernel</a></td>
+<td>Augments the framework with services and ACL (access-control-lists), rendering it stateful.</td>
+</tr>
+<tr>
+<td><a href="http://github.com/phonetworks/pho-kernel">pho-kernel</a></td>
+<td>A basic implementation of the pho-microkernel</td>
+</tr>
+<tr>
+<td><a href="http://github.com/phonetworks/pho-cli">pho-cli</a></td>
+<td>Command-line interface to help compile graphql files and initialize projects.</td>
+</tr>
+<tr>
+<td><a href="http://github.com/phonetworks/pho-server-rest">pho-server-rest</a></td>
+<td>REST APIs that can interface with any programming language or via HTTP.</td>
+</tr>
+</tbody>
+</table>
+<p>In addition, there are several repositories that help the aforementioned ones:</p>
+<table>
+<thead>
+<tr>
+<th>Github</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://github.com/phonetworks/pho-lib-graphql-parser">pho-lib-graphql-parser</a></td>
+<td>General purpose GraphQL schema parser. Used by pho-compiler.</td>
+</tr>
+<tr>
+<td><a href="http://github.com/phonetworks/pho-compiler">pho-compiler</a></td>
+<td>Compiles the GraphQL files into PHP interpretables. Used by pho-cli.</td>
+</tr>
+</tbody>
+</table>
+<p>Last but not least, the REST API language-bindings can be found at <a href="https://github.com/pho-clients"><a href="https://github.com/pho-clients">https://github.com/pho-clients</a></a>. Pho-microkernel service adapters can be found at <a href="https://github.com/pho-adapters"><a href="https://github.com/pho-adapters">https://github.com/pho-adapters</a></a>. Plus, a number of sample GraphQL implementations can be found under <a href="https://github.com/pho-recipes"><a href="https://github.com/phonetworks/pho-recipes">https://github.com/phonetworks/pho-recipes</a></a></p>
+<h2><a name="r16" class="anchor">16. More resources...</a></h2>
 <p>For a full list of Phở Kernel classes and methods, refer to:</p>
 <ol>
 <li><a href="http://phonetworks.org/api/index.html">PHPDocumentor auto-generated reference</a>.</li>

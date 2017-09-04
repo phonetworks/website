@@ -45,7 +45,7 @@
                                         Features
                                     </a>
                                 </li>
-                                                            <li class="active">
+                                                            <li class="">
                                     <a href="/getting-started.html">
                                         Getting Started
                                     </a>
@@ -65,7 +65,7 @@
                                         Recipes
                                     </a>
                                 </li>
-                                                            <li class="">
+                                                            <li class="active">
                                     <a href="/more.html">
                                         More...
                                     </a>
@@ -76,79 +76,24 @@
 
                 
                 <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-                    <h2 id="getting-started">Getting Started</h2>
-<p>Phở enables you to write lightning-fast social apps in GraphQL. </p>
-<p>Once you set up the schema, Phở generates the API interfaces for you to code poetically as follows:</p>
-<pre><code class="language-php">&lt;?php
-require "vendor/autoload.php";
-$kernel = new \Pho\Kernel\Kernel(/* $configs */);
-$kernel-&gt;boot();
-$user = new User($kernel, $kernel-&gt;graph(), "secret_password");
-$tweet = $user-&gt;post("My first tweet");
-$another_user = new User($kernel, $kernel-&gt;graph(), "this_is_not_123456");
-$user-&gt;follow($another_user);
-print_r($another_user-&gt;getFollowers());
-$another_user-&gt;message($user, "Thanks for following me");</code></pre>
-<h3 id="requirements">Requirements</h3>
-<ul>
-<li><a href="http://php.net">PHP 7.1+</a></li>
-<li><a href="http://getcomposer.org">Composer</a></li>
-<li><a href="http://redis.io">Redis</a></li>
-</ul>
-<p>If you have all these requirements already installed and set up, then you can go ahead and install <a href="https://github.com/phonetworks/pho-cli">pho-cli</a>, the command line interface to the Pho stack, which lets you compile GraphQL schema.</p>
-<p>The easiest way to install it is to download the phar file from <a href="https://phonetworks.github.io/pho-cli/pho.phar"><a href="https://phonetworks.github.io/pho-cli/pho.phar">https://phonetworks.github.io/pho-cli/pho.phar</a></a>.</p>
-<h3 id="the-power-of-graphql">The power of GraphQL</h3>
-<p>Recreating Twitter is as easy as setting up the right schema. </p>
-<p>The graph based architecture of Phở feels natural to the fabric of social apps. We define Twitter with:</p>
-<ul>
-<li>One graph; Twitter </li>
-<li>Two nodes; User (an Actor) and Tweet (an Object)</li>
-<li>Five edges; Follow (a Subcribe edge), Post (a formative Write edge), Like (a Subscribe edge), Mention (a Mention edge), Message (a multiplicable Mention edge), and Consume (a Read edge)</li>
-</ul>
-<p>Let's begin with the nodes:</p>
-<pre><code class="language-graphql"># pho-graphql-v1
-
-type User implements ActorNode 
-@edges(in:"User:Follow, Status:Mention", out:"Post, Like, Follow")
-@permissions(mod: "0x0e554", mask: "0xeeeee") 
-@properties(editable: false, volatile: false, revisionable: false)
-{
-    id: ID,
-    birthday: Date,
-    about: String,
-    password: String
-}
-
-type Status implements ObjectNode 
-@edges(in:"User:Post, User:Like", out:"Mention")
-@permissions(mod: "0x0e444", mask: "0xeeeee") 
-@properties(expires: 0, editable: false, volatile: false, revisionable: false)
-{
-    id: ID,
-    status: String @constraints(maxLength: 140)
-}</code></pre>
-<p>Next, we define the edges which we already stated where they may originate from with the @edges(in) directives aboves, and where they may be headed to with the @edges(out) directives.</p>
-<pre><code class="language-graphql"># The Post edge created the Status nodes. So its property is set to be "formative"
-type Post implements WriteEdge 
-@nodes(head:"Status", tail:"User")
-@properties(binding: true, persistent: true, consumer: true, formative: true)
-@labels(headSingular:"post", headPlural: "posts", tailSingular: "author", tailPlural: "authors")
-{
-    id: ID,
-    status: String @constraints(maxLength: 140)
-}</code></pre>
-<p>Once the schema is set up, you should compile it using <a href="https://github.com/phonetworks/pho-cli">pho-cli</a>.  Please note pho-cli depends on a specific patched set of packages. So, the easiest way to get started is to install <a href="https://www.vagrantup.com/">Vagrant</a>, and then run the following:</p>
-<pre><code class="language-bash">vagrant init phonetworks/xenial-php71-pho
-vagrant up
-vagrant ssh
-# now we're in the Vagrant box
-cd /opt/pho-cli
-bin/pho.php build  your-pgql-source-dir compiled-dir pgql # where pgql is the extension of your graphql files
-bin/pho.php init destination-dir compiled-dir
-cd destination-dir</code></pre>
-<p>Voila, now you can access your graph by entering the destination-dir and setting up the play.php or play-custom.php accordingly.</p>
-<p>For more information on schema set up, take a look at <a href="https://github.com/pho-recipes">https://github.com/pho-recipes</a></p>
-<p>The examples are self-explanatory.</p>
+                    <h2 id="more">More...</h2>
+<h3 id="contributing-code">Contributing Code</h3>
+<p>Thanks for your interest in contributing. </p>
+<p>If you are PHP programmer and would like to contribute in core Pho stack, please see
+the <a href="https://github.com/phonetworks/commons-php">Commons-PHP</a> for the basics.</p>
+<p>You can also help us by contributing to our language-specific bindings at
+<a href="https://github.com/pho-clients">pho-clients</a>. To add support for a new language
+that does not exist in that list, please email us at x at phonetworks. For new
+features or bug reports with existing repos, please make a <a href="https://help.github.com/articles/about-pull-requests/">pull request</a>.</p>
+<h3 id="donate">Donate</h3>
+<p>Thank you. You can donate us using Bitcoin (BTC) <strong>--not bitcoin cash!--</strong></p>
+<p>Our bitcoin address: 1UJYZxr5KeairMDTCNajZPpw4Zj9Z4Nb2</p>
+<p><img src="/assets/bitcoin.png" alt="BTC" /></p>
+<p>Or ethers:</p>
+<p>Our ethereum wallet address: 0x52711c85b2b86F25c76C82f6df48262A7559c1Ee</p>
+<p><img src="/assets/eth.png" alt="ETH" /></p>
+<h3 id="future">Future</h3>
+<p>@todo</p>
                 </section>
 
             </div>
