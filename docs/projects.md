@@ -13,6 +13,7 @@ Github                                                           | Description
 [pho-microkernel](http://github.com/phonetworks/pho-microkernel) | Augments the framework with services and ACL (access-control-lists), rendering it stateful.
 [pho-kernel](http://github.com/phonetworks/pho-kernel)           | A basic implementation of the pho-microkernel
 [pho-cli](http://github.com/phonetworks/pho-cli)                 | Command-line interface to help compile graphql files and initialize projects.
+[pho-server-rest](http://github.com/phonetworks/pho-server-rest) | REST APIs that can interface with any programming language or via HTTP.
 
 ### Helpers
 
@@ -26,6 +27,8 @@ Github                                                                         |
 
 ### Others
 
-Pho-microkernel service adapters can be found at [https://github.com/pho-adapters](https://github.com/pho-adapters)
+The REST API language-bindings can be found at [https://github.com/pho-clients](https://github.com/pho-clients).
 
-Last but not least, a number of sample GraphQL implementations can be found under [https://github.com/phonetworks/pho-kernel](https://github.com/pho-recipes)
+Pho-microkernel service adapters can be found at [https://github.com/pho-adapters](https://github.com/pho-adapters).
+
+Last but not least, a number of sample GraphQL implementations can be found under [https://github.com/phonetworks/pho-recipes](https://github.com/pho-recipes)

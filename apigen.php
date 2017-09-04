@@ -67,5 +67,6 @@ exec("mv pho-framework/src/Pho/Lib pho-framework/src/Pho");
 //exec("mv pho-framework/src/Pho/Kernel pho-microkernel/src/Pho");
 
 exec("cp -pR ../img ../{$res_dir}/img");
+exec("cp -pR ../assets ../{$res_dir}/assets");
 
 exit(0);

@@ -38,15 +38,24 @@ menu:
         features:
             text: Features
             relativeUrl: features.html
-        projects:
-            text: Projects
-            relativeUrl: projects.html
+        #projects:
+         #   text: Projects
+          #  relativeUrl: projects.html
         getting-started:
             text: Getting Started
             relativeUrl: getting-started.html
         reference:
             text: Reference
             relativeUrl: reference.html
-        api:
-            text: API
-            relativeUrl: api/index.html
+        #api:
+         #   text: API
+          #  relativeUrl: api/index.html
+        clients:
+            text: Clients
+            absoluteUrl: https://github.com/pho-clients
+        recipes:
+            text: Recipes
+            absoluteUrl: https://github.com/pho-recipes
+        more:
+            text: More...
+            relativeUrl: more.html

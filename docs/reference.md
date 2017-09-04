@@ -12,12 +12,14 @@ currentMenu: reference
 6. <a href="#r6">Graph </a>
 7. <a href="#r7">Nodes</a>
 8. <a href="#r8">Edges</a>
-9. <a href="#r9">Notifications</a>
-10. <a href="#r10">Signals</a>
-11. <a href="#r11">Hooks</a>
-12. <a href="#r12">Handlers & Injectables</a>
-13. <a href="#r13">ACL (Access-Control Lists)</a>
-14. <a href="#r14">More Resources</a>
+9. <a href="#r9">IDs</a>
+10. <a href="#r10">Notifications</a>
+11. <a href="#r11">Signals</a>
+12. <a href="#r12">Hooks</a>
+13. <a href="#r13">Handlers & Injectables</a>
+14. <a href="#r14">ACL (Access-Control Lists)</a>
+15. <a href="#r15">Project Directory</a>
+16. <a href="#r16">More Resources...</a>
 
 ---
 
@@ -66,7 +68,7 @@ In Phở's GAO model, a [social network](https://en.wikipedia.org/wiki/Social_ne
 
 Each of these types have their own particular characteristics which we will discuss in the chapters 5, 6 and 7.
 
-Both edges and nodes are "entities" and they're represented in the database with a cryptographically secure unique identifier in the form of: "aa406464-8508-49e9-b13a-c38d0a67c157". [UUIDv4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4) uses a random generator to avoid collisions.
+Both edges and nodes are "entities" and they're represented in the database with a cryptographically secure unique identifier in the form of: "4a406464850849e9b13ac38d0a67c157". For more information on Pho IDs, check out <a href="#r9">section 9</a>.
 
 The figures below illustrate a mini social network, inspired by the movie [Matrix](https://en.wikipedia.org/wiki/The_Matrix) where **nodes** are represented by:
 
@@ -100,13 +102,14 @@ The list of all the configuration variables you can play with can be found in ph
 
 ```php
 array(
-      "services" => array( // Services: type defines the adapter to use, and uri the service options.
-          "database" => "apcu:", // ["type"=>"apcu", "uri"=> "" ],
-          "logger" => "stdout:", // ["type"=>"stdout", "uri"=> "" ],
-          "storage" => "filesystem:", // ["type"=>"filesystem", "uri"=> "" ],
-          "events" => "local:", // ["type"=>"local", "uri"=> "" ]
+      "services" => array( 
+          // The adapter to use, and uri the service options.
+          "database" => "apcu:", 
+          "logger" => "stdout:", 
+          "storage" => "filesystem:", 
+          "events" => "local:", 
       ),
-      "tmp_path" => sys_get_temp_dir(), // Temporary folder to store files. For example uploaded files may go there.
+      "tmp_path" => sys_get_temp_dir(), // Tmp folder to store files (e.g. uploads)
       "root_path" => __DIR__,
       "adapter_path" => __DIR__ . DIRECTORY_SEPARATOR ." Services" . DIRECTORY_SEPARATOR . "Adapters",
       "namespaces" => array(
@@ -122,6 +125,7 @@ array(
         "graph" => Standards\Graph::class,
         "founder" => Standards\Founder::class,
         "space" => Standards\Space::class,
+        // "actor" => ... // not set here.
         "editors" => Standards\VirtualGraph::class
       )
 );
@@ -267,7 +271,39 @@ An [Edge](https://github.com/phonetworks/pho-lib-graph/blob/master/src/Pho/Lib/G
 | connect      | NodeInterface $head | Connects the edge to a head node.                        | void               |
 | orphan       |                     | Checks if the edge fails to possess a tail or a head     | bool               |
 
-## <a name="r9" class="anchor">9. Notifications</a>
+## <a name="r9" class="anchor">9. IDs</a>
+
+Pho IDs are immutable and come in the format of cryptographically secure,
+ similarly to [UUIDv4](https://en.wikipedia.org/wiki/Universally_unique_identifier),
+ though not the same.
+ 
+ Pho IDs are used to define all graph entities, e.g nodes and edges. It is 16 bytes (128 bits) long similar to UUID, but the first 8 bits are reserved to determine entity type, while the UUID variants are omitted. Hence, Pho ID provides 15 bytes and 8 bits of randomness.
+ 
+ The Graph ID defaults to nil (00000000000000000000000000000000), or 32 chars of 0. It may may be called with ```ID::root()```
+ 
+ Even at scale of billions of nodes and edges, the chances of collision 
+ is identical to zero.
+  
+ You can generate a new ID with ```$id_object = ID::generate($entity)```, 
+ where $entity is any Pho entity, and fetch its  string representation with 
+ PHP type-casting; ```(string) $id_object```.
+
+ Entity headers will be as follows:
+     
+* 0: Graph
+* 1: Unidentified Node
+* 2: SubGraph Node
+* 3: Framework\Graph Node
+* 4: Actor Node
+* 5: Object Node
+* 6: Unidentified Edge
+* 7: Read Edge
+* 8: Write Edge
+* 9: Subscribe Edge
+* 10: Mention Edge
+* 11: Unidentified
+
+## <a name="r10" class="anchor">10. Notifications</a>
 
 Notifications are the messages passed between notifiers and objects, or 
 subscribers and their subscriptions. Notifications constitute a basic component
@@ -281,7 +317,7 @@ to see how notifications works.
 
 Notifications are called by the ```execute()``` method of the edges. Example: [ObjectOut/Mention.php](https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/ObjectOut/Mention.php) and [ActorOut/Write.php](https://github.com/phonetworks/pho-framework/blob/master/src/Pho/Framework/ActorOut/Write.php)
 
-## <a name="r10" class="anchor">10. Signals</a>
+## <a name="r11" class="anchor">11. Signals</a>
 
 One of the best features of the Pho Kernel is that it is event-driven. Anytime a new node or edge is created, deleted, edited, a signal is emitted. If set, a listener object (a [Callable](http://php.net/manual/en/language.types.callable.php)) can process the signal in real-time.
 
@@ -318,7 +354,7 @@ $node->on("modified", function() use ($node) {
 });
 ```
 
-## <a name="r11" class="anchor">11. Hooks</a>
+## <a name="r12" class="anchor">12. Hooks</a>
 
 Hooks allow developers to intercept certain functions that may benefit from hydration at higher-levels. Hydration takes place with persistent objects which, once deserialized, may lose some of their object associations. 
 
@@ -360,7 +396,7 @@ Below you can see a full list of entities that support hooks and their keys.
 
 * **edge()**: called when ```edge()``` (in NotificationList.php) can't find the edge. Enables you to access ```$edge_id``` to fetch it from external sources. The return value is **\Pho\Lib\Graph\EdgeInterface**.
 
-## <a name="r12" class="anchor">12. Handlers and Injectables</a>
+## <a name="r13" class="anchor">13. Handlers and Injectables</a>
 
 #### Handlers 
 
@@ -399,7 +435,7 @@ The use Injectable is discouraged, as it may represent security holes if not use
 
 
 
-## <a name="r13" class="anchor">13. ACL (Access Control Lists)</a>
+## <a name="r14" class="anchor">14. ACL (Access Control Lists)</a>
 
 Acl stands for "access-control-lists". Pho handles access to nodes and graphs similarly to how UNIX handles access to files and folders, hence the name.
 
@@ -459,7 +495,32 @@ The permissions table is as follows;
 | Object    | Manage reactions | Read               | Edit           | Subscribe/*react*
 | Graph     | Moderate/profile | Read contents      | Post content   | Subscribe
 
-## <a name="r14" class="anchor">More resources</a>
+## <a name="r15" class="anchor">15. Project Directory</a>
+
+Pho is designed in microservices architecture. This is a directory of Pho stack projects; it starts with foundational packages and goes up to the user-level.
+
+Github                                                           | Description        
+---------------------------------------------------------------- | -------------------------------------------------
+[pho-lib-graph](http://github.com/phonetworks/pho-lib-graph)     | General purpose graph library.
+[pho-framework](http://github.com/phonetworks/pho-framework)     | A stateless framework that establishes the core principles of the Pho stack.
+[pho-microkernel](http://github.com/phonetworks/pho-microkernel) | Augments the framework with services and ACL (access-control-lists), rendering it stateful.
+[pho-kernel](http://github.com/phonetworks/pho-kernel)           | A basic implementation of the pho-microkernel
+[pho-cli](http://github.com/phonetworks/pho-cli)                 | Command-line interface to help compile graphql files and initialize projects.
+[pho-server-rest](http://github.com/phonetworks/pho-server-rest) | REST APIs that can interface with any programming language or via HTTP.
+
+In addition, there are several repositories that help the aforementioned ones:
+
+Github                                                                         | Description        
+------------------------------------------------------------------------------ | -------------------------------------
+[pho-lib-graphql-parser](http://github.com/phonetworks/pho-lib-graphql-parser) | General purpose GraphQL schema parser. Used by pho-compiler.
+[pho-compiler](http://github.com/phonetworks/pho-compiler)                     | Compiles the GraphQL files into PHP interpretables. Used by pho-cli.
+
+
+Last but not least, the REST API language-bindings can be found at [https://github.com/pho-clients](https://github.com/pho-clients). Pho-microkernel service adapters can be found at [https://github.com/pho-adapters](https://github.com/pho-adapters). Plus, a number of sample GraphQL implementations can be found under [https://github.com/phonetworks/pho-recipes](https://github.com/pho-recipes)
+
+
+
+## <a name="r16" class="anchor">16. More resources...</a>
 
 For a full list of Phở Kernel classes and methods, refer to:
 
