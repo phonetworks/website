@@ -346,6 +346,11 @@ Available events are:
 * **edge.registered**: (string $direction, string $class): called by particles when registering edges. This function may be used extra edges easily and independently, without extending the constructor itself.
 * **notification.received**: (AbstractNotification $notification): called when the actor received a notification. 
 
+#### Graphsystem
+* **graphsystem.touched**: when an entity has been persisted to disk.
+* **graphsystem.node_deleted**: when a node is removed from persistent state.
+* **graphsystem.edge_deleted**: when an edge is removed from persistent state.
+
 Example usage:
 
 ```php
