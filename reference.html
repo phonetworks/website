@@ -585,6 +585,12 @@ of all social-enabled apps.</p>
 <li><strong>edge.registered</strong>: (string $direction, string $class): called by particles when registering edges. This function may be used extra edges easily and independently, without extending the constructor itself.</li>
 <li><strong>notification.received</strong>: (AbstractNotification $notification): called when the actor received a notification. </li>
 </ul>
+<h4 id="graphsystem">Graphsystem</h4>
+<ul>
+<li><strong>graphsystem.touched</strong>: when an entity has been persisted to disk.</li>
+<li><strong>graphsystem.node_deleted</strong>: when a node is removed from persistent state.</li>
+<li><strong>graphsystem.edge_deleted</strong>: when an edge is removed from persistent state.</li>
+</ul>
 <p>Example usage:</p>
 <pre><code class="language-php">$node-&gt;on("modified", function() use ($node) {
     $node-&gt;persist();

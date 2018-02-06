@@ -12,6 +12,7 @@
 namespace Pho\Framework;
 
 use Webmozart\Assert\Assert;
+use Valitron\Validator;
 use Pho\Lib\Graph as LibGraph;
 
 /**
@@ -28,6 +29,20 @@ class FieldHelper
     protected $settings;
 
     /**
+     * whether the field has index
+     *
+     * @var boolean
+     */
+    protected $with_index = false;
+
+    /**
+     * whether the field is set to be unique
+     *
+     * @var boolean
+     */
+    protected $is_unique = false;
+
+    /**
      * Constructor.
      * 
      * @param mixed $value The value to check.
@@ -37,6 +52,26 @@ class FieldHelper
     {
         $this->value = $value;
         $this->settings = $settings;
+    }
+
+    /**
+     * Whether the field has index on it.
+     *
+     * @return boolean
+     */
+    public function withIndex(): bool
+    {
+        return $this->with_index;
+    }
+
+    /**
+     * Whether the field must be unique
+     *
+     * @return boolean
+     */
+    public function isUnique(): bool
+    {
+        return $this->is_unique;
     }
 
     /**
@@ -53,9 +88,22 @@ class FieldHelper
         {
             return (isset($directives[$param]) && $directives[$param]);
         };
-        if($isDirectiveEnabled("md5")) {
+
+        if($isDirectiveEnabled("index")) {
+            $this->with_index = true;
+        }
+
+        if($isDirectiveEnabled("unique")) {
+            $this->is_unique = true;
+        }
+
+        if($isDirectiveEnabled("sha1")) {
+            return sha1($this->value);   
+        }
+        elseif($isDirectiveEnabled("md5")) {
             return md5($this->value);
         }
+
         return $this->value;
     }
 
@@ -76,21 +124,56 @@ class FieldHelper
             if(is_null($constraint_val))
                 continue;
             switch($constraint) {
+                case "format":
+                    if(!in_array($constraint_val, [
+                         "numeric",
+                         "ip",
+                         "email",
+                         "url",
+                         "creditCard",
+                         "alpha",
+                         "alphaNum"
+                         // "date" // there is already the Date field
+                    ])) {
+                        /*
+                        if($constraint_val == "uuid" || $constraint_val == "udid") {
+                            try {
+                                LibGraph\ID::fromString($this->value);
+                            }
+                            catch(LibGraph\Exceptions\MalformedIDException $e) {
+                                throw new \InvalidArgumentException;
+                            }
+                        }
+                        else {
+                            throw new \InvalidArgumentException;
+                        }
+                        */
+                        throw new \InvalidArgumentException;
+                    }
+                    $v = new Validator(["field"=>$this->value]);
+                    $v->rule($constraint_val, "field");
+                    if(!$v->validate()) {
+                        throw new \InvalidArgumentException;
+                    }
+                    break;
+                //case "dateFormat":
+                case "dateBefore":
+                case "dateAfter":
+                    $v = new Validator(["field"=>$this->value]);
+                    $v->rule($constraint, "field", $constraint_val);
+                    if(!$v->validate()) {
+                        throw new \InvalidArgumentException;
+                    }
+                    break;
                 case "minLength":
                 case "maxLength":
                 case "greaterThan":
                 case "lessThan":
                     Assert::$constraint($this->value, $constraint_val);
                     break;
-                case "uuid":
-                /*  $value = implode("-", [
-                        substr($this->value, 0, 8),
-                        substr($this->value, 0, 4),
-                        substr($this->value, 0, 4),
-                        substr($this->value, 0, 4),
-                        substr($this->value, 0, 12)
-                    ]);
-                    Assert::$constraint($value); */
+                                   
+                //case "uuid":
+                case "id":
                     try {
                         LibGraph\ID::fromString($this->value);
                     }
@@ -98,6 +181,7 @@ class FieldHelper
                         throw new \InvalidArgumentException;
                     }
                     break;
+                
                 case "regex":
                     Assert::$constraint($this->value, "/".addslashes($constraint_val)."/");
                     break;
@@ -105,3 +189,4 @@ class FieldHelper
         }
     }
 }
+
