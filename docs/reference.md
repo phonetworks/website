@@ -72,6 +72,8 @@ Both edges and nodes are "entities" and they're represented in the database with
 
 The figures below illustrate a mini social network, inspired by the movie [Matrix](https://en.wikipedia.org/wiki/The_Matrix) where **nodes** are represented by:
 
+![Matrix movie social network](/assets/img/Matrix.png)
+
 * Squares => Graph,
 * Triangles => Actor,
 * Circles => Object
@@ -79,10 +81,10 @@ The figures below illustrate a mini social network, inspired by the movie [Matri
 and **edges** by arrows.
 
 This is what the figure looks like with the Actor/Write edges:
-![Matrix movie social network](img/Matrix.png)
+![Matrix movie social network](/assets/img/Actor-Creates.png)
 
 And this is what it looks like with the Actor/Subscribe edges:
-![Matrix movie social network](img/Matrix.png)
+![Matrix movie social network](/assets/img/Actor-Subscribes.png)
 
 This tiny social network consists of:
 
