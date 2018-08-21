@@ -27,8 +27,8 @@ branch: gh-pages
 title: Phở Networks
 subTitle: "A modern framework for your next social-enabled app"
 
-github:
-    # user: phonetworks
+#github:
+    #user: phonetworks
     #repo: pho-kernel
 
 menu:
