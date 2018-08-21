@@ -23,7 +23,7 @@ namespace Pho\Framework;
  * 
  * @author Emre Sokullu <emre@phonetworks.org>
  */
-class Actor extends \Pho\Lib\Graph\Node implements ParticleInterface, \SplObserver, \SplSubject
+class Actor extends \Pho\Lib\Graph\Node implements ParticleInterface
 {
 
     use ParticleTrait;
@@ -121,22 +121,6 @@ class Actor extends \Pho\Lib\Graph\Node implements ParticleInterface, \SplObserv
         return $this->where();
     }
 
-
-
-    public function update(\SplSubject $subject): void
-    {
-        if($subject instanceof NotificationList) {
-            $this->observeNotificationListUpdate($subject);
-            return;
-        }
-        parent::update($subject);
-    }
-
-    protected function observeNotificationListUpdate(AbstractNotification $notification): void
-    {
-
-    }
-
     /**
      * Gives access to the actor's notifications list
      *
@@ -144,7 +128,9 @@ class Actor extends \Pho\Lib\Graph\Node implements ParticleInterface, \SplObserv
      */
     public function notifications(): NotificationList
     {
-        return $this->notifications;
+        if(isset($this->notifications))
+            return $this->notifications;
+        return new NotificationList($this);
     }
 
     /**
