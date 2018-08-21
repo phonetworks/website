@@ -19,7 +19,8 @@ currentMenu: reference
 13. <a href="#r13">Handlers & Injectables</a>
 14. <a href="#r14">ACL (Access-Control Lists)</a>
 15. <a href="#r15">Project Directory</a>
-16. <a href="#r16">More Resources...</a>
+16. <a href="#r16">Compiling a Recipe</a>
+17. <a href="#r17">More Resources...</a>
 
 ---
 
@@ -527,7 +528,31 @@ Last but not least, the REST API language-bindings can be found at [https://gith
 
 
 
-## <a name="r16" class="anchor">16. More resources...</a>
+## <a name="r16" class="anchor">16. Compiling a Recipe</a>
+
+Here is the steps to compile a recipe.
+The Web recipe ([https://github.com/pho-recipes/Web](https://github.com/pho-recipes/Web)) will be used which is also the recipe used for [GraphJS](https://graphjs.com/).
+
+1. Clone the repo: `https://github.com/pho-recipes/Web`.
+
+    This contains source files that will be used to generate PHP files.
+
+1. Clone the repo: `https://github.com/phonetworks/pho-cli` and install composer dependencies.
+
+    This contains CLI to generate files from recipe using remote compiler.
+
+1. Run the following command from the directory of **pho-cli**:
+    ````
+    ./bin/php.php build ~/php-recipes-web ~/pho-recipes-web-compiled
+    ````
+    The first argument is the source directory containing graphql schema.
+    The second argument is the destination directory where the generated files are placed.
+
+> Note: The repo of each **pho-recipes** contains **.compiled** directory which consists the latest compiled code.
+
+
+
+## <a name="r17" class="anchor">17. More resources...</a>
 
 For a full list of Phở Kernel classes and methods, refer to:
 
