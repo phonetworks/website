@@ -101,7 +101,8 @@
 <li><a href="#r13">Handlers &amp; Injectables</a></li>
 <li><a href="#r14">ACL (Access-Control Lists)</a></li>
 <li><a href="#r15">Project Directory</a></li>
-<li><a href="#r16">More Resources...</a></li>
+<li><a href="#r16">Compiling a Recipe</a></li>
+<li><a href="#r17">More Resources...</a></li>
 </ol>
 <hr />
 <h2><a name="r1" class="anchor">1. Overview</a></h2>
@@ -787,7 +788,29 @@ of all social-enabled apps.</p>
 </tbody>
 </table>
 <p>Last but not least, the REST API language-bindings can be found at <a href="https://github.com/pho-clients">https://github.com/pho-clients</a>. Pho-microkernel service adapters can be found at <a href="https://github.com/pho-adapters">https://github.com/pho-adapters</a>. Plus, a number of sample GraphQL implementations can be found under <a href="https://github.com/pho-recipes">https://github.com/phonetworks/pho-recipes</a></p>
-<h2><a name="r16" class="anchor">16. More resources...</a></h2>
+<h2><a name="r16" class="anchor">16. Compiling a Recipe</a></h2>
+<p>Here is the steps to compile a recipe.
+The Web recipe (<a href="https://github.com/pho-recipes/Web">https://github.com/pho-recipes/Web</a>) will be used which is also the recipe used for <a href="https://graphjs.com/">GraphJS</a>.</p>
+<ol>
+<li>
+<p>Clone the repo: <code>https://github.com/pho-recipes/Web</code>.</p>
+<p>This contains source files that will be used to generate PHP files.</p>
+</li>
+<li>
+<p>Clone the repo: <code>https://github.com/phonetworks/pho-cli</code> and install composer dependencies.</p>
+<p>This contains CLI to generate files from recipe using remote compiler.</p>
+</li>
+<li>
+<p>Run the following command from the directory of <strong>pho-cli</strong>:</p>
+<pre><code>./bin/php.php build ~/php-recipes-web ~/pho-recipes-web-compiled</code></pre>
+<p>The first argument is the source directory containing graphql schema.
+The second argument is the destination directory where the generated files are placed.</p>
+</li>
+</ol>
+<blockquote>
+<p>Note: The repo of each <strong>pho-recipes</strong> contains <strong>.compiled</strong> directory which consists the latest compiled code.</p>
+</blockquote>
+<h2><a name="r17" class="anchor">17. More resources...</a></h2>
 <p>For a full list of Phở Kernel classes and methods, refer to:</p>
 <ol>
 <li><a href="http://phonetworks.org/api/index.html">PHPDocumentor auto-generated reference</a>.</li>
