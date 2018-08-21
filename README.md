@@ -1,5 +1,7 @@
 # website
 
-Markdown sources of the phonetworks.org web site, prepared for Couscous.
+Markdown sources of the phonetworks.org web site. The website is powered by [Couscous](http://couscous.io/). This repo goes hand-in-hand with its custom template at https://github.com/phonetworks/website-template
 
-This repo goes hand-in-hand with its custom template at https://github.com/phonetworks/website-template
+## License
+
+MIT, see [LICENSE](https://github.com/phonetworks/website/blob/master/LICENSE).
