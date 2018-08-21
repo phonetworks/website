@@ -28,7 +28,7 @@ title: Phở Networks
 subTitle: "A modern framework for your next social-enabled app"
 
 github:
-    user: phonetworks
+    # user: phonetworks
     #repo: pho-kernel
 
 menu:
