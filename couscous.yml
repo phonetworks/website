@@ -59,6 +59,9 @@ menu:
         recipes:
             text: Recipes
             absoluteUrl: https://github.com/pho-recipes
+        support:
+            text: Support
+            relativeUrl: support.html
         more:
             text: More...
             relativeUrl: more.html
