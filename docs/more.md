@@ -4,15 +4,6 @@ currentMenu: more
 
 ## More...
 
-### Community
-
-* Follow us at Twitter [http://twitter.com/phonetworks](http://twitter.com/phonetworks
-)
-
-* Have questions? Join us on FreeNode (chat.freenode.net) at #PhoNetworks
-
-<iframe src="http://webchat.freenode.net?channels=%23PhoNetworks" width="647" height="400"></iframe>
-
 ### Contributing Code
 
 Thanks for your interest in contributing. 
