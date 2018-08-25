@@ -39,10 +39,15 @@
 <path fill="none" stroke="#c0c0c0" d="M851.3267,-222C851.3267,-222 1976.1002,-222 1976.1002,-222 1982.1002,-222 1988.1002,-228 1988.1002,-234 1988.1002,-234 1988.1002,-2143 1988.1002,-2143 1988.1002,-2149 1982.1002,-2155 1976.1002,-2155 1976.1002,-2155 851.3267,-2155 851.3267,-2155 845.3267,-2155 839.3267,-2149 839.3267,-2143 839.3267,-2143 839.3267,-234 839.3267,-234 839.3267,-228 845.3267,-222 851.3267,-222"/>
 <text text-anchor="middle" x="1413.7134" y="-2142.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Framework</text>
 </g>
+<g id="clust4" class="cluster">
+<title>cluster_\Pho\Framework\Cargo</title>
+<path fill="none" stroke="#c0c0c0" d="M861.2283,-1797C861.2283,-1797 1875.6852,-1797 1875.6852,-1797 1881.6852,-1797 1887.6852,-1803 1887.6852,-1809 1887.6852,-1809 1887.6852,-1964 1887.6852,-1964 1887.6852,-1970 1881.6852,-1976 1875.6852,-1976 1875.6852,-1976 861.2283,-1976 861.2283,-1976 855.2283,-1976 849.2283,-1970 849.2283,-1964 849.2283,-1964 849.2283,-1809 849.2283,-1809 849.2283,-1803 855.2283,-1797 861.2283,-1797"/>
+<text text-anchor="middle" x="1368.4567" y="-1963.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Cargo</text>
+</g>
 <g id="clust5" class="cluster">
 <title>cluster_\Pho\Framework\ObjectOut</title>
-<path fill="none" stroke="#c0c0c0" d="M1725.7621,-1797C1725.7621,-1797 1859.1825,-1797 1859.1825,-1797 1865.1825,-1797 1871.1825,-1803 1871.1825,-1809 1871.1825,-1809 1871.1825,-1964 1871.1825,-1964 1871.1825,-1970 1865.1825,-1976 1859.1825,-1976 1859.1825,-1976 1725.7621,-1976 1725.7621,-1976 1719.7621,-1976 1713.7621,-1970 1713.7621,-1964 1713.7621,-1964 1713.7621,-1809 1713.7621,-1809 1713.7621,-1803 1719.7621,-1797 1725.7621,-1797"/>
-<text text-anchor="middle" x="1792.4723" y="-1963.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">ObjectOut</text>
+<path fill="none" stroke="#c0c0c0" d="M1725.7621,-920C1725.7621,-920 1859.1825,-920 1859.1825,-920 1865.1825,-920 1871.1825,-926 1871.1825,-932 1871.1825,-932 1871.1825,-1087 1871.1825,-1087 1871.1825,-1093 1865.1825,-1099 1859.1825,-1099 1859.1825,-1099 1725.7621,-1099 1725.7621,-1099 1719.7621,-1099 1713.7621,-1093 1713.7621,-1087 1713.7621,-1087 1713.7621,-932 1713.7621,-932 1713.7621,-926 1719.7621,-920 1725.7621,-920"/>
+<text text-anchor="middle" x="1792.4723" y="-1086.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">ObjectOut</text>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_\Pho\Framework\Exceptions</title>
@@ -51,126 +56,122 @@
 </g>
 <g id="clust7" class="cluster">
 <title>cluster_\Pho\Framework\ActorOut</title>
-<path fill="none" stroke="#c0c0c0" d="M1386.9213,-1502C1386.9213,-1502 1852.5814,-1502 1852.5814,-1502 1858.5814,-1502 1864.5814,-1508 1864.5814,-1514 1864.5814,-1514 1864.5814,-1777 1864.5814,-1777 1864.5814,-1783 1858.5814,-1789 1852.5814,-1789 1852.5814,-1789 1386.9213,-1789 1386.9213,-1789 1380.9213,-1789 1374.9213,-1783 1374.9213,-1777 1374.9213,-1777 1374.9213,-1514 1374.9213,-1514 1374.9213,-1508 1380.9213,-1502 1386.9213,-1502"/>
-<text text-anchor="middle" x="1619.7513" y="-1776.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">ActorOut</text>
+<path fill="none" stroke="#c0c0c0" d="M1386.9213,-1315C1386.9213,-1315 1852.5814,-1315 1852.5814,-1315 1858.5814,-1315 1864.5814,-1321 1864.5814,-1327 1864.5814,-1327 1864.5814,-1590 1864.5814,-1590 1864.5814,-1596 1858.5814,-1602 1852.5814,-1602 1852.5814,-1602 1386.9213,-1602 1386.9213,-1602 1380.9213,-1602 1374.9213,-1596 1374.9213,-1590 1374.9213,-1590 1374.9213,-1327 1374.9213,-1327 1374.9213,-1321 1380.9213,-1315 1386.9213,-1315"/>
+<text text-anchor="middle" x="1619.7513" y="-1589.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">ActorOut</text>
 </g>
 <g id="clust8" class="cluster">
 <title>cluster_\Pho\Framework\Loaders</title>
-<path fill="none" stroke="#c0c0c0" d="M1400.1234,-1315C1400.1234,-1315 1855.882,-1315 1855.882,-1315 1861.882,-1315 1867.882,-1321 1867.882,-1327 1867.882,-1327 1867.882,-1482 1867.882,-1482 1867.882,-1488 1861.882,-1494 1855.882,-1494 1855.882,-1494 1400.1234,-1494 1400.1234,-1494 1394.1234,-1494 1388.1234,-1488 1388.1234,-1482 1388.1234,-1482 1388.1234,-1327 1388.1234,-1327 1388.1234,-1321 1394.1234,-1315 1400.1234,-1315"/>
-<text text-anchor="middle" x="1628.0027" y="-1481.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Loaders</text>
+<path fill="none" stroke="#c0c0c0" d="M1400.1234,-1610C1400.1234,-1610 1855.882,-1610 1855.882,-1610 1861.882,-1610 1867.882,-1616 1867.882,-1622 1867.882,-1622 1867.882,-1777 1867.882,-1777 1867.882,-1783 1861.882,-1789 1855.882,-1789 1855.882,-1789 1400.1234,-1789 1400.1234,-1789 1394.1234,-1789 1388.1234,-1783 1388.1234,-1777 1388.1234,-1777 1388.1234,-1622 1388.1234,-1622 1388.1234,-1616 1394.1234,-1610 1400.1234,-1610"/>
+<text text-anchor="middle" x="1628.0027" y="-1776.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Loaders</text>
 </g>
 <g id="clust9" class="cluster">
 <title>cluster_\Pho\Framework\Handlers</title>
-<path fill="none" stroke="#c0c0c0" d="M1393.5223,-1074C1393.5223,-1074 1815.4723,-1074 1815.4723,-1074 1821.4723,-1074 1827.4723,-1080 1827.4723,-1086 1827.4723,-1086 1827.4723,-1295 1827.4723,-1295 1827.4723,-1301 1821.4723,-1307 1815.4723,-1307 1815.4723,-1307 1393.5223,-1307 1393.5223,-1307 1387.5223,-1307 1381.5223,-1301 1381.5223,-1295 1381.5223,-1295 1381.5223,-1086 1381.5223,-1086 1381.5223,-1080 1387.5223,-1074 1393.5223,-1074"/>
-<text text-anchor="middle" x="1604.4973" y="-1294.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Handlers</text>
-</g>
-<g id="clust4" class="cluster">
-<title>cluster_\Pho\Framework\Cargo</title>
-<path fill="none" stroke="#c0c0c0" d="M861.2283,-679C861.2283,-679 1875.6852,-679 1875.6852,-679 1881.6852,-679 1887.6852,-685 1887.6852,-691 1887.6852,-691 1887.6852,-846 1887.6852,-846 1887.6852,-852 1881.6852,-858 1875.6852,-858 1875.6852,-858 861.2283,-858 861.2283,-858 855.2283,-858 849.2283,-852 849.2283,-846 849.2283,-846 849.2283,-691 849.2283,-691 849.2283,-685 855.2283,-679 861.2283,-679"/>
-<text text-anchor="middle" x="1368.4567" y="-845.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Cargo</text>
+<path fill="none" stroke="#c0c0c0" d="M1393.5223,-679C1393.5223,-679 1815.4723,-679 1815.4723,-679 1821.4723,-679 1827.4723,-685 1827.4723,-691 1827.4723,-691 1827.4723,-900 1827.4723,-900 1827.4723,-906 1821.4723,-912 1815.4723,-912 1815.4723,-912 1393.5223,-912 1393.5223,-912 1387.5223,-912 1381.5223,-906 1381.5223,-900 1381.5223,-900 1381.5223,-691 1381.5223,-691 1381.5223,-685 1387.5223,-679 1393.5223,-679"/>
+<text text-anchor="middle" x="1604.4973" y="-899.2" font-family="Times,serif" font-size="11.00" fill="#c0c0c0">Handlers</text>
 </g>
 <!-- \\Pho\\Framework\\Cargo\\OutgoingEdgeCargo -->
 <g id="node1" class="node">
 <title>\\Pho\\Framework\\Cargo\\OutgoingEdgeCargo</title>
-<polygon fill="none" stroke="#000000" points="1856.6907,-831 1728.2538,-831 1728.2538,-795 1856.6907,-795 1856.6907,-831"/>
-<text text-anchor="middle" x="1792.4723" y="-809.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">OutgoingEdgeCargo</text>
+<polygon fill="none" stroke="#000000" points="1856.6907,-1949 1728.2538,-1949 1728.2538,-1913 1856.6907,-1913 1856.6907,-1949"/>
+<text text-anchor="middle" x="1792.4723" y="-1927.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">OutgoingEdgeCargo</text>
 </g>
 <!-- \\Pho\\Framework\\Cargo\\AbstractOutgoingEdgeCargo -->
 <g id="node2" class="node">
 <title>\\Pho\\Framework\\Cargo\\AbstractOutgoingEdgeCargo</title>
-<polygon fill="none" stroke="#000000" points="1540.8578,-831 1359.8041,-831 1359.8041,-795 1540.8578,-795 1540.8578,-831"/>
-<text text-anchor="start" x="1417.3256" y="-815.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
-<text text-anchor="start" x="1367.8175" y="-804.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AbstractOutgoingEdgeCargo</text>
+<polygon fill="none" stroke="#000000" points="1540.8578,-1949 1359.8041,-1949 1359.8041,-1913 1540.8578,-1913 1540.8578,-1949"/>
+<text text-anchor="start" x="1417.3256" y="-1933.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
+<text text-anchor="start" x="1367.8175" y="-1922.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AbstractOutgoingEdgeCargo</text>
 </g>
 <!-- \\Pho\\Framework\\Cargo\\OutgoingEdgeCargo&#45;&gt;\\Pho\\Framework\\Cargo\\AbstractOutgoingEdgeCargo -->
 <g id="edge6" class="edge">
 <title>\\Pho\\Framework\\Cargo\\OutgoingEdgeCargo&#45;&gt;\\Pho\\Framework\\Cargo\\AbstractOutgoingEdgeCargo</title>
-<path fill="none" stroke="#000000" d="M1728.1181,-813C1678.2656,-813 1608.2816,-813 1551.0318,-813"/>
-<polygon fill="none" stroke="#000000" points="1550.8646,-809.5001 1540.8646,-813 1550.8646,-816.5001 1550.8646,-809.5001"/>
+<path fill="none" stroke="#000000" d="M1728.1181,-1931C1678.2656,-1931 1608.2816,-1931 1551.0318,-1931"/>
+<polygon fill="none" stroke="#000000" points="1550.8646,-1927.5001 1540.8646,-1931 1550.8646,-1934.5001 1550.8646,-1927.5001"/>
 </g>
 <!-- \\Pho\\Framework\\Cargo\\AbstractEdgeCargo -->
 <g id="node4" class="node">
 <title>\\Pho\\Framework\\Cargo\\AbstractEdgeCargo</title>
-<polygon fill="none" stroke="#000000" points="1231.8997,-779 1103.4628,-779 1103.4628,-743 1231.8997,-743 1231.8997,-779"/>
-<text text-anchor="start" x="1134.6758" y="-763.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
-<text text-anchor="start" x="1111.5721" y="-752.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AbstractEdgeCargo</text>
+<polygon fill="none" stroke="#000000" points="1231.8997,-1922 1103.4628,-1922 1103.4628,-1886 1231.8997,-1886 1231.8997,-1922"/>
+<text text-anchor="start" x="1134.6758" y="-1906.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
+<text text-anchor="start" x="1111.5721" y="-1895.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AbstractEdgeCargo</text>
 </g>
 <!-- \\Pho\\Framework\\Cargo\\AbstractOutgoingEdgeCargo&#45;&gt;\\Pho\\Framework\\Cargo\\AbstractEdgeCargo -->
 <g id="edge7" class="edge">
 <title>\\Pho\\Framework\\Cargo\\AbstractOutgoingEdgeCargo&#45;&gt;\\Pho\\Framework\\Cargo\\AbstractEdgeCargo</title>
-<path fill="none" stroke="#000000" d="M1359.6516,-796.2369C1336.2503,-791.9174 1311.0972,-787.2803 1287.8175,-783 1272.9344,-780.2636 1257.0128,-777.3431 1241.7884,-774.5538"/>
-<polygon fill="none" stroke="#000000" points="1242.3694,-771.102 1231.9024,-772.743 1241.1082,-777.9875 1242.3694,-771.102"/>
+<path fill="none" stroke="#000000" d="M1359.7325,-1922.3456C1321.6527,-1918.7081 1277.9077,-1914.5293 1241.7951,-1911.0797"/>
+<polygon fill="none" stroke="#000000" points="1242.1105,-1907.594 1231.8229,-1910.1271 1241.4448,-1914.5623 1242.1105,-1907.594"/>
 </g>
 <!-- \\Pho\\Framework\\Cargo\\IncomingEdgeCargo -->
 <g id="node3" class="node">
 <title>\\Pho\\Framework\\Cargo\\IncomingEdgeCargo</title>
-<polygon fill="none" stroke="#000000" points="1514.5494,-777 1386.1125,-777 1386.1125,-741 1514.5494,-741 1514.5494,-777"/>
-<text text-anchor="middle" x="1450.3309" y="-755.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">IncomingEdgeCargo</text>
+<polygon fill="none" stroke="#000000" points="1514.5494,-1895 1386.1125,-1895 1386.1125,-1859 1514.5494,-1859 1514.5494,-1895"/>
+<text text-anchor="middle" x="1450.3309" y="-1873.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">IncomingEdgeCargo</text>
 </g>
 <!-- \\Pho\\Framework\\Cargo\\IncomingEdgeCargo&#45;&gt;\\Pho\\Framework\\Cargo\\AbstractEdgeCargo -->
 <g id="edge8" class="edge">
 <title>\\Pho\\Framework\\Cargo\\IncomingEdgeCargo&#45;&gt;\\Pho\\Framework\\Cargo\\AbstractEdgeCargo</title>
-<path fill="none" stroke="#000000" d="M1386.1933,-759.4538C1343.4299,-759.7564 1287.0652,-760.1553 1242.2932,-760.4721"/>
-<polygon fill="none" stroke="#000000" points="1242.0285,-756.9737 1232.0536,-760.5445 1242.0781,-763.9736 1242.0285,-756.9737"/>
+<path fill="none" stroke="#000000" d="M1386.1933,-1883.1267C1343.3399,-1887.2203 1286.8278,-1892.6186 1242.0106,-1896.8997"/>
+<polygon fill="none" stroke="#000000" points="1241.6754,-1893.4157 1232.0536,-1897.8509 1242.3411,-1900.384 1241.6754,-1893.4157"/>
 </g>
 <!-- \\Pho\\Framework\\Cargo\\CargoInterface -->
 <g id="node6" class="node">
 <title>\\Pho\\Framework\\Cargo\\CargoInterface</title>
-<polygon fill="none" stroke="#000000" points="965.8516,-752 857.0199,-752 857.0199,-716 965.8516,-716 965.8516,-752"/>
-<text text-anchor="middle" x="911.4358" y="-730.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">CargoInterface</text>
+<polygon fill="none" stroke="#000000" points="965.8516,-1895 857.0199,-1895 857.0199,-1859 965.8516,-1859 965.8516,-1895"/>
+<text text-anchor="middle" x="911.4358" y="-1873.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">CargoInterface</text>
 </g>
 <!-- \\Pho\\Framework\\Cargo\\AbstractEdgeCargo&#45;&gt;\\Pho\\Framework\\Cargo\\CargoInterface -->
 <g id="edge9" class="edge">
 <title>\\Pho\\Framework\\Cargo\\AbstractEdgeCargo&#45;&gt;\\Pho\\Framework\\Cargo\\CargoInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1103.3504,-754.2216C1064.4286,-750.1205 1014.9617,-744.9083 975.9982,-740.8028"/>
-<polygon fill="none" stroke="#000000" points="976.131,-737.2975 965.8193,-739.7303 975.3974,-744.259 976.131,-737.2975"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1103.3504,-1897.2216C1064.4286,-1893.1205 1014.9617,-1887.9083 975.9982,-1883.8028"/>
+<polygon fill="none" stroke="#000000" points="976.131,-1880.2975 965.8193,-1882.7303 975.3974,-1887.259 976.131,-1880.2975"/>
 </g>
 <!-- \\Pho\\Framework\\Cargo\\FieldsCargo -->
 <g id="node5" class="node">
 <title>\\Pho\\Framework\\Cargo\\FieldsCargo</title>
-<polygon fill="none" stroke="#000000" points="1211.7939,-725 1123.5685,-725 1123.5685,-689 1211.7939,-689 1211.7939,-725"/>
-<text text-anchor="middle" x="1167.6812" y="-703.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">FieldsCargo</text>
+<polygon fill="none" stroke="#000000" points="1211.7939,-1868 1123.5685,-1868 1123.5685,-1832 1211.7939,-1832 1211.7939,-1868"/>
+<text text-anchor="middle" x="1167.6812" y="-1846.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">FieldsCargo</text>
 </g>
 <!-- \\Pho\\Framework\\Cargo\\FieldsCargo&#45;&gt;\\Pho\\Framework\\Cargo\\CargoInterface -->
 <g id="edge10" class="edge">
 <title>\\Pho\\Framework\\Cargo\\FieldsCargo&#45;&gt;\\Pho\\Framework\\Cargo\\CargoInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1123.3392,-711.6722C1082.7218,-715.952 1022.0999,-722.3396 976.0891,-727.1876"/>
-<polygon fill="none" stroke="#000000" points="975.4936,-723.7309 965.9154,-728.2596 976.2271,-730.6924 975.4936,-723.7309"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1123.3392,-1854.6722C1082.7218,-1858.952 1022.0999,-1865.3396 976.0891,-1870.1876"/>
+<polygon fill="none" stroke="#000000" points="975.4936,-1866.7309 965.9154,-1871.2596 976.2271,-1873.6924 975.4936,-1866.7309"/>
 </g>
 <!-- \\Pho\\Framework\\Cargo\\SetterPropertiesTrait -->
 <g id="node7" class="node">
 <title>\\Pho\\Framework\\Cargo\\SetterPropertiesTrait</title>
-<polygon fill="none" stroke="#000000" points="1869.5953,-777 1715.3493,-777 1715.3493,-741 1869.5953,-741 1869.5953,-777"/>
-<text text-anchor="middle" x="1792.4723" y="-755.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">SetterPropertiesTrait</text>
+<polygon fill="none" stroke="#000000" points="1869.5953,-1895 1715.3493,-1895 1715.3493,-1859 1869.5953,-1859 1869.5953,-1895"/>
+<text text-anchor="middle" x="1792.4723" y="-1873.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">SetterPropertiesTrait</text>
 </g>
 <!-- \\Pho\\Framework\\Cargo\\FormativePropertiesTrait -->
 <g id="node8" class="node">
 <title>\\Pho\\Framework\\Cargo\\FormativePropertiesTrait</title>
-<polygon fill="none" stroke="#000000" points="1879.8986,-723 1705.046,-723 1705.046,-687 1879.8986,-687 1879.8986,-723"/>
-<text text-anchor="middle" x="1792.4723" y="-701.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">FormativePropertiesTrait</text>
+<polygon fill="none" stroke="#000000" points="1879.8986,-1841 1705.046,-1841 1705.046,-1805 1879.8986,-1805 1879.8986,-1841"/>
+<text text-anchor="middle" x="1792.4723" y="-1819.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">FormativePropertiesTrait</text>
 </g>
 <!-- \\Pho\\Framework\\ObjectOut\\MentionPredicate -->
 <g id="node9" class="node">
 <title>\\Pho\\Framework\\ObjectOut\\MentionPredicate</title>
-<polygon fill="none" stroke="#000000" points="1853.0901,-1895 1731.8545,-1895 1731.8545,-1859 1853.0901,-1859 1853.0901,-1895"/>
-<text text-anchor="middle" x="1792.4723" y="-1873.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">MentionPredicate</text>
+<polygon fill="none" stroke="#000000" points="1853.0901,-1018 1731.8545,-1018 1731.8545,-982 1853.0901,-982 1853.0901,-1018"/>
+<text text-anchor="middle" x="1792.4723" y="-996.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">MentionPredicate</text>
 </g>
 <!-- \\Pho\\Framework\\Predicate -->
 <g id="node38" class="node">
 <title>\\Pho\\Framework\\Predicate</title>
-<polygon fill="none" stroke="#000000" points="1205.592,-1533 1129.7704,-1533 1129.7704,-1497 1205.592,-1497 1205.592,-1533"/>
-<text text-anchor="middle" x="1167.6812" y="-1511.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Predicate</text>
+<polygon fill="none" stroke="#000000" points="1205.592,-1467 1129.7704,-1467 1129.7704,-1431 1205.592,-1431 1205.592,-1467"/>
+<text text-anchor="middle" x="1167.6812" y="-1445.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Predicate</text>
 </g>
 <!-- \\Pho\\Framework\\ObjectOut\\MentionPredicate&#45;&gt;\\Pho\\Framework\\Predicate -->
 <g id="edge13" class="edge">
 <title>\\Pho\\Framework\\ObjectOut\\MentionPredicate&#45;&gt;\\Pho\\Framework\\Predicate</title>
-<path fill="none" stroke="#000000" d="M1731.6016,-1872.4592C1694.4522,-1868.6546 1646.2921,-1861.8625 1604.8444,-1850 1532.7117,-1829.3554 1519.9891,-1809.8756 1450.3309,-1782"/>
+<path fill="none" stroke="#000000" d="M1731.7673,-1001.2255C1694.0275,-1003.7882 1645.1826,-1010.4389 1604.8444,-1027 1399.0649,-1111.4841 1235.6723,-1343.1204 1184.4618,-1422.1595"/>
+<polygon fill="none" stroke="#000000" points="1181.5001,-1420.2944 1179.0448,-1430.6008 1187.3913,-1424.075 1181.5001,-1420.2944"/>
 </g>
 <!-- \\Pho\\Framework\\ObjectOut\\Mention -->
 <g id="node10" class="node">
 <title>\\Pho\\Framework\\ObjectOut\\Mention</title>
-<polygon fill="none" stroke="#000000" points="1823.6802,-1841 1761.2644,-1841 1761.2644,-1805 1823.6802,-1805 1823.6802,-1841"/>
-<text text-anchor="middle" x="1792.4723" y="-1819.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Mention</text>
+<polygon fill="none" stroke="#000000" points="1823.6802,-964 1761.2644,-964 1761.2644,-928 1823.6802,-928 1823.6802,-964"/>
+<text text-anchor="middle" x="1792.4723" y="-942.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Mention</text>
 </g>
 <!-- \\Pho\\Framework\\AbstractEdge -->
 <g id="node81" class="node">
@@ -181,32 +182,34 @@
 <!-- \\Pho\\Framework\\ObjectOut\\Mention&#45;&gt;\\Pho\\Framework\\AbstractEdge -->
 <g id="edge14" class="edge">
 <title>\\Pho\\Framework\\ObjectOut\\Mention&#45;&gt;\\Pho\\Framework\\AbstractEdge</title>
-<path fill="none" stroke="#000000" d="M1761.0792,-1828.5703C1718.6967,-1834.0814 1643.9868,-1836.3258 1604.8444,-1793 1438.0206,-1608.347 1669.8603,-887.7952 1540.8444,-675 1516.5586,-634.9437 1470.3621,-663.3446 1450.3309,-621"/>
+<path fill="none" stroke="#000000" d="M1450.3309,-556C1427.3153,-521.3248 1388.6835,-561.9806 1359.8175,-532 1258.7075,-426.986 1388.8681,-317.0711 1287.8175,-212 1281.6756,-205.6137 1274.4143,-200.4527 1266.5505,-196.2883"/>
+<polygon fill="none" stroke="#000000" points="1267.9817,-193.0936 1257.4437,-191.9977 1264.9983,-199.426 1267.9817,-193.0936"/>
+<path fill="none" stroke="#000000" d="M1761.1281,-950.9221C1719.4971,-955.524 1646.3951,-956.5509 1604.8444,-916 1492.9241,-806.7729 1653.0423,-678.9418 1540.8444,-570 1511.6398,-541.643 1472.8423,-589.9155 1450.3309,-556"/>
 </g>
 <!-- \\Pho\\Framework\\ObjectOut\\MentionNotification -->
 <g id="node11" class="node">
 <title>\\Pho\\Framework\\ObjectOut\\MentionNotification</title>
-<polygon fill="none" stroke="#000000" points="1863.3933,-1949 1721.5512,-1949 1721.5512,-1913 1863.3933,-1913 1863.3933,-1949"/>
-<text text-anchor="middle" x="1792.4723" y="-1927.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">MentionNotification</text>
+<polygon fill="none" stroke="#000000" points="1863.3933,-1072 1721.5512,-1072 1721.5512,-1036 1863.3933,-1036 1863.3933,-1072"/>
+<text text-anchor="middle" x="1792.4723" y="-1050.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">MentionNotification</text>
 </g>
 <!-- \\Pho\\Framework\\AbstractNotification -->
 <g id="node39" class="node">
 <title>\\Pho\\Framework\\AbstractNotification</title>
-<polygon fill="none" stroke="#000000" points="1524.3524,-1929 1376.3094,-1929 1376.3094,-1893 1524.3524,-1893 1524.3524,-1929"/>
-<text text-anchor="start" x="1417.3256" y="-1913.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
-<text text-anchor="start" x="1384.3202" y="-1902.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AbstractNotification</text>
+<polygon fill="none" stroke="#000000" points="1524.3524,-1307 1376.3094,-1307 1376.3094,-1271 1524.3524,-1271 1524.3524,-1307"/>
+<text text-anchor="start" x="1417.3256" y="-1291.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
+<text text-anchor="start" x="1384.3202" y="-1280.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AbstractNotification</text>
 </g>
 <!-- \\Pho\\Framework\\ObjectOut\\MentionNotification&#45;&gt;\\Pho\\Framework\\AbstractNotification -->
 <g id="edge15" class="edge">
 <title>\\Pho\\Framework\\ObjectOut\\MentionNotification&#45;&gt;\\Pho\\Framework\\AbstractNotification</title>
-<path fill="none" stroke="#000000" d="M1721.5804,-1926.856C1667.202,-1923.6773 1591.9722,-1919.2797 1534.5304,-1915.9219"/>
-<polygon fill="none" stroke="#000000" points="1534.5717,-1912.4184 1524.3845,-1915.3288 1534.1632,-1919.4065 1534.5717,-1912.4184"/>
+<path fill="none" stroke="#000000" d="M1721.3575,-1045.2037C1682.9832,-1044.3431 1637.0277,-1050.0776 1604.8444,-1076 1536.7597,-1130.8393 1603.9315,-1201.4783 1540.8444,-1262 1538.4185,-1264.3272 1535.8007,-1266.4549 1533.0373,-1268.4"/>
+<polygon fill="none" stroke="#000000" points="1531.0645,-1265.5037 1524.3567,-1273.7047 1534.7146,-1271.4767 1531.0645,-1265.5037"/>
 </g>
 <!-- \\Pho\\Framework\\Exceptions\\UnrecognizedSetOfParametersForFormativeEdgeException -->
 <g id="node12" class="node">
 <title>\\Pho\\Framework\\Exceptions\\UnrecognizedSetOfParametersForFormativeEdgeException</title>
-<polygon fill="none" stroke="#000000" points="1972.2282,-428 1612.7163,-428 1612.7163,-392 1972.2282,-392 1972.2282,-428"/>
-<text text-anchor="middle" x="1792.4723" y="-406.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">UnrecognizedSetOfParametersForFormativeEdgeException</text>
+<polygon fill="none" stroke="#000000" points="1972.2282,-590 1612.7163,-590 1612.7163,-554 1972.2282,-554 1972.2282,-590"/>
+<text text-anchor="middle" x="1792.4723" y="-568.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">UnrecognizedSetOfParametersForFormativeEdgeException</text>
 </g>
 <!-- \\Exception -->
 <g id="node82" class="node">
@@ -217,243 +220,241 @@
 <!-- \\Pho\\Framework\\Exceptions\\UnrecognizedSetOfParametersForFormativeEdgeException&#45;&gt;\\Exception -->
 <g id="edge16" class="edge">
 <title>\\Pho\\Framework\\Exceptions\\UnrecognizedSetOfParametersForFormativeEdgeException&#45;&gt;\\Exception</title>
-<path fill="none" stroke="#000000" d="M1637.414,-428.0437C1626.2911,-430.6389 1615.3339,-433.6066 1604.8444,-437 1531.072,-460.8658 1519.5255,-552.9864 1450.3309,-518"/>
-<path fill="none" stroke="#000000" d="M1450.3309,-518C1291.8609,-437.8739 1436.7452,-249.7136 1287.8175,-153 1012.9159,25.521 580.914,-114.3236 448.5526,-164.1474"/>
-<polygon fill="none" stroke="#000000" points="446.9259,-161.0216 438.8259,-167.8509 449.4168,-167.5634 446.9259,-161.0216"/>
+<path fill="none" stroke="#000000" d="M1624.5307,-553.9903C1554.3596,-544.7212 1481.8739,-532.3475 1450.3309,-518"/>
 </g>
 <!-- \\Pho\\Framework\\Exceptions\\InvalidEdgeHeadTypeException -->
 <g id="node13" class="node">
 <title>\\Pho\\Framework\\Exceptions\\InvalidEdgeHeadTypeException</title>
-<polygon fill="none" stroke="#000000" points="1892.8024,-644 1692.1421,-644 1692.1421,-608 1892.8024,-608 1892.8024,-644"/>
-<text text-anchor="middle" x="1792.4723" y="-622.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">InvalidEdgeHeadTypeException</text>
+<polygon fill="none" stroke="#000000" points="1892.8024,-536 1692.1421,-536 1692.1421,-500 1892.8024,-500 1892.8024,-536"/>
+<text text-anchor="middle" x="1792.4723" y="-514.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">InvalidEdgeHeadTypeException</text>
 </g>
 <!-- \\Pho\\Framework\\Exceptions\\InvalidEdgeHeadTypeException&#45;&gt;\\Exception -->
 <g id="edge17" class="edge">
 <title>\\Pho\\Framework\\Exceptions\\InvalidEdgeHeadTypeException&#45;&gt;\\Exception</title>
-<path fill="none" stroke="#000000" d="M1691.7149,-617.8948C1663.1807,-613.8902 1632.399,-607.9141 1604.8444,-599 1531.072,-575.1342 1519.079,-553.8557 1450.3309,-518"/>
+<path fill="none" stroke="#000000" d="M1691.804,-527.078C1606.5723,-533.1153 1491.8289,-536.8756 1450.3309,-518"/>
 </g>
 <!-- \\Pho\\Framework\\Exceptions\\InjectionUnavailableException -->
 <g id="node14" class="node">
 <title>\\Pho\\Framework\\Exceptions\\InjectionUnavailableException</title>
-<polygon fill="none" stroke="#000000" points="1896.4039,-590 1688.5407,-590 1688.5407,-554 1896.4039,-554 1896.4039,-590"/>
-<text text-anchor="middle" x="1792.4723" y="-568.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">InjectionUnavailableException</text>
+<polygon fill="none" stroke="#000000" points="1896.4039,-482 1688.5407,-482 1688.5407,-446 1896.4039,-446 1896.4039,-482"/>
+<text text-anchor="middle" x="1792.4723" y="-460.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">InjectionUnavailableException</text>
 </g>
 <!-- \\Pho\\Framework\\Exceptions\\InjectionUnavailableException&#45;&gt;\\Exception -->
 <g id="edge18" class="edge">
 <title>\\Pho\\Framework\\Exceptions\\InjectionUnavailableException&#45;&gt;\\Exception</title>
-<path fill="none" stroke="#000000" d="M1688.6913,-572.6371C1617.9241,-569.1153 1524.044,-556.4452 1450.3309,-518"/>
+<path fill="none" stroke="#000000" d="M1688.6718,-478.3684C1661.3779,-482.3021 1631.982,-486.6774 1604.8444,-491 1535.999,-501.966 1513.788,-546.8639 1450.3309,-518"/>
 </g>
 <!-- \\Pho\\Framework\\Exceptions\\InvalidParticleMethodException -->
 <g id="node15" class="node">
 <title>\\Pho\\Framework\\Exceptions\\InvalidParticleMethodException</title>
-<polygon fill="none" stroke="#000000" points="1899.5045,-536 1685.4401,-536 1685.4401,-500 1899.5045,-500 1899.5045,-536"/>
-<text text-anchor="middle" x="1792.4723" y="-514.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">InvalidParticleMethodException</text>
+<polygon fill="none" stroke="#000000" points="1899.5045,-428 1685.4401,-428 1685.4401,-392 1899.5045,-392 1899.5045,-428"/>
+<text text-anchor="middle" x="1792.4723" y="-406.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">InvalidParticleMethodException</text>
 </g>
 <!-- \\Pho\\Framework\\Exceptions\\InvalidParticleMethodException&#45;&gt;\\Exception -->
 <g id="edge19" class="edge">
 <title>\\Pho\\Framework\\Exceptions\\InvalidParticleMethodException&#45;&gt;\\Exception</title>
-<path fill="none" stroke="#000000" d="M1685.3881,-528.5962C1600.5068,-535.0605 1489.831,-538.6014 1450.3309,-518"/>
+<path fill="none" stroke="#000000" d="M911.4358,-226C823.9614,-229.9282 566.7751,-199.7032 458.0787,-186.2444"/>
+<polygon fill="none" stroke="#000000" points="458.3893,-182.7561 448.0339,-184.996 457.5259,-189.7027 458.3893,-182.7561"/>
+<path fill="none" stroke="#000000" d="M1450.3309,-518C1288.8295,-444.1742 1436.7452,-249.7136 1287.8175,-153 1198.2574,-94.8397 1151.114,-126.9793 1047.5449,-153 980.9696,-169.7264 979.9843,-222.3749 911.4358,-226"/>
+<path fill="none" stroke="#000000" d="M1685.3574,-419.0252C1658.651,-423.0087 1630.3637,-428.7443 1604.8444,-437 1531.072,-460.8658 1520.9094,-550.1031 1450.3309,-518"/>
 </g>
 <!-- \\Pho\\Framework\\Exceptions\\PredicateClassDoesNotExistException -->
 <g id="node16" class="node">
 <title>\\Pho\\Framework\\Exceptions\\PredicateClassDoesNotExistException</title>
-<polygon fill="none" stroke="#000000" points="1916.0099,-482 1668.9347,-482 1668.9347,-446 1916.0099,-446 1916.0099,-482"/>
-<text text-anchor="middle" x="1792.4723" y="-460.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">PredicateClassDoesNotExistException</text>
+<polygon fill="none" stroke="#000000" points="1916.0099,-644 1668.9347,-644 1668.9347,-608 1916.0099,-608 1916.0099,-644"/>
+<text text-anchor="middle" x="1792.4723" y="-622.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">PredicateClassDoesNotExistException</text>
 </g>
 <!-- \\Pho\\Framework\\Exceptions\\PredicateClassDoesNotExistException&#45;&gt;\\Exception -->
 <g id="edge20" class="edge">
 <title>\\Pho\\Framework\\Exceptions\\PredicateClassDoesNotExistException&#45;&gt;\\Exception</title>
-<path fill="none" stroke="#000000" d="M1668.7576,-481.2642C1647.4256,-484.395 1625.4819,-487.7127 1604.8444,-491 1535.999,-501.966 1512.1423,-550.2379 1450.3309,-518"/>
+<path fill="none" stroke="#000000" d="M1668.8986,-617.2369C1549.1586,-607.6017 1382.3863,-590.7048 1359.8175,-570 1249.1989,-468.5178 1402.9634,-336.3148 1287.8175,-240 1223.6175,-186.2994 995.0294,-221.8172 911.4358,-226"/>
 </g>
 <!-- \\Pho\\Framework\\ActorOut\\WritePredicate -->
 <g id="node17" class="node">
 <title>\\Pho\\Framework\\ActorOut\\WritePredicate</title>
-<polygon fill="none" stroke="#000000" points="1846.8881,-1654 1738.0564,-1654 1738.0564,-1618 1846.8881,-1618 1846.8881,-1654"/>
-<text text-anchor="middle" x="1792.4723" y="-1632.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">WritePredicate</text>
+<polygon fill="none" stroke="#000000" points="1846.8881,-1521 1738.0564,-1521 1738.0564,-1485 1846.8881,-1485 1846.8881,-1521"/>
+<text text-anchor="middle" x="1792.4723" y="-1499.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">WritePredicate</text>
 </g>
 <!-- \\Pho\\Framework\\ActorOut\\SubscribePredicate -->
 <g id="node19" class="node">
 <title>\\Pho\\Framework\\ActorOut\\SubscribePredicate</title>
-<polygon fill="none" stroke="#000000" points="1517.6504,-1627 1383.0115,-1627 1383.0115,-1591 1517.6504,-1591 1517.6504,-1627"/>
-<text text-anchor="middle" x="1450.3309" y="-1605.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">SubscribePredicate</text>
+<polygon fill="none" stroke="#000000" points="1517.6504,-1474 1383.0115,-1474 1383.0115,-1438 1517.6504,-1438 1517.6504,-1474"/>
+<text text-anchor="middle" x="1450.3309" y="-1452.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">SubscribePredicate</text>
 </g>
 <!-- \\Pho\\Framework\\ActorOut\\WritePredicate&#45;&gt;\\Pho\\Framework\\ActorOut\\SubscribePredicate -->
 <g id="edge28" class="edge">
 <title>\\Pho\\Framework\\ActorOut\\WritePredicate&#45;&gt;\\Pho\\Framework\\ActorOut\\SubscribePredicate</title>
-<path fill="none" stroke="#000000" d="M1738.259,-1631.7218C1681.5609,-1627.2475 1592.0579,-1620.1843 1527.8919,-1615.1207"/>
-<polygon fill="none" stroke="#000000" points="1528.0645,-1611.6235 1517.8201,-1614.3259 1527.5138,-1618.6018 1528.0645,-1611.6235"/>
+<path fill="none" stroke="#000000" d="M1738.259,-1495.5527C1681.5609,-1487.7641 1592.0579,-1475.4691 1527.8919,-1466.6546"/>
+<polygon fill="none" stroke="#000000" points="1528.2034,-1463.1646 1517.8201,-1465.271 1527.2507,-1470.0994 1528.2034,-1463.1646"/>
 </g>
 <!-- \\Pho\\Framework\\ActorOut\\Subscribe -->
 <g id="node18" class="node">
 <title>\\Pho\\Framework\\ActorOut\\Subscribe</title>
-<polygon fill="none" stroke="#000000" points="1488.2417,-1560 1412.4201,-1560 1412.4201,-1524 1488.2417,-1524 1488.2417,-1560"/>
-<text text-anchor="middle" x="1450.3309" y="-1538.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Subscribe</text>
+<polygon fill="none" stroke="#000000" points="1488.2417,-1390 1412.4201,-1390 1412.4201,-1354 1488.2417,-1354 1488.2417,-1390"/>
+<text text-anchor="middle" x="1450.3309" y="-1368.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Subscribe</text>
 </g>
 <!-- \\Pho\\Framework\\ActorOut\\Subscribe&#45;&gt;\\Pho\\Framework\\AbstractEdge -->
 <g id="edge29" class="edge">
 <title>\\Pho\\Framework\\ActorOut\\Subscribe&#45;&gt;\\Pho\\Framework\\AbstractEdge</title>
-<path fill="none" stroke="#000000" d="M1412.2898,-1533.0468C1393.3727,-1526.5524 1372.0017,-1515.7035 1359.8175,-1498 1255.7339,-1346.7686 1317.5518,-856.1635 1287.8175,-675 1258.2018,-494.5589 1198.0512,-282.6691 1176.0138,-207.8533"/>
-<polygon fill="none" stroke="#000000" points="1179.358,-206.8196 1173.1643,-198.2238 1172.6457,-208.8059 1179.358,-206.8196"/>
+<path fill="none" stroke="#000000" d="M1412.316,-1372.6519C1393.6474,-1370.8211 1372.4964,-1365.116 1359.8175,-1350 1197.8309,-1156.8769 1443.1539,-416.5114 1287.8175,-218 1280.9538,-209.2286 1272.0683,-202.443 1262.2367,-197.2004"/>
+<polygon fill="none" stroke="#000000" points="1263.5078,-193.9296 1252.9726,-192.8069 1260.5082,-200.2544 1263.5078,-193.9296"/>
 </g>
 <!-- \\Pho\\Framework\\ActorOut\\SubscribePredicate&#45;&gt;\\Pho\\Framework\\Predicate -->
 <g id="edge30" class="edge">
 <title>\\Pho\\Framework\\ActorOut\\SubscribePredicate&#45;&gt;\\Pho\\Framework\\Predicate</title>
-<path fill="none" stroke="#000000" d="M1396.1677,-1590.9871C1343.7205,-1573.5449 1264.9978,-1547.3643 1214.9996,-1530.7366"/>
-<polygon fill="none" stroke="#000000" points="1215.9928,-1527.3784 1205.3993,-1527.5438 1213.7838,-1534.0207 1215.9928,-1527.3784"/>
+<path fill="none" stroke="#000000" d="M1382.9884,-1454.3322C1331.375,-1453.054 1261.4272,-1451.3217 1215.4555,-1450.1832"/>
+<polygon fill="none" stroke="#000000" points="1215.5383,-1446.6842 1205.4547,-1449.9355 1215.365,-1453.6821 1215.5383,-1446.6842"/>
 </g>
 <!-- \\Pho\\Framework\\ActorOut\\ReadPredicate -->
 <g id="node20" class="node">
 <title>\\Pho\\Framework\\ActorOut\\ReadPredicate</title>
-<polygon fill="none" stroke="#000000" points="1843.2864,-1708 1741.6582,-1708 1741.6582,-1672 1843.2864,-1672 1843.2864,-1708"/>
-<text text-anchor="middle" x="1792.4723" y="-1686.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">ReadPredicate</text>
+<polygon fill="none" stroke="#000000" points="1843.2864,-1575 1741.6582,-1575 1741.6582,-1539 1843.2864,-1539 1843.2864,-1575"/>
+<text text-anchor="middle" x="1792.4723" y="-1553.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">ReadPredicate</text>
 </g>
 <!-- \\Pho\\Framework\\ActorOut\\ReadPredicate&#45;&gt;\\Pho\\Framework\\Predicate -->
 <g id="edge31" class="edge">
 <title>\\Pho\\Framework\\ActorOut\\ReadPredicate&#45;&gt;\\Pho\\Framework\\Predicate</title>
-<path fill="none" stroke="#000000" d="M1450.3309,-1782C1325.7019,-1732.1263 1224.1401,-1598.6231 1185.0121,-1541.5123"/>
-<polygon fill="none" stroke="#000000" points="1187.7752,-1539.3503 1179.2743,-1533.0268 1181.9764,-1543.2713 1187.7752,-1539.3503"/>
-<path fill="none" stroke="#000000" d="M1741.5809,-1693.7857C1703.424,-1697.4711 1650.1934,-1704.4219 1604.8444,-1717 1533.053,-1736.9122 1519.4998,-1809.6798 1450.3309,-1782"/>
+<path fill="none" stroke="#000000" d="M1741.4208,-1550.2193C1703.6419,-1545.0641 1650.9564,-1537.5866 1604.8444,-1530 1462.781,-1506.627 1295.6596,-1474.3134 1215.4111,-1458.4954"/>
+<polygon fill="none" stroke="#000000" points="1216.0886,-1455.0616 1205.6,-1456.5583 1214.7326,-1461.9291 1216.0886,-1455.0616"/>
 </g>
 <!-- \\Pho\\Framework\\ActorOut\\Read -->
 <g id="node21" class="node">
 <title>\\Pho\\Framework\\ActorOut\\Read</title>
-<polygon fill="none" stroke="#000000" points="1819.4723,-1546 1765.4723,-1546 1765.4723,-1510 1819.4723,-1510 1819.4723,-1546"/>
-<text text-anchor="middle" x="1792.4723" y="-1524.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Read</text>
+<polygon fill="none" stroke="#000000" points="1819.4723,-1359 1765.4723,-1359 1765.4723,-1323 1819.4723,-1323 1819.4723,-1359"/>
+<text text-anchor="middle" x="1792.4723" y="-1337.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Read</text>
 </g>
 <!-- \\Pho\\Framework\\ActorOut\\Read&#45;&gt;\\Pho\\Framework\\AbstractEdge -->
 <g id="edge32" class="edge">
 <title>\\Pho\\Framework\\ActorOut\\Read&#45;&gt;\\Pho\\Framework\\AbstractEdge</title>
-<path fill="none" stroke="#000000" d="M1765.3863,-1532.8988C1724.0624,-1538.6399 1645.769,-1542.3788 1604.8444,-1498 1480.4862,-1363.1457 1637.5457,-830.8829 1540.8444,-675 1516.1507,-635.1938 1470.3621,-663.3446 1450.3309,-621"/>
-<path fill="none" stroke="#000000" d="M1450.3309,-621C1426.2057,-570.0008 1387.3404,-581.2488 1359.8175,-532 1289.9696,-407.0159 1384.8798,-323.2552 1287.8175,-218 1279.7075,-209.2054 1269.58,-202.4342 1258.6672,-197.2231"/>
-<polygon fill="none" stroke="#000000" points="1259.9113,-193.9481 1249.3427,-193.2026 1257.1397,-200.376 1259.9113,-193.9481"/>
+<path fill="none" stroke="#000000" d="M1765.3276,-1347.1595C1724.287,-1354.6977 1646.793,-1361.6963 1604.8444,-1319 1504.0533,-1216.4124 1593.4744,-808.84 1540.8444,-675 1516.5269,-613.1599 1487.0786,-611.3638 1450.3309,-556"/>
 </g>
 <!-- \\Pho\\Framework\\ActorOut\\WriteNotification -->
 <g id="node22" class="node">
 <title>\\Pho\\Framework\\ActorOut\\WriteNotification</title>
-<polygon fill="none" stroke="#000000" points="1856.6907,-1762 1728.2538,-1762 1728.2538,-1726 1856.6907,-1726 1856.6907,-1762"/>
-<text text-anchor="middle" x="1792.4723" y="-1740.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">WriteNotification</text>
+<polygon fill="none" stroke="#000000" points="1856.6907,-1413 1728.2538,-1413 1728.2538,-1377 1856.6907,-1377 1856.6907,-1413"/>
+<text text-anchor="middle" x="1792.4723" y="-1391.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">WriteNotification</text>
 </g>
 <!-- \\Pho\\Framework\\ActorOut\\WriteNotification&#45;&gt;\\Pho\\Framework\\AbstractNotification -->
 <g id="edge33" class="edge">
 <title>\\Pho\\Framework\\ActorOut\\WriteNotification&#45;&gt;\\Pho\\Framework\\AbstractNotification</title>
-<path fill="none" stroke="#000000" d="M1728.1426,-1754.2426C1690.8493,-1761.7619 1643.727,-1774.0337 1604.8444,-1793 1555.2086,-1817.2115 1505.9035,-1858.6759 1476.782,-1885.4494"/>
-<polygon fill="none" stroke="#000000" points="1474.0528,-1883.2083 1469.1199,-1892.5848 1478.8234,-1888.331 1474.0528,-1883.2083"/>
+<path fill="none" stroke="#000000" d="M1728.1797,-1394.8747C1690.6816,-1392.6167 1643.3396,-1385.9007 1604.8444,-1368 1570.3058,-1351.9392 1574.5769,-1328.6913 1540.8444,-1311 1538.5887,-1309.817 1536.268,-1308.6963 1533.8988,-1307.6347"/>
+<polygon fill="none" stroke="#000000" points="1535.1364,-1304.3596 1524.555,-1303.8263 1532.4943,-1310.8419 1535.1364,-1304.3596"/>
 </g>
 <!-- \\Pho\\Framework\\ActorOut\\Write -->
 <g id="node23" class="node">
 <title>\\Pho\\Framework\\ActorOut\\Write</title>
-<polygon fill="none" stroke="#000000" points="1819.4723,-1600 1765.4723,-1600 1765.4723,-1564 1819.4723,-1564 1819.4723,-1600"/>
-<text text-anchor="middle" x="1792.4723" y="-1578.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Write</text>
+<polygon fill="none" stroke="#000000" points="1819.4723,-1467 1765.4723,-1467 1765.4723,-1431 1819.4723,-1431 1819.4723,-1467"/>
+<text text-anchor="middle" x="1792.4723" y="-1445.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Write</text>
 </g>
 <!-- \\Pho\\Framework\\ActorOut\\Write&#45;&gt;\\Pho\\Framework\\ActorOut\\Subscribe -->
 <g id="edge34" class="edge">
 <title>\\Pho\\Framework\\ActorOut\\Write&#45;&gt;\\Pho\\Framework\\ActorOut\\Subscribe</title>
-<path fill="none" stroke="#000000" d="M1765.339,-1578.8278C1707.4912,-1572.0648 1571.3781,-1556.1517 1498.4549,-1547.6262"/>
-<polygon fill="none" stroke="#000000" points="1498.5099,-1544.1089 1488.171,-1546.4239 1497.697,-1551.0615 1498.5099,-1544.1089"/>
+<path fill="none" stroke="#000000" d="M1765.1718,-1446.5413C1728.4087,-1442.8974 1661.1072,-1435.0514 1604.8444,-1422 1568.289,-1413.5201 1527.9791,-1400.3427 1497.6996,-1389.6443"/>
+<polygon fill="none" stroke="#000000" points="1498.8332,-1386.3327 1488.2385,-1386.267 1496.4798,-1392.9253 1498.8332,-1386.3327"/>
 </g>
 <!-- \\Pho\\Framework\\Loaders\\OutgoingEdgeLoader -->
 <g id="node24" class="node">
 <title>\\Pho\\Framework\\Loaders\\OutgoingEdgeLoader</title>
-<polygon fill="none" stroke="#000000" points="1859.7917,-1467 1725.1528,-1467 1725.1528,-1431 1859.7917,-1431 1859.7917,-1467"/>
-<text text-anchor="middle" x="1792.4723" y="-1445.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">OutgoingEdgeLoader</text>
+<polygon fill="none" stroke="#000000" points="1859.7917,-1762 1725.1528,-1762 1725.1528,-1726 1859.7917,-1726 1859.7917,-1762"/>
+<text text-anchor="middle" x="1792.4723" y="-1740.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">OutgoingEdgeLoader</text>
 </g>
 <!-- \\Pho\\Framework\\Loaders\\AbstractLoader -->
 <g id="node26" class="node">
 <title>\\Pho\\Framework\\Loaders\\AbstractLoader</title>
-<polygon fill="none" stroke="#000000" points="1504.7468,-1413 1395.9151,-1413 1395.9151,-1377 1504.7468,-1377 1504.7468,-1413"/>
-<text text-anchor="start" x="1417.3256" y="-1397.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
-<text text-anchor="start" x="1404.1234" y="-1386.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AbstractLoader</text>
+<polygon fill="none" stroke="#000000" points="1504.7468,-1708 1395.9151,-1708 1395.9151,-1672 1504.7468,-1672 1504.7468,-1708"/>
+<text text-anchor="start" x="1417.3256" y="-1692.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
+<text text-anchor="start" x="1404.1234" y="-1681.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AbstractLoader</text>
 </g>
 <!-- \\Pho\\Framework\\Loaders\\OutgoingEdgeLoader&#45;&gt;\\Pho\\Framework\\Loaders\\AbstractLoader -->
 <g id="edge35" class="edge">
 <title>\\Pho\\Framework\\Loaders\\OutgoingEdgeLoader&#45;&gt;\\Pho\\Framework\\Loaders\\AbstractLoader</title>
-<path fill="none" stroke="#000000" d="M1725.0961,-1439.8041C1689.3302,-1434.7964 1644.657,-1428.3416 1604.8444,-1422 1575.1447,-1417.2693 1542.3143,-1411.5954 1514.5816,-1406.6726"/>
-<polygon fill="none" stroke="#000000" points="1515.069,-1403.2044 1504.6101,-1404.896 1513.8411,-1410.0958 1515.069,-1403.2044"/>
+<path fill="none" stroke="#000000" d="M1725.0961,-1734.8041C1689.3302,-1729.7964 1644.657,-1723.3416 1604.8444,-1717 1575.1447,-1712.2693 1542.3143,-1706.5954 1514.5816,-1701.6726"/>
+<polygon fill="none" stroke="#000000" points="1515.069,-1698.2044 1504.6101,-1699.896 1513.8411,-1705.0958 1515.069,-1698.2044"/>
 </g>
 <!-- \\Pho\\Framework\\Loaders\\FieldsLoader -->
 <g id="node25" class="node">
 <title>\\Pho\\Framework\\Loaders\\FieldsLoader</title>
-<polygon fill="none" stroke="#000000" points="1840.1854,-1413 1744.7592,-1413 1744.7592,-1377 1840.1854,-1377 1840.1854,-1413"/>
-<text text-anchor="middle" x="1792.4723" y="-1391.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">FieldsLoader</text>
+<polygon fill="none" stroke="#000000" points="1840.1854,-1708 1744.7592,-1708 1744.7592,-1672 1840.1854,-1672 1840.1854,-1708"/>
+<text text-anchor="middle" x="1792.4723" y="-1686.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">FieldsLoader</text>
 </g>
 <!-- \\Pho\\Framework\\Loaders\\FieldsLoader&#45;&gt;\\Pho\\Framework\\Loaders\\AbstractLoader -->
 <g id="edge36" class="edge">
 <title>\\Pho\\Framework\\Loaders\\FieldsLoader&#45;&gt;\\Pho\\Framework\\Loaders\\AbstractLoader</title>
-<path fill="none" stroke="#000000" d="M1744.5387,-1395C1684.6608,-1395 1581.9666,-1395 1515.1229,-1395"/>
-<polygon fill="none" stroke="#000000" points="1514.7148,-1391.5001 1504.7148,-1395 1514.7148,-1398.5001 1514.7148,-1391.5001"/>
+<path fill="none" stroke="#000000" d="M1744.5387,-1690C1684.6608,-1690 1581.9666,-1690 1515.1229,-1690"/>
+<polygon fill="none" stroke="#000000" points="1514.7148,-1686.5001 1504.7148,-1690 1514.7148,-1693.5001 1514.7148,-1686.5001"/>
 </g>
 <!-- \\Pho\\Framework\\Loaders\\IncomingEdgeLoader -->
 <g id="node27" class="node">
 <title>\\Pho\\Framework\\Loaders\\IncomingEdgeLoader</title>
-<polygon fill="none" stroke="#000000" points="1859.7917,-1359 1725.1528,-1359 1725.1528,-1323 1859.7917,-1323 1859.7917,-1359"/>
-<text text-anchor="middle" x="1792.4723" y="-1337.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">IncomingEdgeLoader</text>
+<polygon fill="none" stroke="#000000" points="1859.7917,-1654 1725.1528,-1654 1725.1528,-1618 1859.7917,-1618 1859.7917,-1654"/>
+<text text-anchor="middle" x="1792.4723" y="-1632.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">IncomingEdgeLoader</text>
 </g>
 <!-- \\Pho\\Framework\\Loaders\\IncomingEdgeLoader&#45;&gt;\\Pho\\Framework\\Loaders\\AbstractLoader -->
 <g id="edge37" class="edge">
 <title>\\Pho\\Framework\\Loaders\\IncomingEdgeLoader&#45;&gt;\\Pho\\Framework\\Loaders\\AbstractLoader</title>
-<path fill="none" stroke="#000000" d="M1725.0961,-1350.1959C1689.3302,-1355.2036 1644.657,-1361.6584 1604.8444,-1368 1575.1447,-1372.7307 1542.3143,-1378.4046 1514.5816,-1383.3274"/>
-<polygon fill="none" stroke="#000000" points="1513.8411,-1379.9042 1504.6101,-1385.104 1515.069,-1386.7956 1513.8411,-1379.9042"/>
+<path fill="none" stroke="#000000" d="M1725.0961,-1645.1959C1689.3302,-1650.2036 1644.657,-1656.6584 1604.8444,-1663 1575.1447,-1667.7307 1542.3143,-1673.4046 1514.5816,-1678.3274"/>
+<polygon fill="none" stroke="#000000" points="1513.8411,-1674.9042 1504.6101,-1680.104 1515.069,-1681.7956 1513.8411,-1674.9042"/>
 </g>
 <!-- \\Pho\\Framework\\Handlers\\Get -->
 <g id="node28" class="node">
 <title>\\Pho\\Framework\\Handlers\\Get</title>
-<polygon fill="none" stroke="#000000" points="1819.4723,-1280 1765.4723,-1280 1765.4723,-1244 1819.4723,-1244 1819.4723,-1280"/>
-<text text-anchor="middle" x="1792.4723" y="-1258.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Get</text>
+<polygon fill="none" stroke="#000000" points="1819.4723,-885 1765.4723,-885 1765.4723,-849 1819.4723,-849 1819.4723,-885"/>
+<text text-anchor="middle" x="1792.4723" y="-863.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Get</text>
 </g>
 <!-- \\Pho\\Framework\\Handlers\\HandlerInterface -->
 <g id="node32" class="node">
 <title>\\Pho\\Framework\\Handlers\\HandlerInterface</title>
-<polygon fill="none" stroke="#000000" points="1510.9487,-1199 1389.7131,-1199 1389.7131,-1163 1510.9487,-1163 1510.9487,-1199"/>
-<text text-anchor="middle" x="1450.3309" y="-1177.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">HandlerInterface</text>
+<polygon fill="none" stroke="#000000" points="1510.9487,-804 1389.7131,-804 1389.7131,-768 1510.9487,-768 1510.9487,-804"/>
+<text text-anchor="middle" x="1450.3309" y="-782.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">HandlerInterface</text>
 </g>
 <!-- \\Pho\\Framework\\Handlers\\Get&#45;&gt;\\Pho\\Framework\\Handlers\\HandlerInterface -->
 <g id="edge38" class="edge">
 <title>\\Pho\\Framework\\Handlers\\Get&#45;&gt;\\Pho\\Framework\\Handlers\\HandlerInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.4396,-1259.7643C1728.6948,-1256.3516 1661.1115,-1248.7437 1604.8444,-1235 1570.7428,-1226.6704 1533.5728,-1213.8052 1504.2367,-1202.7215"/>
-<polygon fill="none" stroke="#000000" points="1505.1946,-1199.3407 1494.604,-1199.0401 1502.6956,-1205.8795 1505.1946,-1199.3407"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.465,-865.8247C1728.4627,-863.6089 1660.2792,-857.3477 1604.8444,-840 1574.4939,-830.5022 1570.7068,-818.9359 1540.8444,-808 1534.5187,-805.6835 1527.855,-803.5383 1521.1309,-801.5701"/>
+<polygon fill="none" stroke="#000000" points="1521.8414,-798.1346 1511.2683,-798.8137 1519.9572,-804.8763 1521.8414,-798.1346"/>
 </g>
 <!-- \\Pho\\Framework\\Handlers\\Has -->
 <g id="node29" class="node">
 <title>\\Pho\\Framework\\Handlers\\Has</title>
-<polygon fill="none" stroke="#000000" points="1819.4723,-1226 1765.4723,-1226 1765.4723,-1190 1819.4723,-1190 1819.4723,-1226"/>
-<text text-anchor="middle" x="1792.4723" y="-1204.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Has</text>
+<polygon fill="none" stroke="#000000" points="1819.4723,-831 1765.4723,-831 1765.4723,-795 1819.4723,-795 1819.4723,-831"/>
+<text text-anchor="middle" x="1792.4723" y="-809.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Has</text>
 </g>
 <!-- \\Pho\\Framework\\Handlers\\Has&#45;&gt;\\Pho\\Framework\\Handlers\\HandlerInterface -->
 <g id="edge39" class="edge">
 <title>\\Pho\\Framework\\Handlers\\Has&#45;&gt;\\Pho\\Framework\\Handlers\\HandlerInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.339,-1205.8588C1713.1089,-1201.7371 1597.0764,-1192.5804 1521.3582,-1186.6051"/>
-<polygon fill="none" stroke="#000000" points="1521.1969,-1183.0816 1510.9525,-1185.7839 1520.6461,-1190.0599 1521.1969,-1183.0816"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.339,-810.8588C1713.1089,-806.7371 1597.0764,-797.5804 1521.3582,-791.6051"/>
+<polygon fill="none" stroke="#000000" points="1521.1969,-788.0816 1510.9525,-790.7839 1520.6461,-795.0599 1521.1969,-788.0816"/>
 </g>
 <!-- \\Pho\\Framework\\Handlers\\Set -->
 <g id="node30" class="node">
 <title>\\Pho\\Framework\\Handlers\\Set</title>
-<polygon fill="none" stroke="#000000" points="1819.4723,-1172 1765.4723,-1172 1765.4723,-1136 1819.4723,-1136 1819.4723,-1172"/>
-<text text-anchor="middle" x="1792.4723" y="-1150.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Set</text>
+<polygon fill="none" stroke="#000000" points="1819.4723,-777 1765.4723,-777 1765.4723,-741 1819.4723,-741 1819.4723,-777"/>
+<text text-anchor="middle" x="1792.4723" y="-755.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Set</text>
 </g>
 <!-- \\Pho\\Framework\\Handlers\\Set&#45;&gt;\\Pho\\Framework\\Handlers\\HandlerInterface -->
 <g id="edge40" class="edge">
 <title>\\Pho\\Framework\\Handlers\\Set&#45;&gt;\\Pho\\Framework\\Handlers\\HandlerInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.339,-1156.1412C1713.1089,-1160.2629 1597.0764,-1169.4196 1521.3582,-1175.3949"/>
-<polygon fill="none" stroke="#000000" points="1520.6461,-1171.9401 1510.9525,-1176.2161 1521.1969,-1178.9184 1520.6461,-1171.9401"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.339,-761.1412C1713.1089,-765.2629 1597.0764,-774.4196 1521.3582,-780.3949"/>
+<polygon fill="none" stroke="#000000" points="1520.6461,-776.9401 1510.9525,-781.2161 1521.1969,-783.9184 1520.6461,-776.9401"/>
 </g>
 <!-- \\Pho\\Framework\\Handlers\\Form -->
 <g id="node31" class="node">
 <title>\\Pho\\Framework\\Handlers\\Form</title>
-<polygon fill="none" stroke="#000000" points="1819.4723,-1118 1765.4723,-1118 1765.4723,-1082 1819.4723,-1082 1819.4723,-1118"/>
-<text text-anchor="middle" x="1792.4723" y="-1096.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Form</text>
+<polygon fill="none" stroke="#000000" points="1819.4723,-723 1765.4723,-723 1765.4723,-687 1819.4723,-687 1819.4723,-723"/>
+<text text-anchor="middle" x="1792.4723" y="-701.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Form</text>
 </g>
 <!-- \\Pho\\Framework\\Handlers\\Form&#45;&gt;\\Pho\\Framework\\Handlers\\HandlerInterface -->
 <g id="edge41" class="edge">
 <title>\\Pho\\Framework\\Handlers\\Form&#45;&gt;\\Pho\\Framework\\Handlers\\HandlerInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.465,-1101.1753C1728.4627,-1103.3911 1660.2792,-1109.6523 1604.8444,-1127 1574.4939,-1136.4978 1570.7068,-1148.0641 1540.8444,-1159 1534.5187,-1161.3165 1527.855,-1163.4617 1521.1309,-1165.4299"/>
-<polygon fill="none" stroke="#000000" points="1519.9572,-1162.1237 1511.2683,-1168.1863 1521.8414,-1168.8654 1519.9572,-1162.1237"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.4396,-707.2357C1728.6948,-710.6484 1661.1115,-718.2563 1604.8444,-732 1570.7428,-740.3296 1533.5728,-753.1948 1504.2367,-764.2785"/>
+<polygon fill="none" stroke="#000000" points="1502.6956,-761.1205 1494.604,-767.9599 1505.1946,-767.6593 1502.6956,-761.1205"/>
 </g>
 <!-- \\Pho\\Framework\\AbstractPredicate -->
 <g id="node33" class="node">
 <title>\\Pho\\Framework\\AbstractPredicate</title>
-<polygon fill="none" stroke="#000000" points="975.6542,-1479 847.2173,-1479 847.2173,-1443 975.6542,-1443 975.6542,-1479"/>
-<text text-anchor="start" x="878.4304" y="-1463.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
-<text text-anchor="start" x="855.3267" y="-1452.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AbstractPredicate</text>
+<polygon fill="none" stroke="#000000" points="975.6542,-1453 847.2173,-1453 847.2173,-1417 975.6542,-1417 975.6542,-1453"/>
+<text text-anchor="start" x="878.4304" y="-1437.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">«abstract»</text>
+<text text-anchor="start" x="855.3267" y="-1426.2" font-family="Courier,monospace" font-size="11.00" fill="#000000">AbstractPredicate</text>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Predicate -->
 <g id="node58" class="node">
@@ -464,14 +465,14 @@
 <!-- \\Pho\\Framework\\AbstractPredicate&#45;&gt;\\Pho\\Lib\\Graph\\Predicate -->
 <g id="edge1" class="edge">
 <title>\\Pho\\Framework\\AbstractPredicate&#45;&gt;\\Pho\\Lib\\Graph\\Predicate</title>
-<path fill="none" stroke="#000000" d="M847.2206,-1445.0374C831.5793,-1441.2868 814.8759,-1437.3962 799.3267,-1434 769.6129,-1427.5101 736.13,-1420.925 709.6313,-1415.8829"/>
-<polygon fill="none" stroke="#000000" points="709.9496,-1412.381 699.4731,-1413.9603 708.6478,-1419.259 709.9496,-1412.381"/>
+<path fill="none" stroke="#000000" d="M847.125,-1427.7893C804.2755,-1422.9849 748.8728,-1416.773 709.8265,-1412.395"/>
+<polygon fill="none" stroke="#000000" points="710.099,-1408.9037 699.7712,-1411.2676 709.3189,-1415.8601 710.099,-1408.9037"/>
 </g>
 <!-- \\Pho\\Framework\\Logger -->
 <g id="node34" class="node">
 <title>\\Pho\\Framework\\Logger</title>
-<polygon fill="none" stroke="#000000" points="1820.0801,-2128 1764.8645,-2128 1764.8645,-2092 1820.0801,-2092 1820.0801,-2128"/>
-<text text-anchor="middle" x="1792.4723" y="-2106.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Logger</text>
+<polygon fill="none" stroke="#000000" points="1820.0801,-2074 1764.8645,-2074 1764.8645,-2038 1820.0801,-2038 1820.0801,-2074"/>
+<text text-anchor="middle" x="1792.4723" y="-2052.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Logger</text>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Logger -->
 <g id="node57" class="node">
@@ -482,38 +483,38 @@
 <!-- \\Pho\\Framework\\Logger&#45;&gt;\\Pho\\Lib\\Graph\\Logger -->
 <g id="edge2" class="edge">
 <title>\\Pho\\Framework\\Logger&#45;&gt;\\Pho\\Lib\\Graph\\Logger</title>
-<path fill="none" stroke="#000000" d="M1764.7697,-2107.8684C1727.8417,-2104.6076 1660.6567,-2097.2073 1604.8444,-2083 1492.2659,-2054.3427 1462.9919,-2045.3871 1359.8175,-1992 1083.304,-1848.9193 785.7773,-1615.4995 691.8636,-1539.6491"/>
-<polygon fill="none" stroke="#000000" points="693.897,-1536.7921 683.9229,-1533.2188 689.4917,-1542.2321 693.897,-1536.7921"/>
+<path fill="none" stroke="#000000" d="M1764.6179,-2058.3579C1621.7342,-2069.806 972.5926,-2113.7755 839.3267,-1980 769.5662,-1909.9728 866.7872,-1609.2454 799.3267,-1537 774.4024,-1510.3079 731.0293,-1507.4433 699.6265,-1509.5877"/>
+<polygon fill="none" stroke="#000000" points="699.1347,-1506.1174 689.4797,-1510.4798 699.7479,-1513.0905 699.1347,-1506.1174"/>
 </g>
 <!-- \\Pho\\Framework\\NotificationList -->
 <g id="node35" class="node">
 <title>\\Pho\\Framework\\NotificationList</title>
-<polygon fill="none" stroke="#000000" points="1853.0901,-1064 1731.8545,-1064 1731.8545,-1028 1853.0901,-1028 1853.0901,-1064"/>
-<text text-anchor="middle" x="1792.4723" y="-1042.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">NotificationList</text>
+<polygon fill="none" stroke="#000000" points="1853.0901,-1251 1731.8545,-1251 1731.8545,-1215 1853.0901,-1215 1853.0901,-1251"/>
+<text text-anchor="middle" x="1792.4723" y="-1229.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">NotificationList</text>
 </g>
 <!-- \\Pho\\Framework\\FieldHelper -->
 <g id="node36" class="node">
 <title>\\Pho\\Framework\\FieldHelper</title>
-<polygon fill="none" stroke="#000000" points="1836.5849,-1010 1748.3596,-1010 1748.3596,-974 1836.5849,-974 1836.5849,-1010"/>
-<text text-anchor="middle" x="1792.4723" y="-988.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">FieldHelper</text>
+<polygon fill="none" stroke="#000000" points="1836.5849,-1197 1748.3596,-1197 1748.3596,-1161 1836.5849,-1161 1836.5849,-1197"/>
+<text text-anchor="middle" x="1792.4723" y="-1175.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">FieldHelper</text>
 </g>
 <!-- \\Pho\\Framework\\Space -->
 <g id="node37" class="node">
 <title>\\Pho\\Framework\\Space</title>
-<polygon fill="none" stroke="#000000" points="1819.4723,-902 1765.4723,-902 1765.4723,-866 1819.4723,-866 1819.4723,-902"/>
-<text text-anchor="middle" x="1792.4723" y="-880.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Space</text>
+<polygon fill="none" stroke="#000000" points="1819.4723,-1143 1765.4723,-1143 1765.4723,-1107 1819.4723,-1107 1819.4723,-1143"/>
+<text text-anchor="middle" x="1792.4723" y="-1121.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Space</text>
 </g>
 <!-- \\Pho\\Framework\\ContextInterface -->
 <g id="node44" class="node">
 <title>\\Pho\\Framework\\ContextInterface</title>
-<polygon fill="none" stroke="#000000" points="1510.9487,-956 1389.7131,-956 1389.7131,-920 1510.9487,-920 1510.9487,-956"/>
-<text text-anchor="middle" x="1450.3309" y="-934.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">ContextInterface</text>
+<polygon fill="none" stroke="#000000" points="1510.9487,-1253 1389.7131,-1253 1389.7131,-1217 1510.9487,-1217 1510.9487,-1253"/>
+<text text-anchor="middle" x="1450.3309" y="-1231.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">ContextInterface</text>
 </g>
 <!-- \\Pho\\Framework\\Space&#45;&gt;\\Pho\\Framework\\ContextInterface -->
 <g id="edge4" class="edge">
 <title>\\Pho\\Framework\\Space&#45;&gt;\\Pho\\Framework\\ContextInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.4017,-887.6352C1728.8961,-892.5969 1661.8821,-901.9147 1604.8444,-911 1577.4212,-915.3681 1547.3287,-920.5403 1521.0447,-925.183"/>
-<polygon fill="none" stroke="#000000" points="1520.4064,-921.7415 1511.1711,-926.9336 1521.6286,-928.634 1520.4064,-921.7415"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.3897,-1125.941C1728.3012,-1127.888 1660.0192,-1133.8423 1604.8444,-1152 1561.4068,-1166.295 1515.7599,-1192.3811 1485.4438,-1211.505"/>
+<polygon fill="none" stroke="#000000" points="1483.4716,-1208.6117 1476.9312,-1216.9467 1487.2419,-1214.5096 1483.4716,-1208.6117"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Graph -->
 <g id="node62" class="node">
@@ -524,26 +525,25 @@
 <!-- \\Pho\\Framework\\Space&#45;&gt;\\Pho\\Lib\\Graph\\Graph -->
 <g id="edge3" class="edge">
 <title>\\Pho\\Framework\\Space&#45;&gt;\\Pho\\Lib\\Graph\\Graph</title>
-<path fill="none" stroke="#000000" d="M1765.3473,-889.2165C1725.3797,-895.2411 1650.4831,-899.9621 1604.8444,-862 1530.8111,-800.4194 1618.3434,-712.1576 1540.8444,-655 1510.3087,-632.4792 898.02,-617.639 839.3267,-675 735.6692,-776.3044 894.8118,-1216.9585 799.3267,-1326 774.9003,-1353.8942 730.837,-1358.1562 699.143,-1357.0312"/>
-<polygon fill="none" stroke="#000000" points="699.0919,-1353.5232 688.915,-1356.4695 698.708,-1360.5127 699.0919,-1353.5232"/>
+<path fill="none" stroke="#000000" d="M1765.2498,-1130.9593C1724.463,-1138.1311 1647.7165,-1144.5336 1604.8444,-1103 1466.7021,-969.1706 1686.5573,-800.5441 1540.8444,-675 1479.8913,-622.4837 1432.9501,-641.4612 1359.8175,-675 1012.7756,-834.1541 1129.3488,-1134.0274 799.3267,-1326 768.5867,-1343.8813 728.1254,-1350.1474 699.0427,-1352.2317"/>
+<polygon fill="none" stroke="#000000" points="698.6613,-1348.7479 688.882,-1352.8241 699.0688,-1355.736 698.6613,-1348.7479"/>
 </g>
 <!-- \\Pho\\Framework\\Predicate&#45;&gt;\\Pho\\Framework\\AbstractPredicate -->
 <g id="edge5" class="edge">
 <title>\\Pho\\Framework\\Predicate&#45;&gt;\\Pho\\Framework\\AbstractPredicate</title>
-<path fill="none" stroke="#000000" d="M1129.8713,-1507.0321C1092.0495,-1499.0617 1032.864,-1486.5892 985.6356,-1476.6365"/>
-<polygon fill="none" stroke="#000000" points="986.2579,-1473.1909 975.7511,-1474.5535 984.8144,-1480.0404 986.2579,-1473.1909"/>
+<path fill="none" stroke="#000000" d="M1129.8713,-1446.9343C1092.1286,-1444.8722 1033.1116,-1441.6478 985.9322,-1439.0701"/>
+<polygon fill="none" stroke="#000000" points="985.9272,-1435.5647 975.7511,-1438.5139 985.5452,-1442.5543 985.9272,-1435.5647"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\HookableInterface -->
 <g id="node70" class="node">
 <title>\\Pho\\Lib\\Graph\\HookableInterface</title>
-<polygon fill="none" stroke="#000000" points="198.8549,-1418 70.418,-1418 70.418,-1382 198.8549,-1382 198.8549,-1418"/>
-<text text-anchor="middle" x="134.6365" y="-1396.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">HookableInterface</text>
+<polygon fill="none" stroke="#000000" points="198.8549,-1479 70.418,-1479 70.418,-1443 198.8549,-1443 198.8549,-1479"/>
+<text text-anchor="middle" x="134.6365" y="-1457.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">HookableInterface</text>
 </g>
 <!-- \\Pho\\Framework\\AbstractNotification&#45;&gt;\\Pho\\Lib\\Graph\\HookableInterface -->
 <g id="edge12" class="edge">
 <title>\\Pho\\Framework\\AbstractNotification&#45;&gt;\\Pho\\Lib\\Graph\\HookableInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1380.4175,-1929.0811C1256.4051,-1960.5343 1002.4207,-2022 911.4358,-2022 911.4358,-2022 911.4358,-2022 661.7095,-2022 345.725,-2022 180.0268,-1548.9928 142.7963,-1427.9451"/>
-<polygon fill="none" stroke="#000000" points="146.1169,-1426.8341 139.8678,-1418.2784 139.4175,-1428.8637 146.1169,-1426.8341"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1376.1285,-1298.4758C1369.9893,-1301.6692 1364.3955,-1305.7658 1359.8175,-1311 1259.196,-1426.0448 1401.4076,-1892.7391 1287.8175,-1995 1139.6761,-2128.366 1027.1518,-2060.7389 839.3267,-1994 678.4197,-1936.8258 651.9976,-1881.9851 540.0923,-1753 465.2052,-1666.6832 513.7384,-1576.9661 408.6826,-1532"/>
 </g>
 <!-- \\Serializable -->
 <g id="node80" class="node">
@@ -554,7 +554,7 @@
 <!-- \\Pho\\Framework\\AbstractNotification&#45;&gt;\\Serializable -->
 <g id="edge11" class="edge">
 <title>\\Pho\\Framework\\AbstractNotification&#45;&gt;\\Serializable</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1376.0942,-1928.3128C1370.334,-1931.0802 1364.8214,-1934.2863 1359.8175,-1938 1313.1954,-1972.6012 1338.5684,-2018.8005 1287.8175,-2047 1245.1086,-2070.7309 444.4967,-2037.7652 408.6826,-2071"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1376.0949,-1298.4466C1369.9624,-1301.6458 1364.3794,-1305.7517 1359.8175,-1311 1253.3147,-1433.529 1401.7105,-1922.3083 1287.8175,-2038 1011.902,-2318.273 717.4796,-1895.4293 408.6826,-2139"/>
 </g>
 <!-- \\Pho\\Framework\\Object -->
 <g id="node40" class="node">
@@ -565,62 +565,62 @@
 <!-- \\Pho\\Framework\\ParticleInterface -->
 <g id="node43" class="node">
 <title>\\Pho\\Framework\\ParticleInterface</title>
-<polygon fill="none" stroke="#000000" points="1514.5494,-1983 1386.1125,-1983 1386.1125,-1947 1514.5494,-1947 1514.5494,-1983"/>
-<text text-anchor="middle" x="1450.3309" y="-1961.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">ParticleInterface</text>
+<polygon fill="none" stroke="#000000" points="1514.5494,-2020 1386.1125,-2020 1386.1125,-1984 1514.5494,-1984 1514.5494,-2020"/>
+<text text-anchor="middle" x="1450.3309" y="-1998.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">ParticleInterface</text>
 </g>
 <!-- \\Pho\\Framework\\Object&#45;&gt;\\Pho\\Framework\\ParticleInterface -->
 <g id="edge22" class="edge">
 <title>\\Pho\\Framework\\Object&#45;&gt;\\Pho\\Framework\\ParticleInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1764.7632,-1999.0035C1713.1038,-1993.4169 1600.4921,-1981.2388 1525.0239,-1973.0775"/>
-<polygon fill="none" stroke="#000000" points="1524.9501,-1969.5492 1514.6317,-1971.9536 1524.1974,-1976.5086 1524.9501,-1969.5492"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1764.7632,-2002C1713.1038,-2002 1600.4921,-2002 1525.0239,-2002"/>
+<polygon fill="none" stroke="#000000" points="1524.6318,-1998.5001 1514.6317,-2002 1524.6317,-2005.5001 1524.6318,-1998.5001"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Node -->
 <g id="node63" class="node">
 <title>\\Pho\\Lib\\Graph\\Node</title>
-<polygon fill="none" stroke="#000000" points="435.6826,-1391 381.6826,-1391 381.6826,-1355 435.6826,-1355 435.6826,-1391"/>
-<text text-anchor="middle" x="408.6826" y="-1369.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Node</text>
+<polygon fill="none" stroke="#000000" points="435.6826,-1371 381.6826,-1371 381.6826,-1335 435.6826,-1335 435.6826,-1371"/>
+<text text-anchor="middle" x="408.6826" y="-1349.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Node</text>
 </g>
 <!-- \\Pho\\Framework\\Object&#45;&gt;\\Pho\\Lib\\Graph\\Node -->
 <g id="edge21" class="edge">
 <title>\\Pho\\Framework\\Object&#45;&gt;\\Pho\\Lib\\Graph\\Node</title>
-<path fill="none" stroke="#000000" d="M1764.7993,-2000.7089C1696.0749,-1997.8521 1512.169,-1992.3489 1359.8175,-2007 1273.4169,-2015.3088 1254.4262,-2038.9348 1167.6812,-2042"/>
-<path fill="none" stroke="#000000" d="M1167.6812,-2042C996.2659,-2048.057 931.7138,-2062.3352 540.0923,-1616 480.4389,-1548.0124 437.3619,-1448.3231 418.8112,-1400.5342"/>
-<polygon fill="none" stroke="#000000" points="422.0662,-1399.2468 415.2278,-1391.1544 415.5271,-1401.745 422.0662,-1399.2468"/>
+<path fill="none" stroke="#000000" d="M1764.7832,-2003.0567C1727.5848,-2005.1303 1659.7971,-2011.2224 1604.8444,-2029 1531.072,-2052.8658 1527.6302,-2103.9375 1450.3309,-2110"/>
+<path fill="none" stroke="#000000" d="M1450.3309,-2110C1017.1084,-2143.9774 779.8236,-2115.4433 540.0923,-1753 482.5007,-1665.9289 509.207,-1626.003 476.0923,-1527 458.5086,-1474.4301 434.3151,-1414.4001 420.2034,-1380.3685"/>
+<polygon fill="none" stroke="#000000" points="423.4115,-1378.9678 416.3351,-1371.0826 416.9497,-1381.6596 423.4115,-1378.9678"/>
 </g>
 <!-- \\Pho\\Framework\\Actor -->
 <g id="node41" class="node">
 <title>\\Pho\\Framework\\Actor</title>
-<polygon fill="none" stroke="#000000" points="1819.4723,-2074 1765.4723,-2074 1765.4723,-2038 1819.4723,-2038 1819.4723,-2074"/>
-<text text-anchor="middle" x="1792.4723" y="-2052.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Actor</text>
+<polygon fill="none" stroke="#000000" points="1819.4723,-2128 1765.4723,-2128 1765.4723,-2092 1819.4723,-2092 1819.4723,-2128"/>
+<text text-anchor="middle" x="1792.4723" y="-2106.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Actor</text>
 </g>
 <!-- \\Pho\\Framework\\Actor&#45;&gt;\\Pho\\Framework\\ParticleInterface -->
 <g id="edge24" class="edge">
 <title>\\Pho\\Framework\\Actor&#45;&gt;\\Pho\\Framework\\ParticleInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.3193,-2054.2281C1728.4383,-2051.341 1660.701,-2044.3269 1604.8444,-2029 1567.0718,-2018.6353 1526.2026,-2001.4225 1495.9891,-1987.4569"/>
-<polygon fill="none" stroke="#000000" points="1497.1122,-1984.1182 1486.5714,-1983.0495 1494.1451,-1990.4583 1497.1122,-1984.1182"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.4161,-2108.9783C1728.3577,-2106.9388 1660.1102,-2100.8789 1604.8444,-2083 1561.9612,-2069.127 1516.7232,-2044.0127 1486.3583,-2025.4136"/>
+<polygon fill="none" stroke="#000000" points="1488.1598,-2022.4125 1477.8175,-2020.1133 1484.4687,-2028.3602 1488.1598,-2022.4125"/>
 </g>
 <!-- \\Pho\\Framework\\Actor&#45;&gt;\\Pho\\Lib\\Graph\\Node -->
 <g id="edge23" class="edge">
 <title>\\Pho\\Framework\\Actor&#45;&gt;\\Pho\\Lib\\Graph\\Node</title>
-<path fill="none" stroke="#000000" d="M1765.2921,-2056.7832C1678.1557,-2058.9966 1398.0234,-2063.8034 1167.6812,-2042"/>
+<path fill="none" stroke="#000000" d="M1765.3471,-2108.401C1707.3823,-2105.3352 1567.2002,-2099.7933 1450.3309,-2110"/>
 </g>
 <!-- \\Pho\\Framework\\Graph -->
 <g id="node42" class="node">
 <title>\\Pho\\Framework\\Graph</title>
-<polygon fill="none" stroke="#000000" points="1819.4723,-956 1765.4723,-956 1765.4723,-920 1819.4723,-920 1819.4723,-956"/>
-<text text-anchor="middle" x="1792.4723" y="-934.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Graph</text>
+<polygon fill="none" stroke="#000000" points="1819.4723,-1305 1765.4723,-1305 1765.4723,-1269 1819.4723,-1269 1819.4723,-1305"/>
+<text text-anchor="middle" x="1792.4723" y="-1283.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">Graph</text>
 </g>
 <!-- \\Pho\\Framework\\Graph&#45;&gt;\\Pho\\Framework\\ParticleInterface -->
 <g id="edge26" class="edge">
 <title>\\Pho\\Framework\\Graph&#45;&gt;\\Pho\\Framework\\ParticleInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.3826,-932.5526C1724.0537,-925.9963 1645.7539,-920.802 1604.8444,-965 1457.652,-1124.0243 1675.9638,-1768.5979 1540.8444,-1938 1536.2046,-1943.817 1530.366,-1948.4201 1523.8993,-1952.057"/>
-<polygon fill="none" stroke="#000000" points="1522.2528,-1948.9648 1514.7454,-1956.4407 1525.2763,-1955.2782 1522.2528,-1948.9648"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.2658,-1281.1535C1724.1434,-1274.0839 1646.5428,-1267.9519 1604.8444,-1311 1500.9361,-1418.2713 1638.6301,-1867.1196 1540.8444,-1980 1536.2201,-1985.3381 1530.5395,-1989.4951 1524.2974,-1992.7187"/>
+<polygon fill="none" stroke="#000000" points="1522.61,-1989.6345 1514.8081,-1996.8026 1525.3772,-1996.0643 1522.61,-1989.6345"/>
 </g>
 <!-- \\Pho\\Framework\\Graph&#45;&gt;\\Pho\\Framework\\ContextInterface -->
 <g id="edge27" class="edge">
 <title>\\Pho\\Framework\\Graph&#45;&gt;\\Pho\\Framework\\ContextInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.339,-938C1713.1089,-938 1597.0764,-938 1521.3582,-938"/>
-<polygon fill="none" stroke="#000000" points="1520.9525,-934.5001 1510.9525,-938 1520.9524,-941.5001 1520.9525,-934.5001"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M1765.4183,-1283.2582C1728.9313,-1278.1772 1661.9381,-1268.7261 1604.8444,-1260 1577.4523,-1255.8134 1547.3662,-1250.9955 1521.0785,-1246.7134"/>
+<polygon fill="none" stroke="#000000" points="1521.6364,-1243.2582 1511.203,-1245.1009 1520.5083,-1250.1667 1521.6364,-1243.2582"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\SubGraph -->
 <g id="node68" class="node">
@@ -631,8 +631,8 @@
 <!-- \\Pho\\Framework\\Graph&#45;&gt;\\Pho\\Lib\\Graph\\SubGraph -->
 <g id="edge25" class="edge">
 <title>\\Pho\\Framework\\Graph&#45;&gt;\\Pho\\Lib\\Graph\\SubGraph</title>
-<path fill="none" stroke="#000000" d="M1765.4149,-942.5285C1725.1918,-947.6117 1649.575,-950.5854 1604.8444,-911 1523.4598,-838.977 1627.1636,-741.0284 1540.8444,-675 1509.8891,-651.3213 867.8792,-648.4734 839.3267,-675 750.6842,-757.3528 879.5886,-1127.4601 799.3267,-1218 776.5449,-1243.699 737.0885,-1249.2751 706.2491,-1249.1013"/>
-<polygon fill="none" stroke="#000000" points="706.2438,-1245.6002 696.1574,-1248.8428 706.0645,-1252.5979 706.2438,-1245.6002"/>
+<path fill="none" stroke="#000000" d="M1765.2766,-1292.2802C1724.1684,-1298.5188 1646.5865,-1303.184 1604.8444,-1260 1513.9551,-1165.9712 1637.4394,-763.1571 1540.8444,-675 1483.2648,-622.4503 896.4024,-611.9036 839.3267,-665 749.1161,-748.9211 880.9978,-1125.7475 799.3267,-1218 776.5619,-1243.7141 737.1038,-1249.2886 706.2594,-1249.1105"/>
+<polygon fill="none" stroke="#000000" points="706.2528,-1245.6092 696.1659,-1248.8503 706.0724,-1252.6069 706.2528,-1245.6092"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\GraphInterface -->
 <g id="node71" class="node">
@@ -643,8 +643,8 @@
 <!-- \\Pho\\Framework\\ContextInterface&#45;&gt;\\Pho\\Lib\\Graph\\GraphInterface -->
 <g id="edge73" class="edge">
 <title>\\Pho\\Framework\\ContextInterface&#45;&gt;\\Pho\\Lib\\Graph\\GraphInterface</title>
-<path fill="none" stroke="#000000" d="M1433.8879,-956.1125C1413.0125,-980.212 1377.5814,-1025.0325 1359.8175,-1070 1320.8345,-1168.6813 1368.3014,-1472.8623 1287.8175,-1542 1035.7342,-1758.5459 802.6061,-1745.7759 540.0923,-1542 449.491,-1471.6709 541.4462,-1386.253 476.0923,-1292 469.9317,-1283.1153 461.5115,-1275.3722 452.7092,-1268.8733"/>
-<polygon fill="none" stroke="#000000" points="454.4362,-1265.8131 444.2142,-1263.0271 450.4677,-1271.5795 454.4362,-1265.8131"/>
+<path fill="none" stroke="#000000" d="M1389.3873,-1242.5172C1378.0771,-1246.6096 1367.4413,-1252.7708 1359.8175,-1262 1257.6928,-1385.6306 1406.7285,-1872.4168 1287.8175,-1980 1250.8646,-2013.4327 883.3952,-2003.2641 839.3267,-1980 630.8362,-1869.9365 635.3735,-1757.6473 540.0923,-1542 490.2508,-1429.1952 556.5998,-1365.4217 476.0923,-1272 474.5877,-1270.2541 472.9543,-1268.6199 471.2181,-1267.0903"/>
+<polygon fill="none" stroke="#000000" points="473.1492,-1264.1653 463.0282,-1261.0321 468.9863,-1269.7929 473.1492,-1264.1653"/>
 </g>
 <!-- \\Pho\\Framework\\InjectableInterface -->
 <g id="node45" class="node">
@@ -667,98 +667,98 @@
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\NodeAlreadyMemberException -->
 <g id="node48" class="node">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\NodeAlreadyMemberException</title>
-<polygon fill="none" stroke="#000000" points="755.3378,-706 568.0812,-706 568.0812,-670 755.3378,-670 755.3378,-706"/>
-<text text-anchor="middle" x="661.7095" y="-684.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">NodeAlreadyMemberException</text>
+<polygon fill="none" stroke="#000000" points="755.3378,-922 568.0812,-922 568.0812,-886 755.3378,-886 755.3378,-922"/>
+<text text-anchor="middle" x="661.7095" y="-900.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">NodeAlreadyMemberException</text>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\NodeAlreadyMemberException&#45;&gt;\\Exception -->
 <g id="edge45" class="edge">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\NodeAlreadyMemberException&#45;&gt;\\Exception</title>
-<path fill="none" stroke="#000000" d="M567.9989,-679.7024C557.5018,-675.354 547.8255,-669.3143 540.0923,-661 407.0038,-517.9115 579.7334,-391.6665 476.0923,-226 468.9178,-214.5319 457.7185,-205.2196 446.4944,-198.0502"/>
-<polygon fill="none" stroke="#000000" points="447.9515,-194.8454 437.564,-192.7596 444.3836,-200.8679 447.9515,-194.8454"/>
+<path fill="none" stroke="#000000" d="M567.9142,-896.1756C557.3627,-891.7626 547.6952,-885.5788 540.0923,-877 443.6784,-768.2108 550.2036,-351.0529 476.0923,-226 469.1273,-214.2475 457.846,-204.8224 446.488,-197.6387"/>
+<polygon fill="none" stroke="#000000" points="448.2549,-194.6175 437.8577,-192.5808 444.7155,-200.6568 448.2549,-194.6175"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\MalformedGraphIDException -->
 <g id="node49" class="node">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\MalformedGraphIDException</title>
-<polygon fill="none" stroke="#000000" points="752.2363,-652 571.1826,-652 571.1826,-616 752.2363,-616 752.2363,-652"/>
-<text text-anchor="middle" x="661.7095" y="-630.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">MalformedGraphIDException</text>
+<polygon fill="none" stroke="#000000" points="752.2363,-868 571.1826,-868 571.1826,-832 752.2363,-832 752.2363,-868"/>
+<text text-anchor="middle" x="661.7095" y="-846.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">MalformedGraphIDException</text>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\MalformedGraphIDException&#45;&gt;\\Exception -->
 <g id="edge46" class="edge">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\MalformedGraphIDException&#45;&gt;\\Exception</title>
-<path fill="none" stroke="#000000" d="M571.1858,-626.743C559.5055,-622.3494 548.6542,-616.0195 540.0923,-607 421.8779,-482.468 568.6352,-370.6329 476.0923,-226 468.8015,-214.6055 457.5726,-205.3119 446.3572,-198.137"/>
-<polygon fill="none" stroke="#000000" points="447.8255,-194.9382 437.441,-192.8374 444.249,-200.9555 447.8255,-194.9382"/>
+<path fill="none" stroke="#000000" d="M570.997,-843.3119C559.2689,-838.8513 548.4536,-832.3514 540.0923,-823 451.1574,-723.5349 544.6219,-340.4832 476.0923,-226 469.1445,-214.3932 458.0027,-205.0456 446.7617,-197.8866"/>
+<polygon fill="none" stroke="#000000" points="448.1969,-194.67 437.8036,-192.613 444.6456,-200.7024 448.1969,-194.67"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\InvalidDirectionException -->
 <g id="node50" class="node">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\InvalidDirectionException</title>
-<polygon fill="none" stroke="#000000" points="752.2363,-598 571.1826,-598 571.1826,-562 752.2363,-562 752.2363,-598"/>
-<text text-anchor="middle" x="661.7095" y="-576.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">InvalidDirectionException</text>
+<polygon fill="none" stroke="#000000" points="752.2363,-814 571.1826,-814 571.1826,-778 752.2363,-778 752.2363,-814"/>
+<text text-anchor="middle" x="661.7095" y="-792.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">InvalidDirectionException</text>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\InvalidDirectionException&#45;&gt;\\Exception -->
 <g id="edge47" class="edge">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\InvalidDirectionException&#45;&gt;\\Exception</title>
-<path fill="none" stroke="#000000" d="M571.0974,-572.4199C559.5024,-568.0608 548.699,-561.8263 540.0923,-553 436.7035,-446.9735 557.575,-349.6585 476.0923,-226 468.6492,-214.7044 457.3816,-205.4359 446.1776,-198.2536"/>
-<polygon fill="none" stroke="#000000" points="447.6604,-195.0627 437.28,-192.942 444.0723,-201.0731 447.6604,-195.0627"/>
+<path fill="none" stroke="#000000" d="M571.0852,-789.2327C559.3449,-784.783 548.5027,-778.3072 540.0923,-769 377.1682,-588.7041 601.9978,-433.8429 476.0923,-226 469.0835,-214.4299 457.9262,-205.0917 446.6898,-197.9299"/>
+<polygon fill="none" stroke="#000000" points="448.1308,-194.7165 437.7391,-192.6518 444.5752,-200.7462 448.1308,-194.7165"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\DuplicateEdgeException -->
 <g id="node51" class="node">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\DuplicateEdgeException</title>
-<polygon fill="none" stroke="#000000" points="742.4333,-544 580.9857,-544 580.9857,-508 742.4333,-508 742.4333,-544"/>
-<text text-anchor="middle" x="661.7095" y="-522.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">DuplicateEdgeException</text>
+<polygon fill="none" stroke="#000000" points="742.4333,-760 580.9857,-760 580.9857,-724 742.4333,-724 742.4333,-760"/>
+<text text-anchor="middle" x="661.7095" y="-738.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">DuplicateEdgeException</text>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\DuplicateEdgeException&#45;&gt;\\Exception -->
 <g id="edge48" class="edge">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\DuplicateEdgeException&#45;&gt;\\Exception</title>
-<path fill="none" stroke="#000000" d="M580.8671,-524.7667C565.7827,-521.0676 551.2716,-514.6625 540.0923,-504 448.3444,-416.4935 547.5907,-330.7046 476.0923,-226 468.4639,-214.8287 457.1492,-205.5918 445.9589,-198.4003"/>
-<polygon fill="none" stroke="#000000" points="447.4594,-195.2189 437.084,-193.0735 443.857,-201.2208 447.4594,-195.2189"/>
+<path fill="none" stroke="#000000" d="M581.0891,-738.3648C565.6197,-734.0423 550.8987,-726.8057 540.0923,-715 392.0974,-553.3202 590.8568,-412.7404 476.0923,-226 469.0094,-214.4751 457.8334,-205.1483 446.6025,-197.9832"/>
+<polygon fill="none" stroke="#000000" points="448.0507,-194.7736 437.6609,-192.6996 444.4896,-200.8001 448.0507,-194.7736"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\EdgeAlreadyConnectedException -->
 <g id="node52" class="node">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\EdgeAlreadyConnectedException</title>
-<polygon fill="none" stroke="#000000" points="765.6411,-922 557.7779,-922 557.7779,-886 765.6411,-886 765.6411,-922"/>
-<text text-anchor="middle" x="661.7095" y="-900.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">EdgeAlreadyConnectedException</text>
+<polygon fill="none" stroke="#000000" points="765.6411,-706 557.7779,-706 557.7779,-670 765.6411,-670 765.6411,-706"/>
+<text text-anchor="middle" x="661.7095" y="-684.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">EdgeAlreadyConnectedException</text>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\EdgeAlreadyConnectedException&#45;&gt;\\Exception -->
 <g id="edge49" class="edge">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\EdgeAlreadyConnectedException&#45;&gt;\\Exception</title>
-<path fill="none" stroke="#000000" d="M557.7939,-891.2026C551.2036,-887.4178 545.1848,-882.7461 540.0923,-877 443.6784,-768.2108 550.2036,-351.0529 476.0923,-226 469.1273,-214.2475 457.846,-204.8224 446.488,-197.6387"/>
-<polygon fill="none" stroke="#000000" points="448.2549,-194.6175 437.8577,-192.5808 444.7155,-200.6568 448.2549,-194.6175"/>
+<path fill="none" stroke="#000000" d="M557.817,-674.7686C551.2668,-671.0748 545.2478,-666.5429 540.0923,-661 407.0038,-517.9115 579.7334,-391.6665 476.0923,-226 468.9178,-214.5319 457.7185,-205.2196 446.4944,-198.0502"/>
+<polygon fill="none" stroke="#000000" points="447.9515,-194.8454 437.564,-192.7596 444.3836,-200.8679 447.9515,-194.8454"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\OrphanEdgeException -->
 <g id="node53" class="node">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\OrphanEdgeException</title>
-<polygon fill="none" stroke="#000000" points="732.6305,-868 590.7884,-868 590.7884,-832 732.6305,-832 732.6305,-868"/>
-<text text-anchor="middle" x="661.7095" y="-846.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">OrphanEdgeException</text>
+<polygon fill="none" stroke="#000000" points="732.6305,-652 590.7884,-652 590.7884,-616 732.6305,-616 732.6305,-652"/>
+<text text-anchor="middle" x="661.7095" y="-630.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">OrphanEdgeException</text>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\OrphanEdgeException&#45;&gt;\\Exception -->
 <g id="edge50" class="edge">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\OrphanEdgeException&#45;&gt;\\Exception</title>
-<path fill="none" stroke="#000000" d="M590.9838,-848.969C571.95,-845.1557 553.0668,-837.5108 540.0923,-823 451.1574,-723.5349 544.6219,-340.4832 476.0923,-226 469.1445,-214.3932 458.0027,-205.0456 446.7617,-197.8866"/>
-<polygon fill="none" stroke="#000000" points="448.1969,-194.67 437.8036,-192.613 444.6456,-200.7024 448.1969,-194.67"/>
+<path fill="none" stroke="#000000" d="M590.8882,-632.344C572.0818,-628.4776 553.3447,-620.9607 540.0923,-607 421.8779,-482.468 568.6352,-370.6329 476.0923,-226 468.8015,-214.6055 457.5726,-205.3119 446.3572,-198.137"/>
+<polygon fill="none" stroke="#000000" points="447.8255,-194.9382 437.441,-192.8374 444.249,-200.9555 447.8255,-194.9382"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\InvalidEncapsulatedEdgeException -->
 <g id="node54" class="node">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\InvalidEncapsulatedEdgeException</title>
-<polygon fill="none" stroke="#000000" points="775.444,-814 547.975,-814 547.975,-778 775.444,-778 775.444,-814"/>
-<text text-anchor="middle" x="661.7095" y="-792.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">InvalidEncapsulatedEdgeException</text>
+<polygon fill="none" stroke="#000000" points="775.444,-598 547.975,-598 547.975,-562 775.444,-562 775.444,-598"/>
+<text text-anchor="middle" x="661.7095" y="-576.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">InvalidEncapsulatedEdgeException</text>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\InvalidEncapsulatedEdgeException&#45;&gt;\\Exception -->
 <g id="edge51" class="edge">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\InvalidEncapsulatedEdgeException&#45;&gt;\\Exception</title>
-<path fill="none" stroke="#000000" d="M549.8539,-777.8433C546.3414,-775.2255 543.0649,-772.2896 540.0923,-769 377.1682,-588.7041 601.9978,-433.8429 476.0923,-226 469.0835,-214.4299 457.9262,-205.0917 446.6898,-197.9299"/>
-<polygon fill="none" stroke="#000000" points="448.1308,-194.7165 437.7391,-192.6518 444.5752,-200.7462 448.1308,-194.7165"/>
+<path fill="none" stroke="#000000" d="M550.6937,-561.9199C546.8976,-559.2897 543.3387,-556.3292 540.0923,-553 436.7035,-446.9735 557.575,-349.6585 476.0923,-226 468.6492,-214.7044 457.3816,-205.4359 446.1776,-198.2536"/>
+<polygon fill="none" stroke="#000000" points="447.6604,-195.0627 437.28,-192.942 444.0723,-201.0731 447.6604,-195.0627"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\NodeDoesNotExistException -->
 <g id="node55" class="node">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\NodeDoesNotExistException</title>
-<polygon fill="none" stroke="#000000" points="752.2363,-760 571.1826,-760 571.1826,-724 752.2363,-724 752.2363,-760"/>
-<text text-anchor="middle" x="661.7095" y="-738.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">NodeDoesNotExistException</text>
+<polygon fill="none" stroke="#000000" points="752.2363,-544 571.1826,-544 571.1826,-508 752.2363,-508 752.2363,-544"/>
+<text text-anchor="middle" x="661.7095" y="-522.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">NodeDoesNotExistException</text>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Exceptions\\NodeDoesNotExistException&#45;&gt;\\Exception -->
 <g id="edge52" class="edge">
 <title>\\Pho\\Lib\\Graph\\Exceptions\\NodeDoesNotExistException&#45;&gt;\\Exception</title>
-<path fill="none" stroke="#000000" d="M571.1919,-735.1356C559.4369,-730.6994 548.5622,-724.2531 540.0923,-715 392.0974,-553.3202 590.8568,-412.7404 476.0923,-226 469.0094,-214.4751 457.8334,-205.1483 446.6025,-197.9832"/>
-<polygon fill="none" stroke="#000000" points="448.0507,-194.7736 437.6609,-192.6996 444.4896,-200.8001 448.0507,-194.7736"/>
+<path fill="none" stroke="#000000" d="M570.926,-521.8827C559.4979,-518.0107 548.7873,-512.2931 540.0923,-504 448.3444,-416.4935 547.5907,-330.7046 476.0923,-226 468.4639,-214.8287 457.1492,-205.5918 445.9589,-198.4003"/>
+<polygon fill="none" stroke="#000000" points="447.4594,-195.2189 437.084,-193.0735 443.857,-201.2208 447.4594,-195.2189"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Direction -->
 <g id="node56" class="node">
@@ -769,14 +769,14 @@
 <!-- \\Pho\\Lib\\Graph\\PredicateInterface -->
 <g id="node69" class="node">
 <title>\\Pho\\Lib\\Graph\\PredicateInterface</title>
-<polygon fill="none" stroke="#000000" points="476.0021,-1337 341.3632,-1337 341.3632,-1301 476.0021,-1301 476.0021,-1337"/>
-<text text-anchor="middle" x="408.6826" y="-1315.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">PredicateInterface</text>
+<polygon fill="none" stroke="#000000" points="476.0021,-1317 341.3632,-1317 341.3632,-1281 476.0021,-1281 476.0021,-1317"/>
+<text text-anchor="middle" x="408.6826" y="-1295.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">PredicateInterface</text>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Predicate&#45;&gt;\\Pho\\Lib\\Graph\\PredicateInterface -->
 <g id="edge42" class="edge">
 <title>\\Pho\\Lib\\Graph\\Predicate&#45;&gt;\\Pho\\Lib\\Graph\\PredicateInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M623.9718,-1401.3308C599.5692,-1397.0094 567.3845,-1390.0677 540.0923,-1380 509.8736,-1368.8527 505.3066,-1359.5631 476.0923,-1346 472.5279,-1344.3452 468.832,-1342.693 465.0896,-1341.0675"/>
-<polygon fill="none" stroke="#000000" points="466.3119,-1337.784 455.7394,-1337.095 463.5746,-1344.2266 466.3119,-1337.784"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M623.971,-1403.3659C599.1295,-1399.854 566.4535,-1393.0495 540.0923,-1380 506.7385,-1363.489 507.996,-1345.1636 476.0923,-1326 473.4749,-1324.4278 470.7495,-1322.9115 467.9598,-1321.4545"/>
+<polygon fill="none" stroke="#000000" points="469.4054,-1318.2653 458.8855,-1317.0073 466.3249,-1324.551 469.4054,-1318.2653"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\AdjacentNode -->
 <g id="node59" class="node">
@@ -787,26 +787,26 @@
 <!-- \\Pho\\Lib\\Graph\\NodeInterface -->
 <g id="node73" class="node">
 <title>\\Pho\\Lib\\Graph\\NodeInterface</title>
-<polygon fill="none" stroke="#000000" points="185.4506,-1241 83.8223,-1241 83.8223,-1205 185.4506,-1205 185.4506,-1241"/>
-<text text-anchor="middle" x="134.6365" y="-1219.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">NodeInterface</text>
+<polygon fill="none" stroke="#000000" points="185.4506,-1236 83.8223,-1236 83.8223,-1200 185.4506,-1200 185.4506,-1236"/>
+<text text-anchor="middle" x="134.6365" y="-1214.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">NodeInterface</text>
 </g>
 <!-- \\Pho\\Lib\\Graph\\AdjacentNode&#45;&gt;\\Pho\\Lib\\Graph\\NodeInterface -->
 <g id="edge43" class="edge">
 <title>\\Pho\\Lib\\Graph\\AdjacentNode&#45;&gt;\\Pho\\Lib\\Graph\\NodeInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M360.9474,-1196.574C315.0378,-1201.9348 245.4421,-1210.0614 195.5559,-1215.8865"/>
-<polygon fill="none" stroke="#000000" points="195.0667,-1212.4198 185.5402,-1217.056 195.8787,-1219.3725 195.0667,-1212.4198"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M360.9474,-1195.703C315.0378,-1200.2262 245.4421,-1207.083 195.5559,-1211.998"/>
+<polygon fill="none" stroke="#000000" points="195.1488,-1208.5211 185.5402,-1212.9848 195.8352,-1215.4873 195.1488,-1208.5211"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\EntityInterface -->
 <g id="node74" class="node">
 <title>\\Pho\\Lib\\Graph\\EntityInterface</title>
-<polygon fill="none" stroke="#000000" points="192.1526,-1305 77.1204,-1305 77.1204,-1269 192.1526,-1269 192.1526,-1305"/>
-<text text-anchor="middle" x="134.6365" y="-1283.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">EntityInterface</text>
+<polygon fill="none" stroke="#000000" points="192.1526,-1304 77.1204,-1304 77.1204,-1268 192.1526,-1268 192.1526,-1304"/>
+<text text-anchor="middle" x="134.6365" y="-1282.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">EntityInterface</text>
 </g>
 <!-- \\Pho\\Lib\\Graph\\AdjacentNode&#45;&gt;\\Pho\\Lib\\Graph\\EntityInterface -->
 <g id="edge44" class="edge">
 <title>\\Pho\\Lib\\Graph\\AdjacentNode&#45;&gt;\\Pho\\Lib\\Graph\\EntityInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M362.8999,-1209.0707C355.646,-1212.0107 348.2412,-1215.0572 341.2729,-1218 309.0136,-1231.6237 302.2488,-1238.216 269.2729,-1250 247.6959,-1257.7106 223.6974,-1264.7715 202.0072,-1270.6113"/>
-<polygon fill="none" stroke="#000000" points="200.9897,-1267.26 192.2209,-1273.2064 202.784,-1274.0262 200.9897,-1267.26"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M363.1595,-1209.0517C329.7145,-1222.2343 287.1208,-1238.8352 269.2729,-1245 247.5426,-1252.5058 223.5985,-1260.0327 202.0032,-1266.5513"/>
+<polygon fill="none" stroke="#000000" points="200.8363,-1263.2472 192.2628,-1269.4717 202.8467,-1269.9523 200.8363,-1263.2472"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\EdgeList -->
 <g id="node60" class="node">
@@ -829,28 +829,29 @@
 <!-- \\Pho\\Lib\\Graph\\AttributeBag&#45;&gt;\\SplSubject -->
 <g id="edge53" class="edge">
 <title>\\Pho\\Lib\\Graph\\AttributeBag&#45;&gt;\\SplSubject</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M408.6826,-601C347.4844,-489.2838 361.4693,-132.8952 269.2729,-45 249.7748,-26.4115 221.2574,-18.9725 195.482,-16.4619"/>
-<polygon fill="none" stroke="#000000" points="195.6229,-12.9627 185.39,-15.708 195.1014,-19.9433 195.6229,-12.9627"/>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M614.0654,-978.4196C588.8665,-977.5665 559.2638,-971.9099 540.0923,-953 434.3488,-848.6996 572.9893,-737.5665 476.0923,-625 455.345,-600.8977 423.9615,-628.8913 408.6826,-601"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M614.0612,-978.4239C588.861,-977.5721 559.2584,-971.9154 540.0923,-953 434.0681,-848.363 573.2416,-736.9249 476.0923,-624 455.3519,-599.8917 423.9551,-627.8949 408.6826,-600"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M408.6826,-600C347.6137,-488.4587 361.3319,-132.7269 269.2729,-45 249.7709,-26.4157 221.253,-18.9772 195.4783,-16.4658"/>
+<polygon fill="none" stroke="#000000" points="195.6197,-12.9666 185.3866,-15.7116 195.0979,-19.9472 195.6197,-12.9666"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Graph&#45;&gt;\\Pho\\Lib\\Graph\\HookableInterface -->
 <g id="edge55" class="edge">
 <title>\\Pho\\Lib\\Graph\\Graph&#45;&gt;\\Pho\\Lib\\Graph\\HookableInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M634.5427,-1349.1259C609.4938,-1345.0528 571.5442,-1337.6022 540.0923,-1326 509.8736,-1314.8527 507.3461,-1299.7865 476.0923,-1292 417.9498,-1277.5145 395.9341,-1267.4535 341.2729,-1292 297.3336,-1311.7316 311.0479,-1349.0239 269.2729,-1373 251.06,-1383.4531 229.4404,-1389.9093 208.9148,-1393.8816"/>
-<polygon fill="none" stroke="#000000" points="208.1868,-1390.4559 198.9462,-1395.6388 209.402,-1397.3496 208.1868,-1390.4559"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M408.6826,-1532C343.6807,-1504.1778 265.1919,-1485.2037 208.9021,-1473.9195"/>
+<polygon fill="none" stroke="#000000" points="209.4988,-1470.4698 199.0107,-1471.9698 208.1451,-1477.3377 209.4988,-1470.4698"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M634.2937,-1354.1816C608.3846,-1356.3829 569.2483,-1362.5945 540.0923,-1380 463.4145,-1425.7749 490.7803,-1567.1396 408.6826,-1532"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Graph&#45;&gt;\\Pho\\Lib\\Graph\\GraphInterface -->
 <g id="edge54" class="edge">
 <title>\\Pho\\Lib\\Graph\\Graph&#45;&gt;\\Pho\\Lib\\Graph\\GraphInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M634.5358,-1350.3809C609.1473,-1347.1568 570.6766,-1340.2473 540.0923,-1326 507.6189,-1310.8727 506.6645,-1295.6734 476.0923,-1277 470.7959,-1273.765 465.1212,-1270.6202 459.3952,-1267.645"/>
-<polygon fill="none" stroke="#000000" points="460.9083,-1264.4883 450.402,-1263.1209 457.7624,-1270.7416 460.9083,-1264.4883"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M634.3772,-1350.7111C608.8767,-1347.7203 570.3301,-1340.9685 540.0923,-1326 506.7385,-1309.489 507.996,-1291.1636 476.0923,-1272 473.4749,-1270.4278 470.7495,-1268.9115 467.9598,-1267.4545"/>
+<polygon fill="none" stroke="#000000" points="469.4054,-1264.2653 458.8855,-1263.0073 466.3249,-1270.551 469.4054,-1264.2653"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Graph&#45;&gt;\\Serializable -->
 <g id="edge57" class="edge">
 <title>\\Pho\\Lib\\Graph\\Graph&#45;&gt;\\Serializable</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M408.6826,-2071C337.0738,-2137.4515 234.2227,-2190.1171 177.0542,-2216.496"/>
-<polygon fill="none" stroke="#000000" points="175.5876,-2213.318 167.9444,-2220.655 178.4948,-2219.6857 175.5876,-2213.318"/>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M634.6827,-1351.0781C606.9694,-1350.6924 564.5618,-1354.7717 540.0923,-1380 322.4405,-1604.4015 637.8326,-1858.3534 408.6826,-2071"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M408.6826,-2139C345.2615,-2189.0248 253.8731,-2214.0367 194.3721,-2225.7495"/>
+<polygon fill="none" stroke="#000000" points="193.5469,-2222.3436 184.3773,-2227.651 194.8552,-2229.2203 193.5469,-2222.3436"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M634.5991,-1350.9977C606.8168,-1350.5457 564.3529,-1354.5707 540.0923,-1380 421.932,-1503.8522 543.0815,-2032.9898 408.6826,-2139"/>
 </g>
 <!-- \\SplObserver -->
 <g id="node84" class="node">
@@ -861,8 +862,8 @@
 <!-- \\Pho\\Lib\\Graph\\Graph&#45;&gt;\\SplObserver -->
 <g id="edge56" class="edge">
 <title>\\Pho\\Lib\\Graph\\Graph&#45;&gt;\\SplObserver</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M408.6826,-639C396.1492,-609.7719 361.5573,-639.4932 341.2729,-615 208.724,-454.9483 413.0015,-303.0929 269.2729,-153 251.7381,-134.6887 225.5371,-126.9316 200.8963,-124.12"/>
-<polygon fill="none" stroke="#000000" points="201.0976,-120.6242 190.827,-123.2249 200.4777,-127.5967 201.0976,-120.6242"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M408.6826,-638C396.1447,-608.7738 361.5613,-638.4898 341.2729,-614 208.9777,-454.3083 412.7225,-302.7521 269.2729,-153 251.735,-134.6916 225.5336,-126.935 200.8932,-124.123"/>
+<polygon fill="none" stroke="#000000" points="201.0948,-120.6272 190.8241,-123.2276 200.4747,-127.5997 201.0948,-120.6272"/>
 </g>
 <!-- \\Sabre\\Event\\EmitterInterface -->
 <g id="node85" class="node">
@@ -873,63 +874,63 @@
 <!-- \\Pho\\Lib\\Graph\\Graph&#45;&gt;\\Sabre\\Event\\EmitterInterface -->
 <g id="edge58" class="edge">
 <title>\\Pho\\Lib\\Graph\\Graph&#45;&gt;\\Sabre\\Event\\EmitterInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M408.6826,-639C396.1492,-609.7719 361.3612,-639.6543 341.2729,-615 195.0077,-435.4888 428.0833,-267.5143 269.2729,-99 261.4324,-90.6804 251.8052,-84.5303 241.3357,-80.0287"/>
-<polygon fill="none" stroke="#000000" points="242.5338,-76.74 231.9421,-76.4841 240.0625,-83.2893 242.5338,-76.74"/>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M634.6881,-1354.9167C606.9792,-1355.298 564.5752,-1351.2153 540.0923,-1326 431.8147,-1214.4839 469.9406,-781.8542 408.6826,-639"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M634.6867,-1354.918C606.9767,-1355.3004 564.5719,-1351.2185 540.0923,-1326 431.6777,-1214.3127 470.0487,-781.0454 408.6826,-638"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M408.6826,-638C396.1447,-608.7738 361.3645,-638.6516 341.2729,-614 195.2619,-434.8495 427.8037,-267.1729 269.2729,-99 261.4313,-90.6815 251.8034,-84.532 241.3335,-80.0308"/>
+<polygon fill="none" stroke="#000000" points="242.5314,-76.742 231.9396,-76.4864 240.0602,-83.2913 242.5314,-76.742"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Node&#45;&gt;\\Pho\\Lib\\Graph\\HookableInterface -->
 <g id="edge63" class="edge">
 <title>\\Pho\\Lib\\Graph\\Node&#45;&gt;\\Pho\\Lib\\Graph\\HookableInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.4041,-1375.6876C341.5567,-1379.6135 265.9749,-1387.0601 208.9114,-1392.6822"/>
-<polygon fill="none" stroke="#000000" points="208.4535,-1389.2102 198.8448,-1393.674 209.1399,-1396.1765 208.4535,-1389.2102"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.4041,-1363.7503C336.9031,-1381.2879 247.8339,-1416.3895 189.763,-1439.275"/>
+<polygon fill="none" stroke="#000000" points="188.3861,-1436.0555 180.3658,-1442.9783 190.9527,-1442.568 188.3861,-1436.0555"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\NodeWorkerInterface -->
 <g id="node72" class="node">
 <title>\\Pho\\Lib\\Graph\\NodeWorkerInterface</title>
-<polygon fill="none" stroke="#000000" points="205.5575,-1364 63.7154,-1364 63.7154,-1328 205.5575,-1328 205.5575,-1364"/>
-<text text-anchor="middle" x="134.6365" y="-1342.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">NodeWorkerInterface</text>
+<polygon fill="none" stroke="#000000" points="205.5575,-1371 63.7154,-1371 63.7154,-1335 205.5575,-1335 205.5575,-1371"/>
+<text text-anchor="middle" x="134.6365" y="-1349.7" font-family="Courier,monospace" font-size="11.00" fill="#000000">NodeWorkerInterface</text>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Node&#45;&gt;\\Pho\\Lib\\Graph\\NodeWorkerInterface -->
 <g id="edge62" class="edge">
 <title>\\Pho\\Lib\\Graph\\Node&#45;&gt;\\Pho\\Lib\\Graph\\NodeWorkerInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.4041,-1370.3124C343.1686,-1366.5453 272.0314,-1359.5366 215.9237,-1354.0087"/>
-<polygon fill="none" stroke="#000000" points="215.9285,-1350.4923 205.6334,-1352.9949 215.2421,-1357.4586 215.9285,-1350.4923"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.4041,-1353C343.1686,-1353 272.0314,-1353 215.9237,-1353"/>
+<polygon fill="none" stroke="#000000" points="215.6335,-1349.5001 205.6334,-1353 215.6334,-1356.5001 215.6335,-1349.5001"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Node&#45;&gt;\\Pho\\Lib\\Graph\\NodeInterface -->
 <g id="edge61" class="edge">
 <title>\\Pho\\Lib\\Graph\\Node&#45;&gt;\\Pho\\Lib\\Graph\\NodeInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.535,-1365.534C368.5793,-1361.1513 353.3163,-1354.7326 341.2729,-1346 300.9164,-1316.7376 311.2145,-1286.9415 269.2729,-1260 247.2242,-1245.8368 219.788,-1237.0374 195.4463,-1231.5973"/>
-<polygon fill="none" stroke="#000000" points="196.0883,-1228.1559 185.5835,-1229.5348 194.6554,-1235.0077 196.0883,-1228.1559"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.6605,-1344.7512C368.8799,-1340.2186 353.7291,-1333.9 341.2729,-1326 304.3593,-1302.5885 307.1519,-1280.8151 269.2729,-1259 246.5691,-1245.9245 219.264,-1236.6094 195.1953,-1230.1987"/>
+<polygon fill="none" stroke="#000000" points="196.0066,-1226.7936 185.4517,-1227.712 194.2756,-1233.5762 196.0066,-1226.7936"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Node&#45;&gt;\\Pho\\Lib\\Graph\\EntityInterface -->
 <g id="edge59" class="edge">
 <title>\\Pho\\Lib\\Graph\\Node&#45;&gt;\\Pho\\Lib\\Graph\\EntityInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.443,-1362.2188C344.1034,-1347.4755 280.3642,-1322.4486 269.2729,-1319 247.6867,-1312.2883 223.7807,-1306.1875 202.1761,-1301.1552"/>
-<polygon fill="none" stroke="#000000" points="202.9576,-1297.7436 192.4282,-1298.9199 201.3929,-1304.5665 202.9576,-1297.7436"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.4041,-1346.3308C339.9385,-1336.1931 259.777,-1316.5949 202.0543,-1302.4826"/>
+<polygon fill="none" stroke="#000000" points="202.8186,-1299.0664 192.2734,-1300.0913 201.1561,-1305.8662 202.8186,-1299.0664"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Node&#45;&gt;\\Serializable -->
 <g id="edge66" class="edge">
 <title>\\Pho\\Lib\\Graph\\Node&#45;&gt;\\Serializable</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M402.9588,-1391.0041C368.2346,-1500.2273 185.8862,-2073.7962 143.462,-2207.2398"/>
-<polygon fill="none" stroke="#000000" points="140.0232,-2206.5045 140.3288,-2217.095 146.6941,-2208.6254 140.0232,-2206.5045"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M403.0842,-1371.018C368.6097,-1481.9721 185.2283,-2072.1733 143.2164,-2207.3859"/>
+<polygon fill="none" stroke="#000000" points="139.8508,-2206.4225 140.2259,-2217.0107 146.5356,-2208.4995 139.8508,-2206.4225"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Node&#45;&gt;\\SplSubject -->
 <g id="edge65" class="edge">
 <title>\\Pho\\Lib\\Graph\\Node&#45;&gt;\\SplSubject</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.3536,-1369.1669C367.0102,-1365.6469 350.5355,-1358.9046 341.2729,-1346 172.4302,-1110.7696 458.9088,-263.8138 269.2729,-45 251.0673,-23.9932 221.5141,-16.5213 194.7276,-14.6127"/>
-<polygon fill="none" stroke="#000000" points="194.7799,-11.1114 184.6263,-14.137 194.4505,-18.1036 194.7799,-11.1114"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.3579,-1349.1638C367.0158,-1345.6429 350.5411,-1338.9006 341.2729,-1326 174.918,-1094.4462 456.0953,-260.3799 269.2729,-45 251.0583,-24.0011 221.5043,-16.5299 194.7196,-14.6197"/>
+<polygon fill="none" stroke="#000000" points="194.7729,-11.1184 184.6191,-14.1432 194.443,-18.1106 194.7729,-11.1184"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Node&#45;&gt;\\SplObserver -->
 <g id="edge64" class="edge">
 <title>\\Pho\\Lib\\Graph\\Node&#45;&gt;\\SplObserver</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.3785,-1369.149C367.0429,-1365.6234 350.5677,-1358.8814 341.2729,-1346 185.8634,-1130.6218 443.7174,-353.2724 269.2729,-153 252.3456,-133.5664 225.7054,-125.7311 200.5742,-123.164"/>
-<polygon fill="none" stroke="#000000" points="200.5376,-119.6513 190.3019,-122.3864 200.0092,-126.6313 200.5376,-119.6513"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.3836,-1349.1453C367.0496,-1345.6186 350.5743,-1338.8767 341.2729,-1326 188.3507,-1114.2976 440.9045,-349.8393 269.2729,-153 252.3356,-133.5751 225.6939,-125.7411 200.5642,-123.1727"/>
+<polygon fill="none" stroke="#000000" points="200.5286,-119.66 190.2927,-122.3944 199.9997,-126.64 200.5286,-119.66"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\Node&#45;&gt;\\Sabre\\Event\\EmitterInterface -->
 <g id="edge67" class="edge">
 <title>\\Pho\\Lib\\Graph\\Node&#45;&gt;\\Sabre\\Event\\EmitterInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.3655,-1369.1583C367.0258,-1365.6357 350.551,-1358.8935 341.2729,-1346 179.1472,-1120.6962 451.3127,-308.5426 269.2729,-99 261.9112,-90.526 252.7027,-84.2558 242.576,-79.6654"/>
-<polygon fill="none" stroke="#000000" points="243.6312,-76.3193 233.0444,-75.907 241.0634,-82.8313 243.6312,-76.3193"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.3702,-1349.1549C367.032,-1345.6313 350.557,-1338.8892 341.2729,-1326 181.6348,-1104.3725 448.4995,-305.1091 269.2729,-99 261.9072,-90.5294 252.6962,-84.2614 242.568,-79.6723"/>
+<polygon fill="none" stroke="#000000" points="243.6223,-76.3258 233.0354,-75.9148 241.0552,-82.8382 243.6223,-76.3258"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\EntityWorkerInterface -->
 <g id="node86" class="node">
@@ -940,8 +941,8 @@
 <!-- \\Pho\\Lib\\Graph\\Node&#45;&gt;\\Pho\\Lib\\Graph\\EntityWorkerInterface -->
 <g id="edge60" class="edge">
 <title>\\Pho\\Lib\\Graph\\Node&#45;&gt;\\Pho\\Lib\\Graph\\EntityWorkerInterface</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.398,-1369.1348C367.0685,-1365.6049 350.593,-1358.8632 341.2729,-1346 194.9414,-1144.0378 420.7799,-424.1093 269.2729,-226 259.7334,-213.5262 246.6287,-204.4109 232.3179,-197.7553"/>
-<polygon fill="none" stroke="#000000" points="233.339,-194.3875 222.7648,-193.7263 230.6187,-200.8373 233.339,-194.3875"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M381.4038,-1349.1307C367.0761,-1345.5994 350.6004,-1338.8578 341.2729,-1326 197.4281,-1127.7129 418.1989,-420.4997 269.2729,-226 259.7261,-213.5317 246.6178,-204.4192 232.3056,-197.7648"/>
+<polygon fill="none" stroke="#000000" points="233.3262,-194.3967 222.7519,-193.7362 230.6063,-200.8467 233.3262,-194.3967"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\ID -->
 <g id="node64" class="node">
@@ -982,13 +983,13 @@
 <!-- \\Pho\\Lib\\Graph\\TailNode&#45;&gt;\\SplSubject -->
 <g id="edge70" class="edge">
 <title>\\Pho\\Lib\\Graph\\TailNode&#45;&gt;\\SplSubject</title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M627.3697,-1031.0317C599.8549,-1030.6683 562.2992,-1025.3531 540.0923,-1002 422.978,-878.8408 585.3783,-755.1557 476.0923,-625 455.6424,-600.6449 423.9615,-628.8913 408.6826,-601"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M627.367,-1031.0342C599.8507,-1030.6723 562.2941,-1025.358 540.0923,-1002 422.703,-878.4976 585.6316,-754.5152 476.0923,-624 455.6477,-599.6404 423.9551,-627.8949 408.6826,-600"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\SubGraph&#45;&gt;\\Pho\\Lib\\Graph\\Node -->
 <g id="edge71" class="edge">
 <title>\\Pho\\Lib\\Graph\\SubGraph&#45;&gt;\\Pho\\Lib\\Graph\\Node</title>
-<path fill="none" stroke="#000000" d="M627.3323,-1246.8444C601.7292,-1249.5361 566.7428,-1256.0937 540.0923,-1272 502.7542,-1294.2852 511.4985,-1320.7578 476.0923,-1346 466.8183,-1352.6117 455.6946,-1357.9195 445.1818,-1362.0201"/>
-<polygon fill="none" stroke="#000000" points="443.9671,-1358.7376 435.7695,-1365.4495 446.3635,-1365.3146 443.9671,-1358.7376"/>
+<path fill="none" stroke="#000000" d="M627.2119,-1248.1882C602.025,-1251.5578 567.6165,-1258.3748 540.0923,-1272 506.7385,-1288.511 507.996,-1306.8364 476.0923,-1326 466.5921,-1331.7065 455.6679,-1336.6775 445.4179,-1340.7454"/>
+<polygon fill="none" stroke="#000000" points="443.9776,-1337.5482 435.8655,-1344.3633 446.4569,-1344.0944 443.9776,-1337.5482"/>
 </g>
 <!-- \\Pho\\Lib\\Graph\\SubGraph&#45;&gt;\\Pho\\Lib\\Graph\\GraphInterface -->
 <g id="edge72" class="edge">
