@@ -42,7 +42,7 @@
                                         Features
                                     </a>
                                 </li>
-                                                            <li class="active">
+                                                            <li class="">
                                     <a href="/getting-started.html">
                                         Getting Started
                                     </a>
@@ -67,7 +67,7 @@
                                         Recipes
                                     </a>
                                 </li>
-                                                            <li class="">
+                                                            <li class="active">
                                     <a href="/support.html">
                                         Support
                                     </a>
@@ -84,81 +84,11 @@
                 
                 <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
                     <div class="improve pull-right hidden-sm hidden-xs">
-                        <a href="https://github.com/phonetworks/website/edit/master/docs/getting-started.md"><i class="fa fa-pencil"></i> &nbsp;Improve this page</a>
+                        <a href="https://github.com/phonetworks/website/edit/master/docs/support.md"><i class="fa fa-pencil"></i> &nbsp;Improve this page</a>
                     </div>
-                    <h2 id="getting-started">Getting Started</h2>
-<p>Phở enables you to write lightning-fast social apps in GraphQL. </p>
-<p>Once you set up the schema, Phở generates the API interfaces for you to code poetically as follows:</p>
-<pre><code class="language-php">&lt;?php
-require "vendor/autoload.php";
-$kernel = new \Pho\Kernel\Kernel(/* $configs */);
-$kernel-&gt;boot();
-$user = new User($kernel, $kernel-&gt;graph(), "secret_password");
-$tweet = $user-&gt;post("My first tweet");
-$another_user = new User($kernel, $kernel-&gt;graph(), "this_is_not_123456");
-$user-&gt;follow($another_user);
-print_r($another_user-&gt;getFollowers());
-$another_user-&gt;message($user, "Thanks for following me");</code></pre>
-<h3 id="requirements">Requirements</h3>
-<ul>
-<li><a href="http://php.net">PHP 7.1+</a></li>
-<li><a href="http://getcomposer.org">Composer</a></li>
-<li><a href="http://redis.io">Redis</a></li>
-</ul>
-<p>If you have all these requirements already installed and set up, then you can go ahead and install <a href="https://github.com/phonetworks/pho-cli">pho-cli</a>, the command line interface to the Pho stack, which lets you compile GraphQL schema.</p>
-<p>The easiest way to install it is to download the phar file from <a href="https://phonetworks.github.io/pho-cli/pho.phar">https://phonetworks.github.io/pho-cli/pho.phar</a>.</p>
-<h3 id="the-power-of-graphql">The power of GraphQL</h3>
-<p>Recreating Twitter is as easy as setting up the right schema. </p>
-<p>The graph based architecture of Phở feels natural to the fabric of social apps. We define Twitter with:</p>
-<ul>
-<li>One graph; Twitter </li>
-<li>Two nodes; User (an Actor) and Tweet (an Object)</li>
-<li>Five edges; Follow (a Subcribe edge), Post (a formative Write edge), Like (a Subscribe edge), Mention (a Mention edge), Message (a multiplicable Mention edge), and Consume (a Read edge)</li>
-</ul>
-<p>Let's begin with the nodes:</p>
-<pre><code class="language-graphql"># pho-graphql-v1
-
-type User implements ActorNode 
-@edges(in:"User:Follow, Status:Mention", out:"Post, Like, Follow")
-@permissions(mod: "0x0e554", mask: "0xeeeee") 
-@properties(editable: false, volatile: false, revisionable: false)
-{
-    id: ID,
-    birthday: Date,
-    about: String,
-    password: String
-}
-
-type Status implements ObjectNode 
-@edges(in:"User:Post, User:Like", out:"Mention")
-@permissions(mod: "0x0e444", mask: "0xeeeee") 
-@properties(expires: 0, editable: false, volatile: false, revisionable: false)
-{
-    id: ID,
-    status: String @constraints(maxLength: 140)
-}</code></pre>
-<p>Next, we define the edges which we already stated where they may originate from with the @edges(in) directives aboves, and where they may be headed to with the @edges(out) directives.</p>
-<pre><code class="language-graphql"># The Post edge created the Status nodes. So its property is set to be "formative"
-type Post implements WriteEdge 
-@nodes(head:"Status", tail:"User")
-@properties(binding: true, persistent: true, consumer: true, formative: true)
-@labels(headSingular:"post", headPlural: "posts", tailSingular: "author", tailPlural: "authors")
-{
-    id: ID,
-    status: String @constraints(maxLength: 140)
-}</code></pre>
-<p>Once the schema is set up, you should compile it using <a href="https://github.com/phonetworks/pho-cli">pho-cli</a>.  Please note pho-cli depends on a specific patched set of packages. So, the easiest way to get started is to install <a href="https://www.vagrantup.com/">Vagrant</a>, and then run the following:</p>
-<pre><code class="language-bash">vagrant init phonetworks/xenial-php71-pho
-vagrant up
-vagrant ssh
-# now we're in the Vagrant box
-cd /opt/pho-cli
-bin/pho.php build  your-pgql-source-dir compiled-dir pgql # where pgql is the extension of your graphql files
-bin/pho.php init destination-dir compiled-dir
-cd destination-dir</code></pre>
-<p>Voila, now you can access your graph by entering the destination-dir and setting up the play.php or play-custom.php accordingly.</p>
-<p>For more information on schema set up, take a look at <a href="https://github.com/pho-recipes">https://github.com/pho-recipes</a></p>
-<p>The examples are self-explanatory.</p>
+                    <h2 id="support">Support</h2>
+<p>You can find support via community blogs below:</p>
+<graphjs-forum access="public" min-width="100%"></graphjs-forum>
                     <p>&nbsp;</p>
                     <hr></hr>
                     <p>Any questions/comments? Please say below:</p>
