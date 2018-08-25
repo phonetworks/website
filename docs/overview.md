@@ -105,7 +105,7 @@ Phở introduces GAO to model social graphs. Nodes and Edges are atomic entities
 * Actor
 * Object
 
-Phở Networks allows you to extend you these abstract entities with your own, and create your very own innovative macro social network, or use one of our existing [recipes](https://github.com/pho-recipes) to replicate well-known solutions for your own domain-specific community needs.
+Phở Networks allows you to extend  these abstract entities with your own, and create a new social network, or use one of our existing [recipes](https://github.com/pho-recipes) to replicate well-known solutions for your own domain-specific community needs.
 
 
 ## License 💩
