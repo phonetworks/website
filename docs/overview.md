@@ -51,9 +51,9 @@ function pick(div, to_bolden) {
 <div id="dPlaying" data-id="8aTCBtvoPhjSEujGxl3S6NObP" style="display:none;">
 </div>
 
-Phở Networks is an open source, **infinitely scalable**, event-driven, **extensible** stack that gives you solid foundations to build **social-enabled apps**.
+Phở Networks is an open source framework to build **graph apps**. Graph apps are based on the archetypes Actor, Graph, Object. You may extend them for a completely custom social networking experience. The stack is designed to be **infinitely scalable**, event-driven, and **extensible** .
 
-When developing a social-enabled app, you have four options to base it off:
+When developing a graph app, you have four options to base it off:
 
 Foundation          | Maturity | Scalability  | Convenience
 ----------------    | ------   | --------     | --------------------
@@ -64,13 +64,13 @@ Phở                 |   3      |     10       |   10
 
 \* there is no major SN that uses mongodb but they all use redis and memcache
 
-Social-enabled apps consist of graphs, and graphs are by definition difficult to break down into shards using relational databases, therefore it is extremely costly to scale a fast-growing social-enabled app. 
+Graph apps are by definition difficult to break down into shards using relational databases, therefore it is extremely costly to scale a fast-growing graph app. 
 
 Built with portability and scale-out in mind, Phở Networks apps can run on web, desktop, mobile, IoT (internet of things) & embedded platforms, and serve just a handful number of users or billions using open source software and commodity hardware.
 
 ## Use Cases 🤔
 
-What is a social-enabled app? Here are some examples:
+What is a graph app? Here are some examples:
 
 * [A blog or news web site (with different actor models such as readers, authors, editors, contributors).](http://techcrunch.com)
 * [A personal/business web site with some level of interactivity such as page comments and subscription for updates.]()
@@ -89,7 +89,7 @@ The applications of social-enabled apps are limitless. The bottomline is that an
 
 While designing Phở Networks, our aim was to build a truly infinitely scalable open source fully extensible social backend. The biggest challenge was database. Today's popular databases such as MySQL are hard to maintain with growing traffic and millions of daily active users. The answer to these problems are (a) to shard your data (b) to switch to a NoSQL solution. Although sharding data is tedious and expensive, and NoSQL solutions are notoriously yet to standardize and stabilize. In response, inspired by FriendFeed founder Bret Taylor's [schema-less MySQL blog post](http://backchannel.org/blog/friendfeed-schemaless-mysql), we chose to create a stack that would be built upon stable technologies and use atomic methods to establish a horizontally scalable platform to handle any workload.
 
-At Phở, our default choice of stable keeper of truth has been Redis. Although this and all of our choices can be adapted to your platform of choice using custom adapters. For indexing, we use ElasticSearch. For event-driven messaging, we use ZeroMQ. The platform itself is therefore clusterable to an endless number of machines using round-robin DNS and high-availability solutions that continuously listen for service heartbeats.
+At Phở, our default choice of stable keeper of truth has been Redis. Although this and all of our choices can be adapted to your platform of choice using custom adapters. For indexing, we use Neo4J. For event-driven messaging, we use ZeroMQ. The platform itself is therefore clusterable to an endless number of machines using round-robin DNS techniques and high-availability solutions that continuously listen for service heartbeats.
 
 While this is too many open source technologies to digest, we've made it easy for you to get started via Vagrant and docker images.
 
