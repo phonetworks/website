@@ -48,14 +48,41 @@ trait EntityTrait
     protected $attributes;
 
     /**
+     * ID generator object
+     *
+     * @var string
+     */
+    protected $id_generator = ID::class;
+
+    /**
      * Constructor.
      * 
      * Assigns a random ID and initializes the object.
      */
     public function __construct()
     {
-        $this->id = ID::generate();
+        $this->id = $this->id_generator::generate($this);
         $this->attributes = new AttributeBag($this);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function init(): void
+    {
+        $this->attributes->on("modified", [$this, "emitModified"]);
+    }
+
+    /**
+     * Emits modified signal
+     * 
+     * Needed for Closure::fromCallable function
+     *
+     * @return void
+     */
+    public function emitModified(): void
+    {
+        $this->emit("modified");
     }
 
     /**
@@ -95,7 +122,7 @@ trait EntityTrait
      */    
     public function destroy(): void
     {
-        $this->emit("deleting");
+        $this->emit("deleting", [$this->id()]);
     }
 
     /**
@@ -111,11 +138,24 @@ trait EntityTrait
      */
     protected function entityToArray(): array
     {
-        return [
-           "id" => (string) $this->id,
-            "attributes" => $this->attributes->toArray()
+        $array = [
+                "id" => (string) $this->id,
+                "label" => $this->label(),
+                "attributes" => $this->attributes->toArray()
         ];
+        if(isset($this->listeners)&&isset($this->listeners_flat)) {
+            $array["listeners"] = $this->listeners_flat;
+        }
+        return $array;
     }
+        
+   /**
+     * {@inheritdoc}
+     */
+   public function equals(EntityInterface $entity): bool
+   {
+        return $this->id()->equals($entity->id());       
+   }
 
     /**
      * {@inheritdoc}
@@ -123,16 +163,6 @@ trait EntityTrait
     public function toArray(): array
     {
         return $this->entityToArray();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function update(\SplSubject $subject): void
-    {
-        if($subject instanceof AttributeBag /*&& $this instanceof NodeInterface*/) {
-            $this->emit("modified");
-        }
     }
 
     /**

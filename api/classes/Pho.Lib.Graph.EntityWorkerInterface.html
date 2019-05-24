@@ -21,54 +21,54 @@
     <script src="../js/jquery.smooth-scroll.js"></script>
     <script src="../js/prism.min.js"></script>
     <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
-    <script type="text/javascript">
-    function loadExternalCodeSnippets() {
-        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
-            var src = pre.getAttribute('data-src');
-            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
-            var language = 'php';
+        <script type="text/javascript">
+        function loadExternalCodeSnippets() {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+                var src = pre.getAttribute('data-src');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
 
-            var code = document.createElement('code');
-            code.className = 'language-' + language;
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
 
-            pre.textContent = '';
+                pre.textContent = '';
 
-            code.textContent = 'Loading…';
+                code.textContent = 'Loading…';
 
-            pre.appendChild(code);
+                pre.appendChild(code);
 
-            var xhr = new XMLHttpRequest();
+                var xhr = new XMLHttpRequest();
 
-            xhr.open('GET', src, true);
+                xhr.open('GET', src, true);
 
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4) {
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
 
-                    if (xhr.status < 400 && xhr.responseText) {
-                        code.textContent = xhr.responseText;
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
 
-                        Prism.highlightElement(code);
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist or is empty';
+                        }
                     }
-                    else if (xhr.status >= 400) {
-                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
-                    }
-                    else {
-                        code.textContent = '✖ Error: File does not exist or is empty';
-                    }
-                }
-            };
+                };
 
-            xhr.send(null);
+                xhr.send(null);
+            });
+        }
+
+        $(document).ready(function(){
+            loadExternalCodeSnippets();
         });
-    }
-
-    $(document).ready(function(){
-        loadExternalCodeSnippets();
-    });
-    $('#source-view').on('shown', function () {
-        loadExternalCodeSnippets();
-    })
-</script>
+        $('#source-view').on('shown', function () {
+            loadExternalCodeSnippets();
+        })
+    </script>
 
     <link rel="shortcut icon" href="../images/favicon.ico"/>
     <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
@@ -114,12 +114,12 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">213</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">236</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="../reports/markers.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">3</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">4</span>
                                 </a>
                             </li>
                             <li>
@@ -144,37 +144,37 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1713857993"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-260752797"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1713857993" class="accordion-body collapse in">
+            <div id="namespace-260752797" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-985033536"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1014740081"></a>
                                 <a href="../namespaces/Pho.html" style="margin-left: 30px; padding-left: 0">Pho</a>
             </div>
-            <div id="namespace-985033536" class="accordion-body collapse ">
+            <div id="namespace-1014740081" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-492327767"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1208001674"></a>
                                 <a href="../namespaces/Pho.Framework.html" style="margin-left: 30px; padding-left: 0">Framework</a>
             </div>
-            <div id="namespace-492327767" class="accordion-body collapse ">
+            <div id="namespace-1208001674" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1835951823"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-990425768"></a>
                                 <a href="../namespaces/Pho.Framework.ActorOut.html" style="margin-left: 30px; padding-left: 0">ActorOut</a>
             </div>
-            <div id="namespace-1835951823" class="accordion-body collapse ">
+            <div id="namespace-990425768" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -182,6 +182,7 @@
                                                                                                     <li class="class"><a href="../classes/Pho.Framework.ActorOut.Read.html">Read</a></li>
                                                     <li class="class"><a href="../classes/Pho.Framework.ActorOut.ReadPredicate.html">ReadPredicate</a></li>
                                                     <li class="class"><a href="../classes/Pho.Framework.ActorOut.Subscribe.html">Subscribe</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Framework.ActorOut.SubscribeNotification.html">SubscribeNotification</a></li>
                                                     <li class="class"><a href="../classes/Pho.Framework.ActorOut.SubscribePredicate.html">SubscribePredicate</a></li>
                                                     <li class="class"><a href="../classes/Pho.Framework.ActorOut.Write.html">Write</a></li>
                                                     <li class="class"><a href="../classes/Pho.Framework.ActorOut.WriteNotification.html">WriteNotification</a></li>
@@ -195,10 +196,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-508689479"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1299086419"></a>
                                 <a href="../namespaces/Pho.Framework.Cargo.html" style="margin-left: 30px; padding-left: 0">Cargo</a>
             </div>
-            <div id="namespace-508689479" class="accordion-body collapse ">
+            <div id="namespace-1299086419" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -220,10 +221,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1407804003"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1919488721"></a>
                                 <a href="../namespaces/Pho.Framework.Exceptions.html" style="margin-left: 30px; padding-left: 0">Exceptions</a>
             </div>
-            <div id="namespace-1407804003" class="accordion-body collapse ">
+            <div id="namespace-1919488721" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -242,10 +243,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-85278298"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-595906123"></a>
                                 <a href="../namespaces/Pho.Framework.Handlers.html" style="margin-left: 30px; padding-left: 0">Handlers</a>
             </div>
-            <div id="namespace-85278298" class="accordion-body collapse ">
+            <div id="namespace-595906123" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -264,10 +265,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-757639554"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-453639777"></a>
                                 <a href="../namespaces/Pho.Framework.Loaders.html" style="margin-left: 30px; padding-left: 0">Loaders</a>
             </div>
-            <div id="namespace-757639554" class="accordion-body collapse ">
+            <div id="namespace-453639777" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -285,10 +286,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-885356013"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1681604326"></a>
                                 <a href="../namespaces/Pho.Framework.ObjOut.html" style="margin-left: 30px; padding-left: 0">ObjOut</a>
             </div>
-            <div id="namespace-885356013" class="accordion-body collapse ">
+            <div id="namespace-1681604326" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -329,28 +330,47 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2077611507"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2077623310"></a>
                                 <a href="../namespaces/Pho.Lib.html" style="margin-left: 30px; padding-left: 0">Lib</a>
             </div>
-            <div id="namespace-2077611507" class="accordion-body collapse ">
+            <div id="namespace-2077623310" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2144757271"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1601406497"></a>
                                 <a href="../namespaces/Pho.Lib.Graph.html" style="margin-left: 30px; padding-left: 0">Graph</a>
             </div>
-            <div id="namespace-2144757271" class="accordion-body collapse ">
+            <div id="namespace-1601406497" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-78846875"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-39405261"></a>
+                                <a href="../namespaces/Pho.Lib.Graph.Event.html" style="margin-left: 30px; padding-left: 0">Event</a>
+            </div>
+            <div id="namespace-39405261" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Pho.Lib.Graph.Event.EmitterInterface.html">EmitterInterface</a></li>
+                                                                            <li class="trait"><a href="../classes/Pho.Lib.Graph.Event.EmitterTrait.html">EmitterTrait</a></li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1064428906"></a>
                                 <a href="../namespaces/Pho.Lib.Graph.Exceptions.html" style="margin-left: 30px; padding-left: 0">Exceptions</a>
             </div>
-            <div id="namespace-78846875" class="accordion-body collapse ">
+            <div id="namespace-1064428906" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -359,7 +379,7 @@
                                                     <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.EdgeAlreadyConnectedException.html">EdgeAlreadyConnectedException</a></li>
                                                     <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.InvalidDirectionException.html">InvalidDirectionException</a></li>
                                                     <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.InvalidEncapsulatedEdgeException.html">InvalidEncapsulatedEdgeException</a></li>
-                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.MalformedGraphIDException.html">MalformedGraphIDException</a></li>
+                                                    <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.MalformedIDException.html">MalformedIDException</a></li>
                                                     <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.NodeAlreadyMemberException.html">NodeAlreadyMemberException</a></li>
                                                     <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.NodeDoesNotExistException.html">NodeDoesNotExistException</a></li>
                                                     <li class="class"><a href="../classes/Pho.Lib.Graph.Exceptions.OrphanEdgeException.html">OrphanEdgeException</a></li>
@@ -372,16 +392,15 @@
                     
                     <ul>
                                                     <li class="interface"><a href="../classes/Pho.Lib.Graph.EntityInterface.html">EntityInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Pho.Lib.Graph.EntityWorkerInterface.html">EntityWorkerInterface</a></li>
                                                     <li class="interface"><a href="../classes/Pho.Lib.Graph.GraphInterface.html">GraphInterface</a></li>
                                                     <li class="interface"><a href="../classes/Pho.Lib.Graph.HookableInterface.html">HookableInterface</a></li>
                                                     <li class="interface"><a href="../classes/Pho.Lib.Graph.NodeInterface.html">NodeInterface</a></li>
                                                     <li class="interface"><a href="../classes/Pho.Lib.Graph.NodeWorkerInterface.html">NodeWorkerInterface</a></li>
                                                     <li class="interface"><a href="../classes/Pho.Lib.Graph.PredicateInterface.html">PredicateInterface</a></li>
-                                                                            <li class="trait"><a href="../classes/Pho.Lib.Graph.EntityTrait.html">EntityTrait</a></li>
-                                                    <li class="trait"><a href="../classes/Pho.Lib.Graph.GraphTrait.html">GraphTrait</a></li>
+                                                                            <li class="trait"><a href="../classes/Pho.Lib.Graph.GraphTrait.html">GraphTrait</a></li>
                                                     <li class="trait"><a href="../classes/Pho.Lib.Graph.HookableTrait.html">HookableTrait</a></li>
                                                     <li class="trait"><a href="../classes/Pho.Lib.Graph.SerializableTrait.html">SerializableTrait</a></li>
-                                                    <li class="trait"><a href="../classes/Pho.Lib.Graph.SplSubjectTrait.html">SplSubjectTrait</a></li>
                                                                             <li class="class"><a href="../classes/Pho.Lib.Graph.AdjacentNode.html">AdjacentNode</a></li>
                                                     <li class="class"><a href="../classes/Pho.Lib.Graph.AttributeBag.html">AttributeBag</a></li>
                                                     <li class="class"><a href="../classes/Pho.Lib.Graph.Direction.html">Direction</a></li>
@@ -432,104 +451,76 @@
             <div class="row-fluid">
                 <div class="span8 content class">
                     <nav>
-                                                <a href="../namespaces/Pho.Lib.Graph.html">\Pho\Lib\Graph</a> <i class="icon-level-up"></i>
+                                                <a href="../namespaces/Pho.Lib.Graph.html">\Pho\Lib\Graph</a>
                                             </nav>
                     <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
 
-                    <h1><small>\Pho\Lib\Graph</small>EntityTrait</h1>
-                    <p><em>Implements EntityInterface.</em></p>
-                    <p>This trait is used by Node and Edge classes.</p>
-<p>Graphs are mathematical structures used to model pairwise relations between objects.
+                    <h1><small>\Pho\Lib\Graph</small>EntityWorkerInterface</h1>
+                    <p><em>An worker interface for EntityTrait.</em></p>
+                    <p>Graphs are mathematical structures used to model pairwise relations between objects.
 Entities is a Pho concept used to represent the commonalities between the most
 atomic graph elements, Nodes and Edges.</p>
-<p>All entities use Observer Pattern to observe the updates from their attribute bags.</p>
-                    
-                                        
+
                     <section id="summary">
                         <h2>Summary</h2>
                         <section class="row-fluid heading">
-                            <section class="span4">
+                            <section class="span6">
                                 <a href="#methods">Methods</a>
                             </section>
-                            <section class="span4">
-                                <a href="#properties">Properties</a>
-                            </section>
-                            <section class="span4">
+                            <section class="span6">
                                 <a href="#constants">Constants</a>
                             </section>
                         </section>
                         <section class="row-fluid public">
-                            <section class="span4">
-                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method___construct" class="">__construct()</a><br />
-                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_id" class="">id()</a><br />
-                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_label" class="">label()</a><br />
-                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_isA" class="">isA()</a><br />
-                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_attributes" class="">attributes()</a><br />
-                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_destroy" class="">destroy()</a><br />
-                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_toArray" class="">toArray()</a><br />
-                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_update" class="">update()</a><br />
-                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_type" class="">type()</a><br />
-                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method___toString" class="">__toString()</a><br />
+                            <section class="span6">
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityWorkerInterface.html#method_id">id()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityWorkerInterface.html#method_label">label()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityWorkerInterface.html#method_isA">isA()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityWorkerInterface.html#method_attributes">attributes()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityWorkerInterface.html#method_destroy">destroy()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityWorkerInterface.html#method_toArray">toArray()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityWorkerInterface.html#method_equals">equals()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityWorkerInterface.html#method_emit">emit()</a><br />
+                                                                    <a href="../classes/Pho.Lib.Graph.EntityWorkerInterface.html#method_init">init()</a><br />
                                                             </section>
-                            <section class="span4">
-                                                                    <em>No public properties found</em>
-                                                            </section>
-                            <section class="span4">
+                            <section class="span6">
                                                                     <em>No constants found</em>
                                                             </section>
                         </section>
                         <section class="row-fluid protected">
-                            <section class="span4">
-                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#method_entityToArray" class="">entityToArray()</a><br />
+                            <section class="span6">
+                                                                    <em>No protected methods found</em>
                                                             </section>
-                            <section class="span4">
-                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#property_id" class="">$id</a><br />
-                                                                    <a href="../classes/Pho.Lib.Graph.EntityTrait.html#property_attributes" class="">$attributes</a><br />
-                                                            </section>
-                            <section class="span4">
+                            <section class="span6">
                                 <em>N/A</em>
                             </section>
                         </section>
                         <section class="row-fluid private">
-                            <section class="span4">
+                            <section class="span6">
                                                                     <em>No private methods found</em>
                                                             </section>
-                            <section class="span4">
-                                                                    <em>No private properties found</em>
-                                                            </section>
-                            <section class="span4">
+                            <section class="span6">
                                 <em>N/A</em>
                             </section>
                         </section>
                     </section>
                 </div>
                 <aside class="span4 detailsbar">
-                                        
-                    
-                    <dl>
+                                        <dl>
                         <dt>File</dt>
-                            <dd><a href="../files/Lib.Graph.EntityTrait.html"><div class="path-wrapper">Lib/Graph/EntityTrait.php</div></a></dd>
-                                                <dt>Package</dt>
-                            <dd><div class="namespace-wrapper">Default</div></dd>
-                                                <dt>Class hierarchy</dt>
-                            <dd class="hierarchy">
-                                                                                                                                                                    <div class="namespace-wrapper">\Pho\Lib\Graph\EntityTrait</div>
+                            <dd>
+                                <a href="../files/Lib.Graph.EntityWorkerInterface.html"><div class="path-wrapper">Lib/Graph/EntityWorkerInterface.php</div></a>
                             </dd>
-
-                        
-                        
-                        
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">\Default</div></dd>
+                                                
                                                                             <dt>See also</dt>
-                                                                                        <dd><a href=""><span class="namespace-wrapper">\Pho\Lib\Graph\Edge</span></a></dd>
-                                                            <dd><a href="../classes/Pho.Lib.Graph.Node.html"><span class="namespace-wrapper">\Pho\Lib\Graph\Node</span></a></dd>
-                                                    
+                                                                                    <dd><a href=""><div class="namespace-wrapper">\Pho\Lib\Graph\EntityTrait</div></a></dd>
                                                                         </dl>
                     <h2>Tags</h2>
                     <table class="table table-condensed">
                                             <tr>
-                            <th>
-                                author
-                            </th>
+                            <th>author</th>
                             <td>
                                                                     <p>Emre Sokullu <a href="mailto:emre@phonetworks.org">emre@phonetworks.org</a></p>
                                                             </td>
@@ -538,97 +529,13 @@ atomic graph elements, Nodes and Edges.</p>
                 </aside>
             </div>
 
-                        
-                                    <a id="properties" name="properties"></a>
-            <div class="row-fluid">
+            
+                        <div class="row-fluid">
                 <div class="span8 content class">
-                    <h2>Properties</h2>
+                    <h2>Methods</h2>
                 </div>
                 <aside class="span4 detailsbar"></aside>
             </div>
-
-                                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="property_id" name="property_id" class="anchor"></a>
-            <article class="property">
-                <h3 class="protected ">$id</h3>
-                <pre class="signature">$id : \Pho\Lib\Graph\ID</pre>
-                <p><em>The entity ID.</em></p>
-                
-
-                                <h4>Type</h4>
-                <a href="../classes/Pho.Lib.Graph.ID.html">\Pho\Lib\Graph\ID</a>
-                                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                        <dl>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="property_attributes" name="property_attributes" class="anchor"></a>
-            <article class="property">
-                <h3 class="protected ">$attributes</h3>
-                <pre class="signature">$attributes : \Pho\Lib\Graph\AttributeBag</pre>
-                <p><em>Attributes of the entity.</em></p>
-                <p>Both nodes and edges may hold attributes.</p>
-
-                                <h4>Type</h4>
-                <a href="../classes/Pho.Lib.Graph.AttributeBag.html">\Pho\Lib\Graph\AttributeBag</a>
-                                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                        <dl>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                            
-                                    <a id="methods" name="methods"></a>
-            <div class="row-fluid">
-                <div class="span8 content class"><h2>Methods</h2></div>
-                <aside class="span4 detailsbar"></aside>
-            </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method___construct" name="method___construct" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">__construct()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">__construct() </pre>
-                <p><em>Constructor.</em></p>
-                <p>Assigns a random ID and initializes the object.</p>
-
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                    <dt>File</dt>
-                    <dd><a href="../files/Lib.Graph.EntityTrait.html"><div class="path-wrapper">Lib/Graph/EntityTrait.php</div></a></dd>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
 
                                     <div class="row-fluid">
         <div class="span8 content class">
@@ -636,20 +543,24 @@ atomic graph elements, Nodes and Edges.</p>
             <article class="method">
                 <h3 class="public ">id()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">id() </pre>
-                <p><em>{@inheritdoc}</em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">id() : \Pho\Lib\Graph\ID</pre>
+                <p><em>Returns the unique id of the entity.</em></p>
+                <p>The IDs in Pho Kernel are in the form of cryptographically secure UUIDv4.
+Even at scale of billions of nodes and edges, the chances of collision
+is identical to zero. The IDs are immutable, therefore there is not a
+setter method provided.</p>
 
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    <a href="../classes/Pho.Lib.Graph.ID.html">\Pho\Lib\Graph\ID</a>
+                                            &mdash; <p>The ID</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                    <dt>File</dt>
-                    <dd><a href="../files/Lib.Graph.EntityTrait.html"><div class="path-wrapper">Lib/Graph/EntityTrait.php</div></a></dd>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
@@ -664,20 +575,22 @@ atomic graph elements, Nodes and Edges.</p>
             <article class="method">
                 <h3 class="public ">label()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">label() </pre>
-                <p><em>{@inheritdoc}</em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">label() : string</pre>
+                <p><em>Returns the label of the entity.</em></p>
+                <p>Provides a more developer-friendly way of getting class name.
+Labels are immutable.</p>
 
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The label in all lowercase.</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                    <dt>File</dt>
-                    <dd><a href="../files/Lib.Graph.EntityTrait.html"><div class="path-wrapper">Lib/Graph/EntityTrait.php</div></a></dd>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
@@ -692,28 +605,32 @@ atomic graph elements, Nodes and Edges.</p>
             <article class="method">
                 <h3 class="public ">isA()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">isA(\Pho\Lib\Graph\string  <span class="argument">$class_name</span>) </pre>
-                <p><em>{@inheritdoc}</em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">isA(string  <span class="argument">$class_name</span>) : boolean</pre>
+                <p><em>A boolean method that verifies if the entity extends or is the given class.</em></p>
+                <p>This method is a helper and works identical to using
+<code>$node instanceof  $class_name</code> or <code>`$edge instanceof  $class_name</code></p>
+<p>Make sure the $class_name parameter is namespace-safe with <code>get_class()</code>
+method orthe special <strong>::class</strong> constant
+(<a href="http://php.net/manual/en/language.oop5.constants.php"><a href="http://php.net/manual/en/language.oop5.constants.php">http://php.net/manual/en/language.oop5.constants.php</a></a>).</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td>\Pho\Lib\Graph\string</td>
+                                <td>string</td>
                                 <td>$class_name </td>
                                 <td></td>
                             </tr>
                                             </table>
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                    <dt>File</dt>
-                    <dd><a href="../files/Lib.Graph.EntityTrait.html"><div class="path-wrapper">Lib/Graph/EntityTrait.php</div></a></dd>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
@@ -728,20 +645,26 @@ atomic graph elements, Nodes and Edges.</p>
             <article class="method">
                 <h3 class="public ">attributes()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">attributes() </pre>
-                <p><em>{@inheritdoc}</em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">attributes() : string|array|null|boolean</pre>
+                <p><em>Retrieves the attribute bag associated with this entity.</em></p>
+                <p>Once you fetch the bag, you can add new values by
+assigning values to the object;
+<code>$entity-&gt;attributes()-&gt;my_value = 2</code></p>
+<p>Similarly you can fetch values by accessing the properties
+of the bag object directly. You can use the PHP <code>isset()</code>
+function to check if they exist or <code>unset()</code> if the attribute
+needs to be deleted.</p>
 
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    string|array|null|boolean
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                    <dt>File</dt>
-                    <dd><a href="../files/Lib.Graph.EntityTrait.html"><div class="path-wrapper">Lib/Graph/EntityTrait.php</div></a></dd>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
@@ -756,8 +679,9 @@ atomic graph elements, Nodes and Edges.</p>
             <article class="method">
                 <h3 class="public ">destroy()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">destroy() </pre>
-                <p><em>{@inheritdoc}</em></p>
+                <pre class="signature" style="margin-right: 54px;">destroy() : void</pre>
+                <p><em>If the purpose is just to free up memory by getting rid of unused entities,
+you can use PHP&#039;s built-in ```unset()``` method.</em></p>
                 
 
                 
@@ -768,8 +692,6 @@ atomic graph elements, Nodes and Edges.</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                    <dt>File</dt>
-                    <dd><a href="../files/Lib.Graph.EntityTrait.html"><div class="path-wrapper">Lib/Graph/EntityTrait.php</div></a></dd>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
@@ -784,135 +706,7 @@ atomic graph elements, Nodes and Edges.</p>
             <article class="method">
                 <h3 class="public ">toArray()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">toArray() </pre>
-                <p><em>{@inheritdoc}</em></p>
-                
-
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                    <dt>File</dt>
-                    <dd><a href="../files/Lib.Graph.EntityTrait.html"><div class="path-wrapper">Lib/Graph/EntityTrait.php</div></a></dd>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_update" name="method_update" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">update()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">update(\SplSubject  <span class="argument">$subject</span>) </pre>
-                <p><em>{@inheritdoc}</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>\SplSubject</td>
-                                <td>$subject </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                    <dt>File</dt>
-                    <dd><a href="../files/Lib.Graph.EntityTrait.html"><div class="path-wrapper">Lib/Graph/EntityTrait.php</div></a></dd>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_type" name="method_type" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">type()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">type() : string</pre>
-                <p><em>Retrieves the entity type</em></p>
-                <p>Current allowed values are &quot;node&quot; or &quot;edge&quot;
-Can be extended for more types.
-If the type is unknown, it returns &quot;entity&quot;</p>
-
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                            &mdash; <p>&quot;node&quot;, &quot;edge&quot; or &quot;entity&quot;.</p>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                    <dt>File</dt>
-                    <dd><a href="../files/Lib.Graph.EntityTrait.html"><div class="path-wrapper">Lib/Graph/EntityTrait.php</div></a></dd>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method___toString" name="method___toString" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">__toString()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">__toString() : string</pre>
-                <p><em>Turns the object into string</em></p>
-                <p>Returns its ID in string format</p>
-
-                
-                
-                                    <h4>Returns</h4>
-                    string
-                                            &mdash; <p>The ID</p>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                    <dt>File</dt>
-                    <dd><a href="../files/Lib.Graph.EntityTrait.html"><div class="path-wrapper">Lib/Graph/EntityTrait.php</div></a></dd>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_entityToArray" name="method_entityToArray" class="anchor"></a>
-            <article class="method">
-                <h3 class="protected ">entityToArray()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">entityToArray() : array</pre>
+                <pre class="signature" style="margin-right: 54px;">toArray() : array</pre>
                 <p><em>Converts the object to array</em></p>
                 <p>Used for serialization/unserialization. Converts internal
 object properties into a simple format to help with
@@ -929,11 +723,7 @@ reconstruction.</p>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                    <dt>File</dt>
-                    <dd><a href="../files/Lib.Graph.EntityTrait.html"><div class="path-wrapper">Lib/Graph/EntityTrait.php</div></a></dd>
-                                                                                            <dt>See also</dt>
-                                                                <dd><a href=""><span class="namespace-wrapper">for actual implementation of this method by subclasses.</span></a></dd>
-                                                                </dl>
+                                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -941,16 +731,122 @@ reconstruction.</p>
         </aside>
     </div>
 
-                                                    </div>
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_equals" name="method_equals" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">equals()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">equals(\Pho\Lib\Graph\EntityInterface  <span class="argument">$entity</span>) : boolean</pre>
+                <p><em>Checks if given entity is the same as this object.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Pho.Lib.Graph.EntityInterface.html">\Pho\Lib\Graph\EntityInterface</a></td>
+                                <td>$entity </td>
+                                <td><p>Entity to check equality</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_emit" name="method_emit" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">emit()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">emit(string  <span class="argument">$signal</span>, array  <span class="argument">$params = array()</span>) : boolean</pre>
+                <p><em>Broadcasts a signal</em></p>
+                <p>Enables an event-driven architecture.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$signal </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$params </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_init" name="method_init" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">init()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">init() : self</pre>
+                <p><em>Initializer</em></p>
+                <p>Must be called when the object is initialized.
+Either manually or after deserialization.</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    </div>
     </section>
 
     <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="source-view-label">EntityTrait.php</h3>
+            <h3 id="source-view-label">EntityWorkerInterface.php</h3>
         </div>
         <div class="modal-body">
-            <pre data-src="../files/Lib/Graph/EntityTrait.php.txt" class="language-php line-numbers"></pre>
+            <pre data-src="../files/Lib/Graph/EntityWorkerInterface.php.txt" class="language-php"></pre>
         </div>
     </div>
 
@@ -991,7 +887,7 @@ reconstruction.</p>
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on November 1st, 2018 at 07:15.
+                    on May 24th, 2019 at 06:20.
                 </section>
             </section>
         </section>

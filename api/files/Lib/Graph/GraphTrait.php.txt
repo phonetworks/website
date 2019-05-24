@@ -39,18 +39,57 @@ trait GraphTrait
     protected $node_ids = [];
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
-    public function add(NodeInterface $node): NodeInterface
+    public function init(): void 
+    {
+        foreach($this->nodes as $node) {
+            $node->on("deleting", [$this, "remove"]);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     * 
+     * should be able to change context of  $node if $node's context is 
+     */
+    public function add(NodeInterface $node, bool $skip_signals = false, $active_exceptions = false): NodeInterface
     {
         if($this->contains($node->id())) {
-            throw new Exceptions\NodeAlreadyMemberException($node, $this);
+            if($active_exceptions)
+                throw new Exceptions\NodeAlreadyMemberException($node, $this);
+            return $node;
         }
         $this->node_ids[] = (string) $node->id();
         $this->nodes[(string) $node->id()] = $node;
-        $this->emit("node.added", [$node]);
-        $this->emit("modified");
+        $node->on("deleting", [$this, "remove"]);
+        if($node instanceof GraphInterface) {
+            foreach($node->members() as $member) {
+                $this->add($member, true);
+            }
+            $node->on("node.added", [$this, "add"]);
+            $node->on("node.removed", [$this, "remove"]);
+        }
+        if(!$this instanceof Graph) {
+            try {
+                $this->context()->add($node);
+            }
+            catch(Exceptions\NodeAlreadyMemberException $e) { /* ignore */ }
+        }
+        if(!$skip_signals) {
+            if($this->canEmitNodeAddSignals()) // sometimes this is not the preferred way
+                $this->emit("node.added", [$node]);
+            $this->emit("modified");
+        }
         return $node;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function canEmitNodeAddSignals(): bool
+    {
+        return $this->context()->canEmitNodeAddSignals();
     }
 
     /**
@@ -110,6 +149,7 @@ trait GraphTrait
                 } catch(\Exception $e) { /* ignore, that's fine */ }
             }
             $this->emit("modified");
+            $this->emit("node.removed", [$node_id]);
         }
     }
 
@@ -134,14 +174,6 @@ trait GraphTrait
     {
         return count($this->node_ids);
     }
-   
-    /**
-     * {@inheritdoc}
-     */
-    public function toArray(): array
-    {
-        return $this->graphToArray();
-    }
 
     /**
      * Converts the object to array
@@ -157,19 +189,6 @@ trait GraphTrait
     protected function graphToArray(): array
     {
         return ["members"=>$this->node_ids];
-    }
-
-    /**
-     * \SplObserver method that observes nodes and crosses them off of the 
-     * nodes list when they are destroyed.
-     *
-     * @param \SplSubject $node
-     *
-     * @return void
-     */
-    protected function observeNodeDeletion(\SplSubject $node): void
-    {
-        $this->remove($node->id());
     }
 
 }

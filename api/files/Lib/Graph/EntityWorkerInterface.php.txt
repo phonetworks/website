@@ -105,18 +105,15 @@ interface EntityWorkerInterface
      * @return array The object in array format.
      */
     public function toArray(): array;
-
-
+    
     /**
-     * @internal
+     * Checks if given entity is the same as this object.
+     *    
+     * @param EntityInterface $entity Entity to check equality
      *
-     * Observed entities use this method to update the entity.
-     *
-     * @param \SplSubject $subject Updater.
-     *
-     * @return void
+     * @return bool
      */
-    public function update(\SplSubject $subject): void;
+    public function equals(EntityInterface $entity): bool;
 
     /**
      * Broadcasts a signal
@@ -128,6 +125,18 @@ interface EntityWorkerInterface
      * 
      * @return bool
      */
-    public function emit(string $signal, array $params = [], ?callable $continueCallBack = null): bool;
+    public function emit(string $signal, array $params = []): bool;
+
+
+    /**
+     * Initializer
+     * 
+     * Must be called when the object is initialized.
+     * Either manually or after deserialization.
+     *
+     * @return self
+     */
+    public function init(): void;
 
 }
+

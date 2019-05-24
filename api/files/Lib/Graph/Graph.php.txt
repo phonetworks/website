@@ -11,8 +11,6 @@
 
 namespace Pho\Lib\Graph;
 
-use Sabre\Event;
-
 /**
  * Graph contains nodes
  * 
@@ -24,8 +22,7 @@ use Sabre\Event;
  */
 class Graph implements 
     GraphInterface,
-    HookableInterface, 
-    \SplObserver, 
+    HookableInterface,
     \Serializable, 
     Event\EmitterInterface
 {
@@ -35,17 +32,49 @@ class Graph implements
     use GraphTrait;
 
     /**
+     * Whether the graph and its subgraphs emit node addition.
+     *
+     * @var boolean
+     */
+    protected $emit_node_add_signal = true;
+
+    /**
+     * Constructor.
+     *
+     * @param bool $defer_signals
+     */
+    public function __construct(bool $emit_node_add_signal = true)
+    {
+        $this->emit_node_add_signal  = $emit_node_add_signal; 
+        $this->init();
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function id(): ID
     {
         return ID::root();
     }
-
-    public function update(\SplSubject $node): void
-    {
-        $this->observeNodeDeletion($node);
-    }
     
+    /**
+     * {@inheritDoc}
+     */
+    public function canEmitNodeAddSignals(): bool
+    {
+        return (bool) $this->emit_node_add_signal;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function toArray(): array
+    {
+        return array_merge(
+            $this->graphToArray(),
+            ["listeners"=>$this->listeners_flat]
+        );
+    }
+
 }
 

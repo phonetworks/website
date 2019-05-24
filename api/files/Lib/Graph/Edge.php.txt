@@ -11,8 +11,6 @@
 
 namespace Pho\Lib\Graph;
 
-use Sabre\Event;
-
 /**
  * Atomic graph entity, Edge
  * 
@@ -31,7 +29,6 @@ class Edge implements
     EntityWorkerInterface,
     EdgeInterface, 
     HookableInterface,
-    \SplObserver, 
     \Serializable,
     Event\EmitterInterface
 {
@@ -40,6 +37,7 @@ class Edge implements
     use Event\EmitterTrait;
     use EntityTrait {
         EntityTrait::__construct as ____construct;
+        EntityTrait::init as __init;
     }
     use HookableTrait;
 
@@ -126,6 +124,16 @@ class Edge implements
         
         $this->predicate_label = (string) $this->predicate;
         $this->tail->emit("edge.created", [$this]);
+        if(!is_null($head)) {
+            $this->head->emit("edge.connected", [$this]);
+        }
+        $this->init();
+    }
+
+    public function init(): void
+    {
+        $this->tail()->node()->on("deleting", [$this, "observeTailDestruction"]);
+        $this->__init();
     }
 
     /**
@@ -182,7 +190,7 @@ class Edge implements
         $this->head_id = (string) $head->id();
         $this->head()->edges()->addIncoming($this);
         $this->tail()->edges()->addOutgoing($this);
-        $this->tail->emit("edge.connected", [$this]);
+        $this->head->emit("edge.connected", [$this]);
     }
 
     /**
@@ -252,11 +260,9 @@ class Edge implements
     /**
      * Tail Nodes use this method to update about deletion
      *
-     * @param \SplSubject $subject Updater.
-     *
      * @return void
      */
-    protected function observeTailUpdate(\SplSubject $subject): void
+    public function observeTailDestruction(): void
     {
         if($this->predicate()->binding()) {
             $this->head()->destroy();
