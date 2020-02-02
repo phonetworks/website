@@ -23,13 +23,39 @@ $another_user->message($user, "Thanks for following me");
 
 ### Requirements
 
-* [PHP 7.1+](http://php.net)
+* [PHP 7.2+](http://php.net)
 * [Composer](http://getcomposer.org)
 * [Redis](http://redis.io)
 
+Optional, but highly recommended:
+* [Vagrant](https://www.vagrantup.com/)
+
 If you have all these requirements already installed and set up, then you can go ahead and install [pho-cli](https://github.com/phonetworks/pho-cli), the command line interface to the Pho stack, which lets you compile GraphQL schema.
 
+<!--
 The easiest way to install it is to download the phar file from [https://phonetworks.github.io/pho-cli/pho.phar](https://phonetworks.github.io/pho-cli/pho.phar).
+-->
+
+
+
+### First Steps
+
+In addition to core requirements shown above, these first steps will require you to have:
+
+* [Neo4J](https://neo4j.com/)
+* [Git](https://git-scm.com/)
+
+as well. So if you're ready, let's start:
+
+```
+git clone https://github.com/phonetworks/pho-cli
+cd pho-cli
+composer install
+php bin/pho.php init newpho
+cd newpho
+php kernel.php
+
+```
 
 ### The power of GraphQL
 
