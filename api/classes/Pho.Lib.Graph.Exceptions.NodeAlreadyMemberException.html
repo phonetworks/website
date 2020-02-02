@@ -24,7 +24,7 @@
     <script type="text/javascript">
     function loadExternalCodeSnippets() {
         Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
-            var src = pre.getAttribute('data-src');
+            var src = pre.getAttribute('data-src').replace( /\\/g, '/');
             var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
             var language = 'php';
 
@@ -114,12 +114,12 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">236</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">237</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="../reports/markers.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">4</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">5</span>
                                 </a>
                             </li>
                             <li>
@@ -144,37 +144,37 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1357443966"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1767699018"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1357443966" class="accordion-body collapse in">
+            <div id="namespace-1767699018" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-514418762"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-164705856"></a>
                                 <a href="../namespaces/Pho.html" style="margin-left: 30px; padding-left: 0">Pho</a>
             </div>
-            <div id="namespace-514418762" class="accordion-body collapse ">
+            <div id="namespace-164705856" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1527016200"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1538708286"></a>
                                 <a href="../namespaces/Pho.Framework.html" style="margin-left: 30px; padding-left: 0">Framework</a>
             </div>
-            <div id="namespace-1527016200" class="accordion-body collapse ">
+            <div id="namespace-1538708286" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-249156163"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1056089725"></a>
                                 <a href="../namespaces/Pho.Framework.ActorOut.html" style="margin-left: 30px; padding-left: 0">ActorOut</a>
             </div>
-            <div id="namespace-249156163" class="accordion-body collapse ">
+            <div id="namespace-1056089725" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -196,10 +196,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1859946074"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-431628943"></a>
                                 <a href="../namespaces/Pho.Framework.Cargo.html" style="margin-left: 30px; padding-left: 0">Cargo</a>
             </div>
-            <div id="namespace-1859946074" class="accordion-body collapse ">
+            <div id="namespace-431628943" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -221,10 +221,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1915685623"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1635726545"></a>
                                 <a href="../namespaces/Pho.Framework.Exceptions.html" style="margin-left: 30px; padding-left: 0">Exceptions</a>
             </div>
-            <div id="namespace-1915685623" class="accordion-body collapse ">
+            <div id="namespace-1635726545" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -243,10 +243,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1413911839"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1077852228"></a>
                                 <a href="../namespaces/Pho.Framework.Handlers.html" style="margin-left: 30px; padding-left: 0">Handlers</a>
             </div>
-            <div id="namespace-1413911839" class="accordion-body collapse ">
+            <div id="namespace-1077852228" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -265,10 +265,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1726394879"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1971406557"></a>
                                 <a href="../namespaces/Pho.Framework.Loaders.html" style="margin-left: 30px; padding-left: 0">Loaders</a>
             </div>
-            <div id="namespace-1726394879" class="accordion-body collapse ">
+            <div id="namespace-1971406557" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -286,10 +286,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1697602992"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1328550597"></a>
                                 <a href="../namespaces/Pho.Framework.ObjOut.html" style="margin-left: 30px; padding-left: 0">ObjOut</a>
             </div>
-            <div id="namespace-1697602992" class="accordion-body collapse ">
+            <div id="namespace-1328550597" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -330,28 +330,28 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1093301155"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-91890436"></a>
                                 <a href="../namespaces/Pho.Lib.html" style="margin-left: 30px; padding-left: 0">Lib</a>
             </div>
-            <div id="namespace-1093301155" class="accordion-body collapse ">
+            <div id="namespace-91890436" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1627952751"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2010407576"></a>
                                 <a href="../namespaces/Pho.Lib.Graph.html" style="margin-left: 30px; padding-left: 0">Graph</a>
             </div>
-            <div id="namespace-1627952751" class="accordion-body collapse ">
+            <div id="namespace-2010407576" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-10491270"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-942113324"></a>
                                 <a href="../namespaces/Pho.Lib.Graph.Event.html" style="margin-left: 30px; padding-left: 0">Event</a>
             </div>
-            <div id="namespace-10491270" class="accordion-body collapse ">
+            <div id="namespace-942113324" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -367,10 +367,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1039124665"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1709453111"></a>
                                 <a href="../namespaces/Pho.Lib.Graph.Exceptions.html" style="margin-left: 30px; padding-left: 0">Exceptions</a>
             </div>
-            <div id="namespace-1039124665" class="accordion-body collapse ">
+            <div id="namespace-1709453111" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -526,7 +526,7 @@
                         
                         
                         
-                        
+                                                
                                                                         </dl>
                     <h2>Tags</h2>
                     <table class="table table-condensed">
@@ -535,7 +535,7 @@
                                 author
                             </th>
                             <td>
-                                                                    <p>Emre Sokullu <a href="mailto:emre@phonetworks.org">emre@phonetworks.org</a></p>
+                                                                                                        <p>Emre Sokullu <a href="mailto:emre@phonetworks.org">emre@phonetworks.org</a></p>
                                                             </td>
                         </tr>
                                         </table>
@@ -575,13 +575,15 @@
                                             </table>
                 
                 
-                				
+                
                             </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Lib.Graph.Exceptions.NodeAlreadyMemberException.html"><div class="path-wrapper">\Pho\Lib\Graph\Exceptions\NodeAlreadyMemberException</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -639,7 +641,7 @@
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on May 24th, 2019 at 06:20.
+                    on February 2nd, 2020 at 06:09.
                 </section>
             </section>
         </section>

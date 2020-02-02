@@ -24,7 +24,7 @@
     <script type="text/javascript">
     function loadExternalCodeSnippets() {
         Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
-            var src = pre.getAttribute('data-src');
+            var src = pre.getAttribute('data-src').replace( /\\/g, '/');
             var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
             var language = 'php';
 
@@ -114,12 +114,12 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">236</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">237</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="../reports/markers.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">4</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">5</span>
                                 </a>
                             </li>
                             <li>
@@ -144,37 +144,37 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-782663493"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1839626369"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-782663493" class="accordion-body collapse in">
+            <div id="namespace-1839626369" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1277775370"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-478961854"></a>
                                 <a href="../namespaces/Pho.html" style="margin-left: 30px; padding-left: 0">Pho</a>
             </div>
-            <div id="namespace-1277775370" class="accordion-body collapse ">
+            <div id="namespace-478961854" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-311223730"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-219367987"></a>
                                 <a href="../namespaces/Pho.Framework.html" style="margin-left: 30px; padding-left: 0">Framework</a>
             </div>
-            <div id="namespace-311223730" class="accordion-body collapse ">
+            <div id="namespace-219367987" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1620036410"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-945836782"></a>
                                 <a href="../namespaces/Pho.Framework.ActorOut.html" style="margin-left: 30px; padding-left: 0">ActorOut</a>
             </div>
-            <div id="namespace-1620036410" class="accordion-body collapse ">
+            <div id="namespace-945836782" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -196,10 +196,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2058672339"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1678833278"></a>
                                 <a href="../namespaces/Pho.Framework.Cargo.html" style="margin-left: 30px; padding-left: 0">Cargo</a>
             </div>
-            <div id="namespace-2058672339" class="accordion-body collapse ">
+            <div id="namespace-1678833278" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -221,10 +221,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1707964254"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-631312543"></a>
                                 <a href="../namespaces/Pho.Framework.Exceptions.html" style="margin-left: 30px; padding-left: 0">Exceptions</a>
             </div>
-            <div id="namespace-1707964254" class="accordion-body collapse ">
+            <div id="namespace-631312543" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -243,10 +243,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-346210028"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1717616762"></a>
                                 <a href="../namespaces/Pho.Framework.Handlers.html" style="margin-left: 30px; padding-left: 0">Handlers</a>
             </div>
-            <div id="namespace-346210028" class="accordion-body collapse ">
+            <div id="namespace-1717616762" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -265,10 +265,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2048330713"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1565469721"></a>
                                 <a href="../namespaces/Pho.Framework.Loaders.html" style="margin-left: 30px; padding-left: 0">Loaders</a>
             </div>
-            <div id="namespace-2048330713" class="accordion-body collapse ">
+            <div id="namespace-1565469721" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -286,10 +286,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2067319064"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-908696366"></a>
                                 <a href="../namespaces/Pho.Framework.ObjOut.html" style="margin-left: 30px; padding-left: 0">ObjOut</a>
             </div>
-            <div id="namespace-2067319064" class="accordion-body collapse ">
+            <div id="namespace-908696366" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -330,28 +330,28 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2080858696"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2056689575"></a>
                                 <a href="../namespaces/Pho.Lib.html" style="margin-left: 30px; padding-left: 0">Lib</a>
             </div>
-            <div id="namespace-2080858696" class="accordion-body collapse ">
+            <div id="namespace-2056689575" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-601176316"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1104891247"></a>
                                 <a href="../namespaces/Pho.Lib.Graph.html" style="margin-left: 30px; padding-left: 0">Graph</a>
             </div>
-            <div id="namespace-601176316" class="accordion-body collapse ">
+            <div id="namespace-1104891247" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1975511978"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-287225091"></a>
                                 <a href="../namespaces/Pho.Lib.Graph.Event.html" style="margin-left: 30px; padding-left: 0">Event</a>
             </div>
-            <div id="namespace-1975511978" class="accordion-body collapse ">
+            <div id="namespace-287225091" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -367,10 +367,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1790384067"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-920788585"></a>
                                 <a href="../namespaces/Pho.Lib.Graph.Exceptions.html" style="margin-left: 30px; padding-left: 0">Exceptions</a>
             </div>
-            <div id="namespace-1790384067" class="accordion-body collapse ">
+            <div id="namespace-920788585" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -547,7 +547,7 @@ of all social-enabled apps.</p>
                                 </a>                            </dd>
                         
                         
-                        
+                                                
                                                                         </dl>
                     <h2>Tags</h2>
                     <table class="table table-condensed">
@@ -556,7 +556,7 @@ of all social-enabled apps.</p>
                                 author
                             </th>
                             <td>
-                                                                    <p>Emre Sokullu <a href="mailto:emre@phonetworks.org">emre@phonetworks.org</a></p>
+                                                                                                        <p>Emre Sokullu <a href="mailto:emre@phonetworks.org">emre@phonetworks.org</a></p>
                                                             </td>
                         </tr>
                                         </table>
@@ -576,7 +576,7 @@ of all social-enabled apps.</p>
             <a id="constant_MSG" name="constant_MSG" class="anchor"></a>
             <article id="constant_MSG" class="constant">
                 <h3 class="">MSG</h3>
-                <pre class="signature">MSG</pre>
+                <pre class="signature">MSG = &quot;&quot;</pre>
                 <p><em></em></p>
                 
             </article>
@@ -707,7 +707,7 @@ of all social-enabled apps.</p>
                                             </table>
                 
                 
-                				
+                
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -743,7 +743,7 @@ of all social-enabled apps.</p>
                                             </table>
                 
                 
-                				
+                
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -771,7 +771,7 @@ of all social-enabled apps.</p>
 
                 
                 
-                				
+                
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -807,13 +807,15 @@ of all social-enabled apps.</p>
                                             </table>
                 
                 
-                				
+                
                             </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.AbstractNotification.html"><div class="path-wrapper">\Pho\Framework\AbstractNotification</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -836,13 +838,15 @@ of all social-enabled apps.</p>
                                     <h4>Returns</h4>
                     mixed
                                             &mdash; <p>It's actually the EdgeInterface method.</p>
-                                    				
+                                    
                             </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                                            <dt>See also</dt>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.AbstractNotification.html"><div class="path-wrapper">\Pho\Framework\AbstractNotification</div></a></dd>
+                                                                            <dt>See also</dt>
                                                                 <dd><a href=""><span class="namespace-wrapper">\Pho\Framework\edge</span></a></dd>
                                                                 </dl>
             <h2>Tags</h2>
@@ -867,13 +871,15 @@ of all social-enabled apps.</p>
                                     <h4>Returns</h4>
                     \Pho\Lib\Graph\EdgeInterface
                                             &mdash; <p>The edge associated with this notification.</p>
-                                    				
+                                    
                             </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.AbstractNotification.html"><div class="path-wrapper">\Pho\Framework\AbstractNotification</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -895,14 +901,16 @@ of all social-enabled apps.</p>
                 
                                     <h4>Returns</h4>
                     string
-                                    				
+                                    
                             </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                         <span class="label label-info">abstract</span>
                                                 <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.AbstractNotification.html"><div class="path-wrapper">\Pho\Framework\AbstractNotification</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -924,13 +932,15 @@ of all social-enabled apps.</p>
                 
                                     <h4>Returns</h4>
                     array
-                                    				
+                                    
                             </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.AbstractNotification.html"><div class="path-wrapper">\Pho\Framework\AbstractNotification</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -953,13 +963,15 @@ notification message and behaviour.</p>
                 
                                     <h4>Returns</h4>
                     string
-                                    				
+                                    
                             </article>
         </div>
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
-                                                                            </dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Pho.Framework.AbstractNotification.html"><div class="path-wrapper">\Pho\Framework\AbstractNotification</div></a></dd>
+                                                            </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
                                     <tr><td colspan="2"><em>None found</em></td></tr>
@@ -979,7 +991,7 @@ notification message and behaviour.</p>
 
                 
                 
-                				
+                
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -1045,7 +1057,7 @@ notification message and behaviour.</p>
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on May 24th, 2019 at 06:20.
+                    on February 2nd, 2020 at 06:09.
                 </section>
             </section>
         </section>

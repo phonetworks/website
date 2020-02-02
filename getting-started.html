@@ -105,12 +105,32 @@ print_r($another_user-&gt;getFollowers());
 $another_user-&gt;message($user, "Thanks for following me");</code></pre>
 <h3 id="requirements">Requirements</h3>
 <ul>
-<li><a href="http://php.net">PHP 7.1+</a></li>
+<li><a href="http://php.net">PHP 7.2+</a></li>
 <li><a href="http://getcomposer.org">Composer</a></li>
 <li><a href="http://redis.io">Redis</a></li>
 </ul>
+<p>Optional, but highly recommended:</p>
+<ul>
+<li><a href="https://www.vagrantup.com/">Vagrant</a></li>
+</ul>
 <p>If you have all these requirements already installed and set up, then you can go ahead and install <a href="https://github.com/phonetworks/pho-cli">pho-cli</a>, the command line interface to the Pho stack, which lets you compile GraphQL schema.</p>
-<p>The easiest way to install it is to download the phar file from <a href="https://phonetworks.github.io/pho-cli/pho.phar"><a href="https://phonetworks.github.io/pho-cli/pho.phar">https://phonetworks.github.io/pho-cli/pho.phar</a></a>.</p>
+<!--
+The easiest way to install it is to download the phar file from [https://phonetworks.github.io/pho-cli/pho.phar](https://phonetworks.github.io/pho-cli/pho.phar).
+-->
+<h3 id="first-steps">First Steps</h3>
+<p>In addition to core requirements shown above, these first steps will require you to have:</p>
+<ul>
+<li><a href="https://neo4j.com/">Neo4J</a></li>
+<li><a href="https://git-scm.com/">Git</a></li>
+</ul>
+<p>as well. So if you're ready, let's start:</p>
+<pre><code>git clone https://github.com/phonetworks/pho-cli
+cd pho-cli
+composer install
+php bin/pho.php init newpho
+cd newpho
+php kernel.php
+</code></pre>
 <h3 id="the-power-of-graphql">The power of GraphQL</h3>
 <p>Recreating Twitter is as easy as setting up the right schema. </p>
 <p>The graph based architecture of Phở feels natural to the fabric of social apps. We define Twitter with:</p>
