@@ -18,7 +18,7 @@ scripts:
     #before:
         #- rm website/couscous.phar
 
-cname: www.phonetworks.org
+cname: phonetworks.org
 
 # Set the target branch in which to deploy the generated website
 branch: gh-pages
