@@ -4,6 +4,8 @@ currentMenu: getting-started
 
 ## Getting Started
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sz07bFqHNHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Phở enables you to write lightning-fast social apps in GraphQL. 
 
 Once you set up the schema, Phở generates the API interfaces for you to code poetically as follows:
