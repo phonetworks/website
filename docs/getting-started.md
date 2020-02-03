@@ -4,8 +4,6 @@ currentMenu: getting-started
 
 ## Getting Started
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sz07bFqHNHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 Phở enables you to write lightning-fast social apps in GraphQL. 
 
 Once you set up the schema, Phở generates the API interfaces for you to code poetically as follows:
@@ -41,6 +39,8 @@ The easiest way to install it is to download the phar file from [https://phonetw
 
 
 ### First Steps
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sz07bFqHNHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 In addition to core requirements shown above, these first steps will require you to have:
 
