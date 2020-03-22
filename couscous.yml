@@ -44,6 +44,9 @@ menu:
         getting-started:
             text: Getting Started
             relativeUrl: getting-started.html
+        designer:
+            text: Gapp Designer
+            relativeUrl: designer.html
         reference:
             text: Reference
             relativeUrl: reference.html
