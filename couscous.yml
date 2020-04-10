@@ -10,7 +10,7 @@ exclude:
     - vendor
     - website
     # This special entry will ask Couscous to read the exluded directories from your ".gitignore"  file
-    - %gitignore%
+    - "%gitignore%"
 
 scripts:
     after:

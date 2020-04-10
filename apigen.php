@@ -62,7 +62,7 @@ else {
 
 //exec("mv pho-lib-graph/src/Pho/Lib pho-microkernel/src/Pho/Kernel pho-framework/src/Pho");
 exec("mv pho-lib-graph/src/Pho/Lib  pho-framework/src/Pho");
-exec("../vendor/bin/phpdoc run -t ../{$res_dir}/api -d pho-framework/src/ --template=clean --ignore=\"*tests?*,*Tests?*\"");
+exec("php ../phpdoc run -t ../{$res_dir}/api -d pho-framework/src/ --template=clean --ignore=\"*tests?*,*Tests?*\"");
 exec("mv pho-framework/src/Pho/Lib pho-framework/src/Pho");
 //exec("mv pho-framework/src/Pho/Kernel pho-microkernel/src/Pho");
 

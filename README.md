@@ -18,6 +18,10 @@ Run:
 vendor/bin/couscous deploy
 ```
 
+## Notes
+
+This repository contains [phpdoc](https://github.com/phpDocumentor/phpDocumentor) binary, version 2.9.1
+
 ## License
 
 MIT, see [LICENSE](https://github.com/phonetworks/website/blob/master/LICENSE).

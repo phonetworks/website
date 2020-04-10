@@ -9,6 +9,7 @@ function close_all() {
     document.getElementById('dEditing').style.display="none";
     document.getElementById('dBuilding').style.display="none";
     document.getElementById('dPlaying').style.display="none";
+    document.getElementById('dServing').style.display="none";
     var i = 0;
     while(i < document.getElementsByClassName('dPicker').length) {
         document.getElementsByClassName('dPicker')[i++].style.fontWeight="400";
@@ -36,19 +37,28 @@ function pick(div, to_bolden) {
 
 ## Meet Graph Apps 👯‍
 
-[ <a href="#" onclick="pick('Cloning', this)" class="dPicker" style="font-weight:900;">Cloning a Recipe</a> ] &nbsp; [ <a href="#" onclick="pick('Editing', this)" class="dPicker">Editing Schema Files</a> ] &nbsp; [ <a href="#" onclick="pick('Building', this)"  class="dPicker">Building</a> ] &nbsp; [ <a href="#" onclick="pick('Playing', this)"  class="dPicker">Working with the APIs</a> ]
+Pho Networks provides a whiteboard-friendly way to create social applications. Using our open-source [Gapp Designer](/designer.html) tool, in just a few touches, you can create the backend for the next Facebook, that's designed to handle thousands of users concurrently. 
 
-<div  style="display:block;" data-id="ElK47XRwn9cAwx2OZicJ5VA1N" id="dCloning">
-<script type="text/javascript" src="https://asciinema.org/a/ElK47XRwn9cAwx2OZicJ5VA1N.js" id="asciicast-ElK47XRwn9cAwx2OZicJ5VA1N" data-autoplay="true" data-speed="2" async></script>
+To get started, you must have [PHP 7.2+](https://www.php.net), [Redis](https://redis.io), and [Neo4J](https://www.neo4j.org) installed on your platform. Just download the [pho-cli PHAR file](https://github.com/phonetworks/pho-cli/releases/download/0.2/pho.phar) and move it to your `/usr/local/bin` or an equivalent.
+
+Next:
+
+[ <a href="#" onclick="pick('Cloning', this)" class="dPicker" style="font-weight:900;">Starting a Project</a> ] &nbsp; [ <a href="#" onclick="pick('Editing', this)" class="dPicker">Editing Schema Files</a> ] &nbsp; [ <a href="#" onclick="pick('Building', this)"  class="dPicker">Building & Preparing to Launch</a> ] &nbsp; [ <a href="#" onclick="pick('Playing', this)"  class="dPicker">Playing with the Project</a> ]  &nbsp; [ <a href="#" onclick="pick('Serving', this)"  class="dPicker">Serving the APIs</a> ]
+
+<div  style="display:block;" data-id="hiTG4Dsbn2ekSlkBz3iItNKOd" id="dCloning">
+<script type="text/javascript" src="https://asciinema.org/a/hiTG4Dsbn2ekSlkBz3iItNKOd.js" id="asciicast-hiTG4Dsbn2ekSlkBz3iItNKOd" data-autoplay="true" data-speed="2" data-cols="120" data-rows="20" async></script>
 </div>
 
-<div id="dEditing" data-id="jyHXB6sCH1c2syvyXUNwlmUlU" style="display:none;">
+<div id="dEditing" data-id="TrRX4D0igW2vG9rMaH82P0amR" style="display:none;">
 </div>
 
-<div id="dBuilding" data-id="YTCxY878nCDCDBMBCZnEaC3z5" style="display:none;">
+<div id="dBuilding" data-id="BtRzCuMeF3vdwmGoQDxEGPHtF" style="display:none;">
 </div>
 
-<div id="dPlaying" data-id="8aTCBtvoPhjSEujGxl3S6NObP" style="display:none;">
+<div id="dPlaying" data-id="3X23d5tsibWMvR9YidhajzNb5" style="display:none;">
+</div>
+
+<div id="dServing" data-id="Dc1jQjCyDmd0gv2unUpo1OWfn" style="display:none;">
 </div>
 
 Phở Networks is an open source framework to build **graph apps**. Graph apps are based on the archetypes Actor, Graph, Object. You may extend them for a completely custom social networking experience. The stack is designed to be **infinitely scalable**, event-driven, and **extensible** .
