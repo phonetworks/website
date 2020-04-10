@@ -101,6 +101,7 @@ function close_all() {
     document.getElementById('dEditing').style.display="none";
     document.getElementById('dBuilding').style.display="none";
     document.getElementById('dPlaying').style.display="none";
+    document.getElementById('dServing').style.display="none";
     var i = 0;
     while(i < document.getElementsByClassName('dPicker').length) {
         document.getElementsByClassName('dPicker')[i++].style.fontWeight="400";
@@ -126,16 +127,24 @@ function pick(div, to_bolden) {
 }
 </script>
 <h2 id="meet-graph-apps-">Meet Graph Apps 👯‍</h2>
-<p>[ <a href="#" onclick="pick('Cloning', this)" class="dPicker" style="font-weight:900;">Cloning a Recipe</a> ] &nbsp; [ <a href="#" onclick="pick('Editing', this)" class="dPicker">Editing Schema Files</a> ] &nbsp; [ <a href="#" onclick="pick('Building', this)"  class="dPicker">Building</a> ] &nbsp; [ <a href="#" onclick="pick('Playing', this)"  class="dPicker">Working with the APIs</a> ]</p>
-<div style="display:block;" data-id="ElK47XRwn9cAwx2OZicJ5VA1N" id="dCloning">
-<script type="text/javascript" src="https://asciinema.org/a/ElK47XRwn9cAwx2OZicJ5VA1N.js" id="asciicast-ElK47XRwn9cAwx2OZicJ5VA1N" data-autoplay="true" data-speed="2" async></script>
+<p>Phở Networks provides a whiteboard-friendly way to create social applications. Using our open-source <a href="/designer.html">Gapp Designer</a> tool, in just a few touches, you can create the backend for the next Facebook, that's designed to handle thousands of users concurrently. </p>
+<h4 id="requirements">Requirements</h4>
+<p>To get started, you must have <a href="https://www.php.net">PHP 7.2+</a>, <a href="https://redis.io">Redis</a>, and <a href="https://www.neo4j.org">Neo4J</a> installed on your platform. Just download the <a href="https://github.com/phonetworks/pho-cli/releases/download/0.2/pho.phar">pho-cli PHAR file</a> and move it to your <code>/usr/local/bin</code> or an equivalent.</p>
+<h4 id="getting-started">Getting Started</h4>
+<p>[ <a href="#" onclick="pick('Cloning', this)" class="dPicker" style="font-weight:900;">Starting a Project</a> ] &nbsp; [ <a href="#" onclick="pick('Editing', this)" class="dPicker">Editing Schema Files</a> ] &nbsp; [ <a href="#" onclick="pick('Building', this)"  class="dPicker">Building &amp; Preparing to Launch</a> ] &nbsp; [ <a href="#" onclick="pick('Playing', this)"  class="dPicker">Playing with the Project</a> ]  &nbsp; [ <a href="#" onclick="pick('Serving', this)"  class="dPicker">Serving the APIs</a> ]</p>
+<div style="display:block;" data-id="hiTG4Dsbn2ekSlkBz3iItNKOd" id="dCloning">
+<script type="text/javascript" src="https://asciinema.org/a/hiTG4Dsbn2ekSlkBz3iItNKOd.js" id="asciicast-hiTG4Dsbn2ekSlkBz3iItNKOd" data-autoplay="true" data-speed="2" data-cols="120" data-rows="20" async></script>
 </div>
-<div id="dEditing" data-id="jyHXB6sCH1c2syvyXUNwlmUlU" style="display:none;">
+<div id="dEditing" data-id="TrRX4D0igW2vG9rMaH82P0amR" style="display:none;">
 </div>
-<div id="dBuilding" data-id="YTCxY878nCDCDBMBCZnEaC3z5" style="display:none;">
+<div id="dBuilding" data-id="BtRzCuMeF3vdwmGoQDxEGPHtF" style="display:none;">
 </div>
-<div id="dPlaying" data-id="8aTCBtvoPhjSEujGxl3S6NObP" style="display:none;">
+<div id="dPlaying" data-id="3X23d5tsibWMvR9YidhajzNb5" style="display:none;">
 </div>
+<div id="dServing" data-id="Dc1jQjCyDmd0gv2unUpo1OWfn" style="display:none;">
+</div>
+<p>Ready to start? Don't forget to check out the <a href="/designer.html">Gapp Designer</a> to build the schema of your next app.</p>
+<h4 id="background">Background</h4>
 <p>Phở Networks is an open source framework to build <strong>graph apps</strong>. Graph apps are based on the archetypes Actor, Graph, Object. You may extend them for a completely custom social networking experience. The stack is designed to be <strong>infinitely scalable</strong>, event-driven, and <strong>extensible</strong> .</p>
 <p>When developing a graph app, you have four options to base it off:</p>
 <table>
@@ -177,26 +186,26 @@ function pick(div, to_bolden) {
 <p>* there is no major SN that uses mongodb but they all use redis and memcache</p>
 <p>Graph apps are by definition difficult to break down into shards using relational databases, therefore it is extremely costly to scale a fast-growing graph app. </p>
 <p>Built with portability and scale-out in mind, Phở Networks apps can run on web, desktop, mobile, IoT (internet of things) &amp; embedded platforms, and serve just a handful number of users or billions using open source software and commodity hardware.</p>
-<h2 id="use-cases-">Use Cases 🤔</h2>
-<p>What is a graph app? Here are some examples:</p>
-<ul>
-<li><a href="http://techcrunch.com">A blog or news web site (with different actor models such as readers, authors, editors, contributors).</a></li>
-<li>[A personal/business web site with some level of interactivity such as page comments and subscription for updates.]()</li>
-<li><a href="http://facebook.com">A macro social network like Facebook, instagram and Twitter.</a></li>
-<li><a href="http://wowwiki.wikia.com/wiki/Portal:Main">A wiki for the game World of Warcraft.</a></li>
-<li><a href="https://groups.yahoo.com/neo/groups/old-chevy-truck/info">A micro social network like a Yahoo Group that connects stock Chevrolet and GMC truck fans in the US.</a></li>
-<li><a href="https://www.meetup.com/python-istanbul/events/238314057/">A meetup that connects Python developers in Istanbul, Turkey.</a></li>
-<li><a href="http://fitbit.com">A mobile health/fitness app  that ranks your activity and calorie intake amongst your friends.</a></li>
-<li><a href="http://www.kiloo.com/games/subway-surfers/">A mobile game that ranks your activity/score among your friends who play the same game.</a></li>
-<li><a href="https://www.halowaypoint.com/en-us">A multi-player console game that matches you with other gamers in real-time.</a></li>
-<li>An IoT camera attached to your car plate, monitors other cars around, forms a real-time traffic graph and alerts you with commute potentials. (💡)</li>
-</ul>
-<p>The applications of social-enabled apps are limitless. The bottomline is that any app that touches humans and help them interact are social-enabled by definition.</p>
-<h2 id="scalability-">Scalability 💪</h2>
+<!--
+## Use Cases 🤔
+What is a graph app? Here are some examples:
+* [A blog or news web site (with different actor models such as readers, authors, editors, contributors).](http://techcrunch.com)
+* [A personal/business web site with some level of interactivity such as page comments and subscription for updates.]()
+* [A macro social network like Facebook, instagram and Twitter.](http://facebook.com)
+* [A wiki for the game World of Warcraft.](http://wowwiki.wikia.com/wiki/Portal:Main)
+* [A micro social network like a Yahoo Group that connects stock Chevrolet and GMC truck fans in the US.](https://groups.yahoo.com/neo/groups/old-chevy-truck/info)
+* [A meetup that connects Python developers in Istanbul, Turkey.](https://www.meetup.com/python-istanbul/events/238314057/)
+* [A mobile health/fitness app  that ranks your activity and calorie intake amongst your friends.](http://fitbit.com)
+* [A mobile game that ranks your activity/score among your friends who play the same game.](http://www.kiloo.com/games/subway-surfers/)
+* [A multi-player console game that matches you with other gamers in real-time.](https://www.halowaypoint.com/en-us)
+* An IoT camera attached to your car plate, monitors other cars around, forms a real-time traffic graph and alerts you with commute potentials. (💡)
+The applications of social-enabled apps are limitless. The bottomline is that any app that touches humans and help them interact are social-enabled by definition.
+-->
+<h4 id="scalability">Scalability</h4>
 <p>While designing Phở Networks, our aim was to build a truly infinitely scalable open source fully extensible social backend. The biggest challenge was database. Today's popular databases such as MySQL are hard to maintain with growing traffic and millions of daily active users. The answer to these problems are (a) to shard your data (b) to switch to a NoSQL solution. Although sharding data is tedious and expensive, and NoSQL solutions are notoriously yet to standardize and stabilize. In response, inspired by FriendFeed founder Bret Taylor's <a href="http://backchannel.org/blog/friendfeed-schemaless-mysql">schema-less MySQL blog post</a>, we chose to create a stack that would be built upon stable technologies and use atomic methods to establish a horizontally scalable platform to handle any workload.</p>
 <p>At Phở, our default choice of stable keeper of truth has been Redis. Although this and all of our choices can be adapted to your platform of choice using custom adapters. For indexing, we use Neo4J. For event-driven messaging, we use ZeroMQ. The platform itself is therefore clusterable to an endless number of machines using round-robin DNS techniques and high-availability solutions that continuously listen for service heartbeats.</p>
 <p>While this is too many open source technologies to digest, we've made it easy for you to get started via Vagrant and docker images.</p>
-<h2 id="theory-">Theory 🤓</h2>
+<h4 id="theory">Theory</h4>
 <p>Pho-Kernel is a first of its kind backend. It is not a database but it is closely coupled with Redis, a proven distributed persistable in-memory storage service. Moreover, Phở stack gives you a familiar programming interface for graph-type relationship models that are in heavy use with social-enabled apps.</p>
 <p><img src="https://github.com/phonetworks/pho-lib-graph/raw/master/.github/lib-graph-components.png" alt="Architecture" title="Pho LibGraph Architecture" /></p>
 <p>Phở introduces GAO to model social graphs. Nodes and Edges are atomic entities of any graph. In the GAO model, the atomic nodes are:</p>
