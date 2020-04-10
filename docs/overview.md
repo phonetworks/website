@@ -78,7 +78,7 @@ NoSQL               |   8      |     8*       |   6
 Graph Database      |   6      |     3        |   4
 Phở                 |   3      |     10       |   10
 
-\* there is no major SN that uses mongodb but they all use redis and memcache
+\* there is no major SN that uses mongodb (to the best of our knowledge) but they all use redis and memcache in one way or another
 
 Graph apps are by definition difficult to break down into shards using relational databases, therefore it is extremely costly to scale a fast-growing graph app. 
 
