@@ -96,56 +96,132 @@
                         <a href="https://github.com/phonetworks/website/edit/master/docs/getting-started.md"><i class="fa fa-pencil"></i> &nbsp;Improve this page</a>
                     </div>
                     <h2 id="getting-started">Getting Started</h2>
-<p>Phở enables you to write lightning-fast social apps in GraphQL. </p>
-<p>Once you set up the schema, Phở generates the API interfaces for you to code poetically as follows:</p>
-<pre><code class="language-php">&lt;?php
+<!--
+Phở enables you to write social apps in GraphQL. 
+Once you set up the schema, Phở generates the API interfaces for you to code poetically as follows:
+```php
+<?php
 require "vendor/autoload.php";
 $kernel = new \Pho\Kernel\Kernel(/* $configs */);
-$kernel-&gt;boot();
-$user = new User($kernel, $kernel-&gt;graph(), "secret_password");
-$tweet = $user-&gt;post("My first tweet");
-$another_user = new User($kernel, $kernel-&gt;graph(), "this_is_not_123456");
-$user-&gt;follow($another_user);
-print_r($another_user-&gt;getFollowers());
-$another_user-&gt;message($user, "Thanks for following me");</code></pre>
+$kernel->boot();
+$user = new User($kernel, $kernel->graph(), "secret_password");
+$tweet = $user->post("My first tweet");
+$another_user = new User($kernel, $kernel->graph(), "this_is_not_123456");
+$user->follow($another_user);
+print_r($another_user->getFollowers());
+$another_user->message($user, "Thanks for following me");
+```
+-->
 <h3 id="requirements">Requirements</h3>
 <ul>
 <li><a href="http://php.net">PHP 7.2+</a></li>
 <li><a href="http://getcomposer.org">Composer</a></li>
 <li><a href="http://redis.io">Redis</a></li>
-</ul>
-<p>Optional, but highly recommended:</p>
-<ul>
-<li><a href="https://www.vagrantup.com/">Vagrant</a></li>
-</ul>
-<p>If you have all these requirements already installed and set up, then you can go ahead and install <a href="https://github.com/phonetworks/pho-cli">pho-cli</a>, the command line interface to the Pho stack, which lets you compile GraphQL schema.</p>
-<!--
-The easiest way to install it is to download the phar file from [https://phonetworks.github.io/pho-cli/pho.phar](https://phonetworks.github.io/pho-cli/pho.phar).
--->
-<h3 id="first-steps">First Steps</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sz07bFqHNHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<p>In addition to core requirements shown above, these first steps will require you to have:</p>
-<ul>
 <li><a href="https://neo4j.com/">Neo4J</a></li>
-<li><a href="https://git-scm.com/">Git</a></li>
 </ul>
-<p>as well. So if you're ready, let's start:</p>
-<pre><code>git clone https://github.com/phonetworks/pho-cli
-cd pho-cli
-composer install
-php bin/pho.php init newpho
-cd newpho
-php kernel.php
-</code></pre>
-<h3 id="the-power-of-graphql">The power of GraphQL</h3>
-<p>Recreating Twitter is as easy as setting up the right schema. </p>
-<p>The graph based architecture of Phở feels natural to the fabric of social apps. We define Twitter with:</p>
+<h3 id="step-1">Step 1</h3>
+<p>The first step is to download the <a href="https://github.com/phonetworks/pho-cli/releases/download/0.2/pho.phar">pho-cli PHAR file</a> and move it to your <code>/usr/local/bin</code> or an equivalent.</p>
+<pre><code class="language-shell">cd /tmp
+wget https://github.com/phonetworks/pho-cli/releases/download/0.2/pho.phar
+mv pho.phar /usr/local/bin/pho
+chmod +x /usr/local/bin/pho</code></pre>
+<h3 id="step-2">Step 2</h3>
+<p>Now that pho-cli is in our executable binary folder, we can use it to initialize new graph app projects and build (or compile) them.</p>
+<pre><code class="language-shell">pho init</code></pre>
+<p>This will start a dialog where the pho-cli will ask you the following name:</p>
+<ul>
+<li>
+<p><strong>App Name</strong>: This should not contain any special characters. The name you enter here will be used to generate a new folder in the path you ran this command and the project will situate there.</p>
+</li>
+<li>
+<p><strong>App Description</strong>: Describe what this app is about in no more than 255 characters. May contain special characters.</p>
+</li>
+<li>
+<p><strong>App Template</strong>: You have six options here ordered by complexity starting with the simplest; &quot;Blank&quot; which generates no schema/ folder at all. If you use Blank template, you must generate a schema yourself using <a href="/designer.html">Gapp Designer</a>. Basic is the same as <a href="https://github.com/pho-recipes/basic">https://github.com/pho-recipes/basic</a>. GraphJS: <a href="https://github.com/pho-recipes/web">https://github.com/pho-recipes/web</a>. Simplified Twitter: <a href="https://github.com/pho-recipes/twitter-simple">https://github.com/pho-recipes/twitter-simple</a>. Full Twitter: <a href="https://github.com/pho-recipes/twitter-full">https://github.com/pho-recipes/twitter-full</a>. Facebook: <a href="https://github.com/pho-recipes/facebook">https://github.com/pho-recipes/facebook</a>. </p>
+</li>
+<li>
+<p><strong>Founder Username</strong>: This will be the super-admin's username. Keep it &quot;admin&quot; or another nickname of your choice, short and with no special characters.</p>
+</li>
+<li>
+<p><strong>Founder Password</strong>: This will be the super-admin's password.</p>
+</li>
+<li><strong>Founder Email</strong>: This is shown only with the GraphJS template.</li>
+</ul>
+<p>After you type in these fields successfully, your new project will be created in <code>{current_path}/{app_name_that_you_entered_in_the_first_step}</code></p>
+<p>The folder will look like as follows:</p>
+<table>
+<thead>
+<tr>
+<th>File Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>📄 .env</td>
+<td>Contains application settings &amp; resources. VERY IMPORTANT!</td>
+</tr>
+<tr>
+<td>📄 .phonetworks</td>
+<td>Ignore but DO NOT DELETE!</td>
+</tr>
+<tr>
+<td>📄 LICENSE</td>
+<td>Contains the application's LICENSE file.</td>
+</tr>
+<tr>
+<td>📄 Procfile</td>
+<td>Heroku Instructions. You may delete this if you're not hosting the app on Heroku.</td>
+</tr>
+<tr>
+<td>📄 README.md</td>
+<td>Project Instructions. Feel free delete.</td>
+</tr>
+<tr>
+<td>📄 app.json</td>
+<td>Heroku Description. You may delete this if you're not hosting the app on Heroku.</td>
+</tr>
+<tr>
+<td>📁 build</td>
+<td>This is where the compiled files are hosted. If you selected the &quot;blank&quot; template, this will be empty.</td>
+</tr>
+<tr>
+<td>📄 composer.json</td>
+<td>App's dependencies in human-readable format.</td>
+</tr>
+<tr>
+<td>📄 composer.lock</td>
+<td>App's dependencies in compiled format.</td>
+</tr>
+<tr>
+<td>📁 lib</td>
+<td>Libraries used in the app. Most probably, you won't need to touch these files.</td>
+</tr>
+<tr>
+<td>📁 public</td>
+<td>Contains REST API Server related files. You may extend the REST Server here.</td>
+</tr>
+<tr>
+<td>📁 schema</td>
+<td>Contains the schema files. VERY IMPORTANT! You fine-tune your app here, and the pho-cli's <code>build</code> command compiles them into the <code>build/</code> folder.</td>
+</tr>
+<tr>
+<td>📁 src</td>
+<td>Contains a generic kernel application which you can use to interact via the command line interface.</td>
+</tr>
+</tbody>
+</table>
+<p>The most part of this filesystem structure is the <code>schema/</code> folder which contains the definitions of your app.</p>
+<h3 id="step-3">Step 3</h3>
+<p>After the project is created, you need to make sure the app is defined as per your requirements.</p>
+<p>The easiest way to design your definitions is using the open-source <a href="/designer.html">Gapp Designer</a> tool available on this site. After you create your and download your definitions, unzip and put them in the <code>schema/</code> folder of your project.</p>
+<p>For background, here's how the GraphQL schema of a simple Twitter clone as follows:</p>
 <ul>
 <li>One graph; Twitter </li>
 <li>Two nodes; User (an Actor) and Tweet (an Object)</li>
 <li>Five edges; Follow (a Subcribe edge), Post (a formative Write edge), Like (a Subscribe edge), Mention (a Mention edge), Message (a multiplicable Mention edge), and Consume (a Read edge)</li>
 </ul>
-<p>Let's begin with the nodes:</p>
+<p>We define the nodes as follows:</p>
 <pre><code class="language-graphql"># pho-graphql-v1
 
 type User implements ActorNode 
@@ -177,18 +253,57 @@ type Post implements WriteEdge
     id: ID,
     status: String @constraints(maxLength: 140)
 }</code></pre>
-<p>Once the schema is set up, you should compile it using <a href="https://github.com/phonetworks/pho-cli">pho-cli</a>.  Please note pho-cli depends on a specific patched set of packages. So, the easiest way to get started is to install <a href="https://www.vagrantup.com/">Vagrant</a>, and then run the following:</p>
-<pre><code class="language-bash">vagrant init phonetworks/xenial-php71-pho
-vagrant up
-vagrant ssh
-# now we're in the Vagrant box
-cd /opt/pho-cli
-bin/pho.php build  your-pgql-source-dir compiled-dir pgql # where pgql is the extension of your graphql files
-bin/pho.php init destination-dir compiled-dir
-cd destination-dir</code></pre>
-<p>Voila, now you can access your graph by entering the destination-dir and setting up the play.php or play-custom.php accordingly.</p>
-<p>For more information on schema set up, take a look at <a href="https://github.com/pho-recipes">https://github.com/pho-recipes</a></p>
-<p>The examples are self-explanatory.</p>
+<p>Once the schema is set up, you should compile it using <a href="https://github.com/phonetworks/pho-cli">pho-cli</a> you downloaded in phar format earlier. Then just go the folder where your project sits, and run:</p>
+<pre><code class="language-bash">pho build</code></pre>
+<p>This will generate the compiled files under the <code>build/</code> folder.</p>
+<p>For more information on schema format, visit <a href="https://github.com/pho-recipes">https://github.com/pho-recipes</a></p>
+<h3 id="step-4">Step 4</h3>
+<p>Once the project is compiled, you should run</p>
+<pre><code>composer install</code></pre>
+<p>to install the dependencies. Make sure <a href="https://getcomposer.org/">Composer</a> was installed and is in the global executable path of your system. This will generate a new <code>vendor/</code> folder under your project filetree.</p>
+<p>Make sure you edit the .env file for the project to suit to your environment's information. The default .env file includes:</p>
+<pre><code>DATABASE_TYPE="redis"
+DATABASE_URI"="tcp://127.0.0.1:6379"
+STORAGE_TYPE="filesystem"
+STORAGE_URI="/tmp/pho"
+INDEX_TYPE="neo4j"
+INDEX_URI="bolt://neo4j:password@127.0.0.1:7687"
+</code></pre>
+<p>where DATABASE_URI is the Redis server.</p>
+<p>and INDEX_URI is the binary Bolt connection to your Neo4J server.</p>
+<p>Additional settings in your .env file are:</p>
+<ul>
+<li>GRAPH_CLASS</li>
+<li>FOUNDER_CLASS</li>
+<li>USER_CLASS=</li>
+<li>FOUNDER_PARAMS</li>
+</ul>
+<p>which determine the foundational types of your app. If you selected a template earlier using <code>pho init</code> (and not the &quot;blank&quot; one) these must come prefilled.</p>
+<h3 id="step-5">Step 5</h3>
+<p>Next up you can do two things; </p>
+<ul>
+<li>either you can play with the mini kernel implementation that allows you to play with the framework in the command line, </li>
+<li>or you can run the REST API server and interact with your app via HTTP.</li>
+</ul>
+<p>To play with the kernel, run <code>php src/index.php</code> which will give you <code>$kernel</code> variable in an interactive PHP shell environment. Here are some sample operations you can try:</p>
+<pre><code class="language-php">$founder = $kernel-&gt;founder(); // to access the founder
+$graph = $kernel-&gt;graph(); // to access the main graph
+echo $founder-&gt;id(); // to print the founder' id
+echo $graph-&gt;id(); // to print the graph's id
+
+/* 
+ Create a new user as below:
+ This may be different based on your schema
+*/
+$user = new \PhoNetworksAutogenerated\User($kernel, $graph, "admin", "123456"); 
+echo $user-&gt;id();
+
+$user-&gt;follow($founder); // to make the user follow the founder
+$followers = $founder-&gt;getFollowers(); // to fetch the founder's followers</code></pre>
+<p>For more on kernel operations, check out the <a href="/reference.html#r5">Reference</a></p>
+<p>To run the REST API Server, run <code>php web/api/index.php</code>. Once it's up and running, you can switch to your web browser and visit <a href="http://localhost/founder">http://localhost/founder</a> to see the ID of your founder object. For full REST API capabilities, check out <a href="/assets/restapi.html">the documentation</a></p>
+<hr />
+<p>Should you have any questions, feel free to contact us using the <a href="/support.html">Forum</a></p>
 
                                             <p>&nbsp;</p>
                         <hr></hr>
