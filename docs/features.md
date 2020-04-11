@@ -4,12 +4,16 @@ currentMenu: features
 
 ## Features
 
+Phở Networks is an open source framework to build **graph apps**. Graph apps are based on the archetypes Actor, Graph, Object. You may extend them for a completely custom social application experience. The stack is designed to be **infinitely scalable**, event-driven, and **extensible** .
+
 Brought to you by a team of early social networking veterans who experienced the pains of explosive growth, Phở Networks is the first social backend product that is:
 
 * <a href="#f1">Lightning-fast thanks to its RAM-first design</a>
 * <a href="#f2">Based on the Graph Model</a>
 * <a href="#f3">Auto-scaling</a>
 * <a href="#f4">Open Source + Event-based = Unlimited Extensibility</a>
+
+For more information on Phở vs. traditional methods (such as NoSQL databases) check out the <a href="#compare">Comparison</a> table.
 
 ---
 
@@ -25,11 +29,19 @@ Moreover, Phở takes advantage of the latest paradigms in networking, e.g. even
 
 ### <a name="f2" class="anchor">Based on the Graph Model</a>
 
-MVC is a frequently used pattern architected with serving static or slightly dynamic content on the internet; for example, blogs and news web sites fall into this category.
+Pho-Kernel is a first of its kind backend. It is not a database but it is closely coupled with Redis, a proven distributed persistable in-memory storage service. Moreover, Phở stack gives you a familiar programming interface for graph-type relationship models that are in heavy use with social-enabled apps.
 
-However, social networks are completely different. While the number of variables in a blog or news web site is one (1) and that is “time” (because new comments may be added, or the recommended articles may change), the social network pages come with an additional variable, which is “viewer”.  That's because, in a social app, pages may look different based on the page’s author’s relationship level with the viewer. For example, if they are friends, certain information may be visible, or if they are part of the same network, the same page may look restricted; if they are not friends at all, that very same page may look off-the-grid. This level of variability makes it difficult to develop and scale social apps with the same MVC architecture that’s in use by static or quasi-dynamic web sites.
+![Architecture](https://github.com/phonetworks/pho-lib-graph/raw/master/.github/lib-graph-components.png "Pho LibGraph Architecture")
 
-Phở Networks introduces the “graph” model. Not only the graph model feels natural to the fabric of social apps, which makes the development of such social apps a breeze, but also it makes the description and engineering of complex graph based apps fast, easy and less prone to errors with GraphQL schema. Here’s an example:
+Phở introduces GAO to model social graphs. Nodes and Edges are atomic entities of any graph. In the GAO model, the atomic nodes are:
+
+* Graph
+* Actor
+* Object
+
+Phở Networks allows you to extend  these abstract entities with your own, and create a new social network, or use one of our existing [recipes](https://github.com/pho-recipes) to replicate well-known solutions for your own domain-specific community needs.
+
+Here’s an example:
 
 ```graphql
 # pho-graphql-v1
@@ -45,18 +57,37 @@ type Tweet implements ObjectNode
 }
 ```
 
-Once the schema is defined, Phở Networks compile them into interpretable PHP files ready to query via REST or access programmatically.
+Once the schema is defined, the Phở Networks engine compiles them into interpretable PHP files ready to query via REST or access programmatically.
 
 ### <a name="f3" class="anchor">Auto-scaling</a>
 
 To date, database sharding and replication have been the de-facto methods of scalability in the social networking world. While they are reliable, database sharding requires an enormous amount of maintenance to make sure the systems function safely and as expected.
 
-Phở Networks does not depend on any of these afore-mentioned methods, and it is horizontally scalable simply by adding new commodity hardware that runs the same piece of software on each machine. This makes scaling super-easy, super-fast.
+Phở Networks does not depend on any of these archaic methods, and it is horizontally scalable simply by adding new commodity hardware that runs the same piece of software on each machine. This makes scaling super-easy, super-fast.
+
+While designing Phở Networks, our aim was to build a truly infinitely scalable open source fully extensible social backend. The biggest challenge was database. Today's popular databases such as MySQL are hard to maintain with growing traffic and millions of daily active users. The answer to these problems are (a) to shard your data (b) to switch to a NoSQL solution. Although sharding data is tedious and expensive, and NoSQL solutions are notoriously yet to standardize and stabilize. In response, inspired by FriendFeed founder Bret Taylor's [schema-less MySQL blog post](http://backchannel.org/blog/friendfeed-schemaless-mysql), we chose to create a stack that would be built upon stable technologies and use atomic methods to establish a horizontally scalable platform to handle any workload.
+
+At Phở, our default choice of stable keeper of truth has been Redis. Although this and all of our choices can be adapted to your platform of choice using custom adapters. For indexing, we use Neo4J. For event-driven messaging, we use ZeroMQ. The platform itself is therefore clusterable to an endless number of machines using round-robin DNS techniques and high-availability solutions that continuously listen for service heartbeats.
 
 The technologies in use by Phở Networks have been field-tested by social networking giants such as Twitter. For example, one of the components that’s used for simple round-robin database queries is called [Twemproxy](https://github.com/twitter/twemproxy) by Twitter.
+
 
 ### <a name="f4" class="anchor">Open Source + Event-based = Unlimited Extensibility</a>
 
 Last but not least, Phở Networks’ event-based design allows you to plug your custom functionality into any part of the system via hooks and signals. Besides, Phở is open source. Which means, you can view and modify the source code too. 
 
 Phở Networks stack is not monolithic. Its architecture is based off of microkernel principles which makes each part of the stack stand on its own repository, decoupled from services. This approach makes the Phở Networks source code easier to grasp and play with for programmers.
+
+
+---
+
+##  <a name="compare" class="anchor">Comparison</a>
+
+Foundation          | Maturity | Scalability  | Convenience
+----------------    | ------   | --------     | --------------------
+Relational Database |   10     |     3        |   6
+NoSQL               |   8      |     8*       |   6
+Graph Database      |   6      |     3        |   4
+Phở                 |   3      |     10       |   10
+
+\* there is no major SN that uses mongodb (to the best of our knowledge) but they all use redis and memcache in one way or another
