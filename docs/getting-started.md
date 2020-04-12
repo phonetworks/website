@@ -32,6 +32,8 @@ $another_user->message($user, "Thanks for following me");
 * [Redis](http://redis.io)
 * [Neo4J](https://neo4j.com/)
 
+Get started with Phở Networks in five easy steps:
+
 
 ### Step 1
 
