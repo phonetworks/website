@@ -4,27 +4,6 @@ currentMenu: getting-started
 
 ## Getting Started
 
-
-<!--
-Phở enables you to write social apps in GraphQL. 
-
-Once you set up the schema, Phở generates the API interfaces for you to code poetically as follows:
-
-```php
-<?php
-require "vendor/autoload.php";
-$kernel = new \Pho\Kernel\Kernel(/* $configs */);
-$kernel->boot();
-$user = new User($kernel, $kernel->graph(), "secret_password");
-$tweet = $user->post("My first tweet");
-$another_user = new User($kernel, $kernel->graph(), "this_is_not_123456");
-$user->follow($another_user);
-print_r($another_user->getFollowers());
-$another_user->message($user, "Thanks for following me");
-```
-
--->
-
 ### Requirements
 
 * [PHP 7.2+](http://php.net)
@@ -33,7 +12,6 @@ $another_user->message($user, "Thanks for following me");
 * [Neo4J](https://neo4j.com/)
 
 Get started with Phở Networks in five easy steps:
-
 
 ### Step 1
 
@@ -212,6 +190,9 @@ echo $user->id();
 
 $user->follow($founder); // to make the user follow the founder
 $followers = $founder->getFollowers(); // to fetch the founder's followers
+// go through a loop to see what's inside $followers
+
+$founder->message($user, "Thanks for following me!");
 ```
 
 For more on kernel operations, check out the [Reference](/reference.html#r5)
