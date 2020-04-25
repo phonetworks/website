@@ -15,11 +15,11 @@ Get started with Phở Networks in five easy steps:
 
 ### Step 1
 
-The first step is to download the [pho-cli PHAR file](https://github.com/phonetworks/pho-cli/releases/download/0.2/pho.phar) and move it to your `/usr/local/bin` or an equivalent.
+The first step is to download the [pho-cli PHAR file](https://github.com/phonetworks/pho-cli/releases/download/0.3/pho.phar) and move it to your `/usr/local/bin` or an equivalent.
 
 ```shell
 cd /tmp
-wget https://github.com/phonetworks/pho-cli/releases/download/0.2/pho.phar
+wget https://github.com/phonetworks/pho-cli/releases/download/0.3/pho.phar
 mv pho.phar /usr/local/bin/pho
 chmod +x /usr/local/bin/pho
 ```
