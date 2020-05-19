@@ -43,7 +43,7 @@ Best of all, Phở is open-source and [MIT](https://github.com/phonetworks/pho-f
 
 
 #### Requirements
-To get started, you must have [PHP 7.2+](https://www.php.net), [Redis](https://redis.io), and [Neo4J](https://www.neo4j.org) installed on your platform. Just download the [pho-cli PHAR file](https://github.com/phonetworks/pho-cli/releases/download/0.3/pho.phar) and move it to your `/usr/local/bin` or an equivalent.
+To get started, you must have [PHP 7.2+](https://www.php.net), [Redis](https://redis.io), and [Neo4J](https://www.neo4j.org) installed on your platform. Just download the [pho-cli PHAR file](https://github.com/phonetworks/pho-cli/raw/pho.phar) and move it to your `/usr/local/bin` or an equivalent.
 
 #### Getting Started
 
