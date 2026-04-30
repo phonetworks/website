@@ -24,4 +24,4 @@ This repository contains [phpdoc](https://github.com/phpDocumentor/phpDocumentor
 
 ## License
 
-MIT, see [LICENSE](https://github.com/phonetworks/website/blob/master/LICENSE).
+MIT, see [LICENSE](https://github.com/phonetworks/website/blob/master/LICENSE)
